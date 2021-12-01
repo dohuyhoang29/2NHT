@@ -13,8 +13,8 @@ import javafx.collections.ObservableList;
 
 public class ProductDatabaseHelper {
 
-  public static List<Product> getAllProduct() {
-    List<Product> list = new ArrayList<>();
+  public static ObservableList<Product> getAllProduct() {
+    ObservableList<Product> list = FXCollections.observableArrayList();
     String query = "SELECT p.id, p.code, p.name AS 'product_name', p.warranty_period, p.import_price, p.price, p.hard_drive, p.origin, p.color, p.img_src, p.screen, p.cpu, p.gpu, p.ram, p.operating_system, p.rear_camera, p.selfie_camera, p.battery_capacity, p.sim, p.weight, p.dimensions, c.name AS 'category_name' FROM product AS p INNER JOIN categories AS c ON p.category_id=c.id;";
 
     try (Connection cnt = DatabaseHelper.getConnetion();
@@ -148,16 +148,35 @@ public class ProductDatabaseHelper {
     return list;
   }
 
-  public static ObservableList<Product> getAllProductByCategoryAndKey(String category) {
+  public static ObservableList<Product> getAllProductByCategoryAndName(String category, String name) {
     ObservableList<Product> list = FXCollections.observableArrayList();
     String query = "SELECT p.id, p.code, p.name AS 'product_name', p.warranty_period, p.import_price, p.price, p.hard_drive, p.origin, "
         + "p.color, p.img_src, p.screen, p.cpu, p.gpu, p.ram, p.operating_system, p.rear_camera, p.selfie_camera, p.battery_capacity, p.sim, "
         + "p.weight, p.dimensions, c.name AS 'category_name' FROM product AS p INNER JOIN categories AS c ON p.category_id=c.id "
-        + "WHERE c.name = ? AND ;";
+        + "WHERE 1 = 1";
+
+    if (category != null) {
+      query += " AND c.name = ? ";
+    }
+
+    if (name != null) {
+      query += " AND p.name LIKE ? ";
+    }
 
     try (Connection cnt = DatabaseHelper.getConnetion();
         PreparedStatement preStm = cnt.prepareStatement(query)) {
-      preStm.setString(1, category);
+      if (category != null && name == null) {
+        preStm.setString(1, category);
+      }
+
+      if (category == null && name != null) {
+        preStm.setString(1, "%" + name + "%");
+      }
+
+      if (category != null && name != null) {
+        preStm.setString(1, category);
+        preStm.setString(2, "%" + name + "%");
+      }
 
       ResultSet rs = preStm.executeQuery();
       while (rs.next()) {

@@ -7,14 +7,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class AccountDatabaseHelper {
-  public static Account getAccountByUsernameOrEmail(String user) {
-    String query = "SELECT * FROM account WHERE username = ? OR email = ?";
+  public static Account getAccountByUsername(String user) {
+    String query = "SELECT * FROM account WHERE username = ?";
     try (Connection cnt = DatabaseHelper.getConnetion();
         PreparedStatement preStm = cnt.prepareStatement(query)) {
       preStm.setString(1, user);
-      preStm.setString(2, user);
       ResultSet rs = preStm.executeQuery();
       if (rs.next()) {
         Integer id = rs.getInt("id");
@@ -54,8 +55,8 @@ public class AccountDatabaseHelper {
     return null;
   }
 
-  public static List<Account> getAllAccount() {
-    List<Account> list = new ArrayList<>();
+  public static ObservableList<Account> getAllAccount() {
+    ObservableList<Account> list = FXCollections.observableArrayList();
     String query = "SELECT * FROM account";
 
     try (Connection cnt = DatabaseHelper.getConnetion();
@@ -147,5 +148,32 @@ public class AccountDatabaseHelper {
     }
 
     return false;
+  }
+
+  public static ObservableList<Account> searchAccount(String user) {
+    ObservableList<Account> list = FXCollections.observableArrayList();
+    String query = "SELECT * FROM account WHERE username LIKE ? OR email LIKE ? OR phone_number LIKE ? OR address LIKE ?";
+    try (Connection cnt = DatabaseHelper.getConnetion();
+        PreparedStatement preStm = cnt.prepareStatement(query)) {
+      preStm.setString(1, "%" + user + "%");
+      preStm.setString(2, "%" + user + "%");
+      preStm.setString(3, "%" + user + "%");
+      preStm.setString(4, "%" + user + "%");
+      ResultSet rs = preStm.executeQuery();
+      while (rs.next()) {
+        Integer id = rs.getInt("id");
+        String username = rs.getString("username");
+        String email = rs.getString("email");
+        String password = rs.getString("password");
+        String type = rs.getString("type");
+        String address = rs.getString("address");
+        String phone = rs.getString("phone_number");
+        list.add(new Account(id, username, email, password, type, address, phone));
+      }
+    } catch (SQLException throwables) {
+      throwables.printStackTrace();
+      return null;
+    }
+    return list;
   }
 }

@@ -113,7 +113,7 @@ public class InsertAccountController implements Initializable {
     if(txtUsername.getText().isEmpty()) {
       errUsername.setText("Username is required");
       count++;
-    }else if(AccountDatabaseHelper.getAccountByUsernameOrEmail(txtUsername.getText()) != null) {
+    }else if(AccountDatabaseHelper.getAccountByUsername(txtUsername.getText()) != null) {
       errUsername.setText("Username exists");
       count++;
     }else if (!check.validUsername(txtUsername.getText())) {

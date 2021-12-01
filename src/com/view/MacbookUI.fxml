@@ -199,7 +199,7 @@
                                     <Separator prefWidth="200.0" />
                                     <HBox alignment="CENTER_RIGHT">
                                        <children>
-                                          <Button fx:id="refineSearch" mnemonicParsing="false" style="-fx-background-color: #26d;" text="Refine Search" textFill="WHITE">
+                                          <Button fx:id="refineSearch" mnemonicParsing="false" onAction="#filter" style="-fx-background-color: #26d;" text="Refine Search" textFill="WHITE">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>

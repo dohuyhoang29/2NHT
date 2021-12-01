@@ -9,6 +9,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.AreaChart;
+import javafx.scene.chart.LineChart;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -18,9 +19,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 public class DashboardController implements Initializable {
-    @FXML
-    private TextField txtSearch;
-
     @FXML
     private ImageView changeLanguage;
 
@@ -32,18 +30,6 @@ public class DashboardController implements Initializable {
 
     @FXML
     private HBox addProduct;
-
-    @FXML
-    private VBox addProductContainer;
-
-    @FXML
-    private HBox addPhone;
-
-    @FXML
-    private HBox addLaptop;
-
-    @FXML
-    private HBox addTablet;
 
     @FXML
     private HBox productList;
@@ -58,7 +44,7 @@ public class DashboardController implements Initializable {
     private Label saleRevenue;
 
     @FXML
-    private AreaChart<?, ?> acRevenue;
+    private LineChart<?, ?> linechartYearly;
 
     @FXML
     private PieChart pcSalesAnalytics;

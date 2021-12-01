@@ -8,6 +8,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -73,7 +76,7 @@ public class ProductsListController implements Initializable {
 
   int count;
 
-  private List<Product> listData = new ArrayList<>();
+  ObservableList<Product> listData = FXCollections.observableArrayList();
   @Override
   public void initialize(URL location, ResourceBundle resources) {
     listData = ProductDatabaseHelper.getAllProduct();
@@ -91,14 +94,35 @@ public class ProductsListController implements Initializable {
     }
   }
 
+  //Hanh dong
   @FXML
   private void showChangeLanguageMousePressed(MouseEvent mouseEvent) {
-    //Hanh dong
     count++;
     if (count % 2 != 0) {
       changeLanguageContainer.setVisible(true);
     } else {
       changeLanguageContainer.setVisible(false);
+    }
+  }
+
+  @FXML
+  void apply (ActionEvent event) {
+    itemLayout.getChildren().clear();
+
+    listData.clear();
+    listData.addAll(ProductDatabaseHelper.getAllProductByCategoryAndName(cpCategroy.getValue(), txtName.getText()));
+
+    try {
+      for (Product p : listData) {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("/com/view/ProductListItemUI.fxml"));
+        VBox vBox = fxmlLoader.load();
+        ProductListItemController productListItemController = fxmlLoader.getController();
+        productListItemController.setData(p);
+        itemLayout.getChildren().add(vBox);
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
     }
   }
 

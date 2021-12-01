@@ -12,6 +12,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -97,6 +98,12 @@ public class MacbookController implements Initializable {
     listCart = CartDatabaseHelper.getAllCartByAccount(ProjectManager.getInstance().getAccount().getUsername());
     Integer cart = listCart.size();
     count.setText(cart.toString());
+  }
+
+  //Action
+  @FXML
+  void filter (ActionEvent event) {
+
   }
 
   //Dieu huong

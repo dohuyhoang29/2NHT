@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ProductsListController">
+<BorderPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ProductsListController">
   <top>
     <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" spacing="10.0" styleClass="background_main" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
       <children>
@@ -245,31 +254,17 @@
                                  </font>
                               </Label>
                               <ChoiceBox fx:id="cpCategroy" prefHeight="25.0" prefWidth="90.0" />
-                              <Label text="Status">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <ChoiceBox fx:id="cbStatus" prefHeight="25.0" prefWidth="98.0" />
                               <Label text="Name">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
                               <TextField fx:id="txtName" promptText="Search" />
-                              <Label text="From">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <DatePicker fx:id="dpFrom" prefHeight="25.0" prefWidth="124.0" />
-                              <Label text="To">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <DatePicker fx:id="dpTo" prefHeight="25.0" prefWidth="135.0" />
-                              <Button fx:id="btnSearch" mnemonicParsing="false" style="-fx-background-color: #56d;" text="Search" textFill="WHITE" />
+                              <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#apply" style="-fx-background-color: #56d;" text="Search" textFill="WHITE" />
+                                 </children>
+                              </HBox>
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="967.0">
@@ -279,37 +274,22 @@
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="25.0" prefWidth="200.0" text="Product Name">
+                              <Label prefHeight="25.0" prefWidth="258.0" text="Product Name">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="25.0" prefWidth="90.0" text="Category">
+                              <Label prefHeight="25.0" prefWidth="142.0" text="Category">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="25.0" prefWidth="78.0" text="Quantity">
+                              <Label prefHeight="25.0" prefWidth="142.0" text="Import Price">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="25.0" prefWidth="116.0" text="Import Price">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <Label prefHeight="25.0" prefWidth="79.0" text="Price">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <Label prefHeight="25.0" prefWidth="115.0" text="Import Date">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <Label prefHeight="25.0" prefWidth="51.0" text="Status">
+                              <Label prefHeight="25.0" prefWidth="162.0" text="Price">
                                  <font>
                                     <Font size="16.0" />
                                  </font>

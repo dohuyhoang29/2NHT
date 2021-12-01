@@ -130,7 +130,7 @@ public class EditAccountController implements Initializable {
     if(txtUsername.getText().isEmpty()) {
       errUsername.setText("Username is required");
       count++;
-    }else if(AccountDatabaseHelper.getAccountByUsernameOrEmail(txtUsername.getText()) != null && !txtUsername.getText().equalsIgnoreCase(acc.getUsername())) {
+    }else if(AccountDatabaseHelper.getAccountByUsername(txtUsername.getText()) != null && !txtUsername.getText().equalsIgnoreCase(acc.getUsername())) {
       errUsername.setText("Username exists");
       count++;
     }else if (!check.validUsername(txtUsername.getText())) {

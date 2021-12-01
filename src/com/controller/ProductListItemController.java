@@ -65,7 +65,6 @@ public class ProductListItemController {
     category.setText(product.getCategoryName());
     importPrice.setText(product.getWarrantyPeriod().toString());
     price.setText(product.getPrice().toString());
-    importDate.setText(product.getWarrantyPeriod());
 
   }
 

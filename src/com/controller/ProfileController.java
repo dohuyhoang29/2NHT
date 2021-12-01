@@ -55,7 +55,7 @@ public class ProfileController implements Initializable {
   @FXML
   void editAccount (ActionEvent event) throws IOException {
     AccountDatabaseHelper.editAccount(txtEmail.getText(), ProjectManager.getInstance().getAccount().getPassword(), ProjectManager.getInstance().getAccount().getType(), txtAddress.getText(), txtPhone.getText(), ProjectManager.getInstance().getAccount().getId());
-    ProjectManager.getInstance().setAccount(AccountDatabaseHelper.getAccountByUsernameOrEmail(ProjectManager.getInstance().getAccount().getUsername()));
+    ProjectManager.getInstance().setAccount(AccountDatabaseHelper.getAccountByUsername(ProjectManager.getInstance().getAccount().getUsername()));
     Navigator.getInstance().goToProfile();
   }
 

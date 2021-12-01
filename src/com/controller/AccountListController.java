@@ -8,6 +8,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -90,7 +92,7 @@ public class AccountListController implements Initializable {
   private ImageView delete;
 
   int count;
-  List<Account> listAccount = new ArrayList<>();
+  ObservableList<Account> listAccount = FXCollections.observableArrayList();
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
@@ -110,6 +112,8 @@ public class AccountListController implements Initializable {
     }
   }
 
+  //Action
+
   @FXML
   private void showChangeLanguageMousePressed(MouseEvent mouseEvent) {
     count++;
@@ -120,6 +124,27 @@ public class AccountListController implements Initializable {
     }
   }
 
+  @FXML
+  void searchAccount (ActionEvent event) {
+    itemLayout.getChildren().clear();
+    listAccount.clear();
+    listAccount.addAll(AccountDatabaseHelper.searchAccount(txtSearchAccount.getText()));
+
+    try {
+      for (Account acc : listAccount) {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("/com/view/AccountListItemUI.fxml"));
+        VBox vBox = fxmlLoader.load();
+        AccountListItemController accountListItemController = fxmlLoader.getController();
+        accountListItemController.setData(acc);
+        itemLayout.getChildren().add(vBox);
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
+  //Dieu huong
   @FXML
   void addAccount(ActionEvent event) throws IOException {
     Navigator.getInstance().goToInsertAccount();

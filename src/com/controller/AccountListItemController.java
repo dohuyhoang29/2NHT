@@ -49,7 +49,6 @@ public class AccountListItemController {
     this.account = account;
     username.setText(account.getUsername());
     email.setText(account.getEmail());
-    password.setText(account.getPassword());
     type.setText(account.getType());
   }
 

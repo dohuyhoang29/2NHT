@@ -7,10 +7,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class CategoryDatabaseHelper {
-  public static List<Category> getAllCategories() {
-    List<Category> list = new ArrayList<>();
+  public static ObservableList<Category> getAllCategories() {
+    ObservableList<Category> list = FXCollections.observableArrayList();
     String query = "SELECT * FROM categories";
     try (Connection cnt = DatabaseHelper.getConnetion();
         PreparedStatement preStm = cnt.prepareStatement(query);

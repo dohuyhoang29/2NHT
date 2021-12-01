@@ -25,39 +25,24 @@
                         <Image url="@../images/Phone/apple/ip13promax/iphone-13-pro-max-blue-select.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="name" prefHeight="25.0" prefWidth="180.0" text="Iphone 13 Pro Max">
+                  <Label fx:id="name" prefHeight="25.0" prefWidth="227.0" text="Iphone 13 Pro Max">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <Label fx:id="category" prefHeight="25.0" prefWidth="90.0" text="Apple">
+            <Label fx:id="category" prefHeight="25.0" prefWidth="141.0" text="Apple">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="quantity" prefHeight="25.0" prefWidth="75.0" text="10">
+            <Label fx:id="importPrice" prefHeight="25.0" prefWidth="140.0" text="4500">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="importPrice" prefHeight="25.0" prefWidth="116.0" text="4500">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label fx:id="price" prefHeight="25.0" prefWidth="79.0" text="4800">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label fx:id="importDate" prefHeight="25.0" prefWidth="115.0" text="03/11/2021">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label fx:id="status" prefHeight="25.0" prefWidth="43.0" text="Stock">
+            <Label fx:id="price" prefHeight="25.0" prefWidth="124.0" text="4800">
                <font>
                   <Font size="16.0" />
                </font>

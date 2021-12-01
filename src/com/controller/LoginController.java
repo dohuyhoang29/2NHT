@@ -60,7 +60,7 @@ public class LoginController implements Initializable {
             errUsername.setText("Username is required");
             errPassword.setText("Username is required");
         } else {
-            Account account = AccountDatabaseHelper.getAccountByUsernameOrEmail(username.getText());
+            Account account = AccountDatabaseHelper.getAccountByUsername(username.getText());
             if (username.getText().equalsIgnoreCase(account.getUsername()) || username.getText().equalsIgnoreCase(account.getEmail())) {
                 if (password.getText().equalsIgnoreCase(account.getPassword())) {
                     ProjectManager.getInstance().setAccount(account);
