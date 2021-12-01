@@ -1,0 +1,62 @@
+Màn hình
+
+Kích thước màn hình	5.4 inches
+Công nghệ màn hình	OLED
+Độ phân giải màn hình	1080 x 2340 pixels (FullHD+)
+Tính năng màn hình	Màn hình super Retina XDR, OLED, 476 ppi, HDR display, công nghệ True Tone Wide color (P3), Haptic Touch, Lớp phủ oleophobic chống bám vân tay 
+Camera sau
+
+Camera sau	Camera góc rộng: 12MP, f/1.6
+Camera góc siêu rộng: 12MP, ƒ/2.4
+Quay video	4K 2160p@30fps
+FullHD 1080p@30fps
+FullHD 1080p@60fps
+HD 720p@30fps
+Tính năng camera	Chạm lấy nét
+HDR
+Nhận diện khuôn mặt
+Quay chậm (Slow Motion)
+Toàn cảnh (Panorama)
+Tự động lấy nét (AF)
+Xóa phông
+Nhãn dán (AR Stickers)
+Nhận diện khuôn mặt 
+Camera trước
+
+Camera trước	12MP, f/2.2 
+Vi xử lý & đồ họa
+
+Chipset	Apple A15
+GPU	GPU 4 nhân 
+RAM & lưu trữ
+
+Dung lượng RAM	4 GB
+Bộ nhớ trong	128 GB 
+Pin & công nghệ sạc
+
+Pin	2,406mAh
+Công nghệ sạc	Sạc nhanh 20W, Sạc không dây, Sạc ngược không dây 15W, Sạc pin nhanh, Tiết kiệm pin
+Cổng sạc	Lightning 
+Giao tiếp & kết nối
+
+Thẻ SIM	2 SIM (nano‑SIM và eSIM)
+Hệ điều hành	iOS15
+Jack tai nghe 3.5	Không
+Công nghệ NFC	Có
+Wi-Fi	WiFi 6E
+Bluetooth	v5.0
+GPS	GPS, GLONASS, Galileo, QZSS, and BeiDou 
+Thiết kế & Trọng lượng
+
+Kích thước	131,5 x 64,2 x 7,65mm
+Trọng lượng	141g
+Chất liệu mặt lưng	Kính
+Chất liệu khung viền	Kim loại 
+Thông số khác
+
+Chỉ số kháng nước, bụi	IP68
+Kiểu màn hình	Tai thỏ 
+Tiện ích khác
+
+Các loại cảm biến	Cảm biến áp kế, Cảm biến tiệm cận, Con quay hồi chuyển
+Tính năng đặc biệt	Hỗ trợ 5G, Kháng nước, kháng bụi, Sạc không dây, Nhận diện khuôn mặt

@@ -1,0 +1,33 @@
+Màn hình
+
+Kích thước màn hình	5.8 inches
+Độ phân giải màn hình	1125 x 2436 pixels 
+Camera sau
+
+Camera sau	12 MP
+Quay video	Quay phim FullHD 1080p@30fps, Quay phim FullHD 1080p@60fps, Quay phim FullHD 1080p@240fps, Quay phim 4K 2160p@24fps, Quay phim FullHD 1080p@120fps, Quay phim 4K 2160p@30fps, Quay phim 4K 2160p@60fps 
+Camera trước
+
+Camera trước	7 MP 
+Vi xử lý & đồ họa
+
+Chipset	Apple A12 Bionic 6 nhân
+GPU	Apple GPU 4 nhân 
+RAM & lưu trữ
+
+Bộ nhớ trong	256 GB
+Khe cắm thẻ nhớ	Không 
+Pin & công nghệ sạc
+
+Pin	Li-po 
+Giao tiếp & kết nối
+
+Thẻ SIM	Nano-SIM
+Hệ điều hành	12
+Wi-Fi	Wi-Fi 802.11 a/b/g/n/ac, Dual-band, Wi-Fi hotspot
+Bluetooth	LE, A2DP, v5.0
+GPS	A-GPS, GLONASS 
+Thiết kế & Trọng lượng
+
+Kích thước	143.6 x 70.9 x 7.7 mm
+Trọng lượng	177g

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="boxImgChooseSrc" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ImgChoosedController">
+   <children>
+      <ImageView fx:id="imgChooseSrc" fitHeight="198.0" fitWidth="552.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Laptop/laptop%20Asus/LAPTOP%20ASUS%20ROG%20GAMING/60486_laptop_asus_gaming_rog_strix_g513ih_hn015t_xam_9.png" />
+         </image></ImageView>
+   </children>
+</HBox>

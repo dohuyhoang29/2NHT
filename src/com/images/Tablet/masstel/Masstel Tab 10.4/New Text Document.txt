@@ -1,0 +1,12 @@
+Màn hình	10.36" , IPS , IPS , 1200 x 2000 Pixel
+Camera sau	13.0 MP
+Camera Selfie	5.0 MP
+RAM 	4 GB
+Bộ nhớ trong	64 GB
+CPU	Unisoc T610
+GPU	Mali-G52
+Dung lượng pin	6000 mAh
+Thẻ sim	2 , Nano SIM
+Hệ điều hành	Android 11
+Xuất xứ	Trung Quốc
+Thời gian ra mắt	10/2021

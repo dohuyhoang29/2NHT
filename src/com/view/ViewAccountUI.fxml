@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+  minWidth="-Infinity" prefHeight="449.0" prefWidth="329.0" xmlns="http://javafx.com/javafx/8.0.171"
+  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ViewAccountController">
+  <children>
+    <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../images/user.png"/>
+      </image>
+    </ImageView>
+    <Label fx:id="username" text="Username">
+      <font>
+        <Font size="24.0"/>
+      </font>
+    </Label>
+    <Label fx:id="email" text="Email">
+      <font>
+        <Font size="18.0"/>
+      </font>
+    </Label>
+    <VBox prefHeight="157.0" prefWidth="424.0" spacing="10.0">
+      <children>
+        <HBox>
+          <children>
+            <Label text="Password: ">
+              <font>
+                <Font size="16.0"/>
+              </font>
+            </Label>
+            <Label fx:id="password" text="pass">
+              <font>
+                <Font size="16.0"/>
+              </font>
+            </Label>
+          </children>
+        </HBox>
+        <HBox>
+          <children>
+            <Label text="Type: ">
+              <font>
+                <Font size="16.0"/>
+              </font>
+            </Label>
+            <Label fx:id="type" text="type">
+              <font>
+                <Font size="16.0"/>
+              </font>
+            </Label>
+          </children>
+        </HBox>
+        <HBox>
+          <children>
+            <Label text="Address: ">
+              <font>
+                <Font size="16.0"/>
+              </font>
+            </Label>
+            <Label fx:id="address" text="address">
+              <font>
+                <Font size="16.0"/>
+              </font>
+            </Label>
+          </children>
+        </HBox>
+        <HBox>
+          <children>
+            <Label text="Phone Number: ">
+              <font>
+                <Font size="16.0"/>
+              </font>
+            </Label>
+            <Label fx:id="phone" text="phone">
+              <font>
+                <Font size="16.0"/>
+              </font>
+            </Label>
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+  </padding>
+</VBox>

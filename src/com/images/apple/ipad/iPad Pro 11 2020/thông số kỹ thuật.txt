@@ -1,0 +1,46 @@
+Màn hình
+
+Kích thước màn hình	11 inches
+Độ phân giải màn hình	1668 x 2388 pixel
+Tính năng màn hình	Tầng số quét 120Hz
+Độ sáng 600 nits 
+Camera sau
+
+Camera sau	12 MP góc rộng,khẩu độ f/1.8
+10 MP góc siêu rộng, f/2.4
+Quay video	4K@24/30/60fps
+1080p@30/60/120/240fps 
+Camera trước
+
+Camera trước	7 MP khẩu độ f/2.2 
+Vi xử lý & đồ họa
+
+Chipset	Apple A12Z Bionic
+Loại CPU	4 nhân 2.5GHz
+4 nhân 1.6GHz
+GPU	Apple GPU 
+RAM & lưu trữ
+
+Dung lượng RAM	6 GB
+Bộ nhớ trong	128 GB
+Khe cắm thẻ nhớ	Không 
+Pin & công nghệ sạc
+
+Pin	Khoảng 7600 mAh
+Công nghệ sạc	Sạc nhanh 18W
+Sạc ngược cho thiết bị khác
+Cổng sạc	USB Type-C 
+Giao tiếp & kết nối
+
+Hệ điều hành	iOS
+Wi-Fi	Wi-Fi 802.11 a/b/g/n/ac/ax, dual-band, hotspot
+Bluetooth	5.0, A2DP, LE, EDR 
+Thiết kế & Trọng lượng
+
+Kích thước	Dài 247.6 mm - Ngang 178.5 mm - Dày 5.9 mm
+Trọng lượng	471 g (Wi-Fi)
+Chất liệu mặt lưng	Kim loại
+Chất liệu khung viền	Kim loại 
+Tiện ích khác
+
+Các loại cảm biến	Cảm biến ánh sáng, Con quay hồi chuyển

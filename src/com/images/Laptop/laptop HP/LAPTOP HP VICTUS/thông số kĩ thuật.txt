@@ -1,0 +1,23 @@
+Hãng sản xuất	HP
+Chủng loại	Notebook
+Part Number	4R0T9PA
+Mầu sắc	 
+Bộ vi xử lý	Intel i7 11800H 2.3Ghz up to 4.6Ghz 8 core 16 thread 24Mb Cache
+Chipset	 
+Bộ nhớ trong	2*8 GB DDR4-3200Mhz
+Số khe cắm	2
+Dung lượng tối đa	32
+VGA	NVIDIA® GeForce® RTX 3060 6GB
+Ổ cứng	512 GB PCIe® NVMe™ M.2 SSD+32GB SSD
+Ổ quang	Không
+Card Reader	Có
+Màn hình	16.1" FHD 144Hz
+Webcam	HP Wide Vision HD camera with integrated dual array digital microphone
+Audio	Audio by B&O; Dual speakers; HP Audio Boost 1.0
+Giao tiếp mạng	 
+Giao tiếp không dây	Intel® Wi-Fi 6 AX 201 (2x2) and Bluetooth® 5 Combo (Supporting Gigabit file transfer speeds)
+Cổng giao tiếp	Integrated 10/100/1000 GbE LAN
+Pin	4-cell, 72 Wh Li-ion
+Kích thước (rộng x dài x cao)	37x26x2.35cm
+Cân nặng	2.46 kg
+Hệ điều hành	Windows 10 Home Single Language 64

@@ -1,0 +1,11 @@
+Màn hình	11.0" , Liquid Retina HD , IPS LCD , 2388 x 1668 Pixel
+Camera sau	10.0 MP + 12.0 MP
+Camera Selfie	12.0 MP
+RAM 	8 GB
+Bộ nhớ trong	128 GB
+CPU	Apple M1
+GPU	Apple M1
+Thẻ sim	0
+Hệ điều hành	iPadOS
+Xuất xứ	Trung Quốc
+Thời gian ra mắt	04/2021

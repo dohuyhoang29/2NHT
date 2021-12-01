@@ -1,0 +1,104 @@
+Hãng sản xuất
+
+Dell
+
+Chủng loại
+
+Vostro 5402 – Bảo hành tận nơi
+
+Part number
+
+70231338
+
+Mầu sắc
+
+Xám
+
+Bộ vi xử lý
+
+Intel Core i7 1165G7 (2.8Ghz/12MB cache)
+
+Chipset
+
+Intel
+
+Bộ nhớ trong
+
+16GB DDR4 3200Mhz (1 * 16GB)
+
+Số khe cắm
+
+2
+
+Dung lượng tối đa
+
+32 GB
+
+VGA
+
+Nvidia Geforce MX330 2G DDR5
+
+Ổ cứng
+
+512GB PCIe NVMe SSD - Hỗ trợ thêm 1 khe cắm SSD M.2 PCIe mở rộng
+
+Ổ quang
+
+No
+
+Card Reader
+
+Micro SD
+
+Bảo mật, công nghệ
+
+Finger Print
+
+Màn hình
+
+14.0 inch FHD, 1920x1080 Anti-Glare
+
+Webcam
+
+HD
+
+Audio
+
+Realtek® ALC3204, 2 W Stereo speaker
+
+Giao tiếp mạng
+
+10/100
+
+Giao tiếp không dây
+
+802.11ac ,Bluetooth
+
+Cổng giao tiếp
+
+1 Headset Jack, 2 USB 3.2 Type-A, 1 Ethernet RJ-45, 1 HDMI 1.4b, 1 USB 3.2 Gen 2 Type-C™ (DP/PowerDelivery)
+
+Pin
+
+3 cell 40Wh
+
+Kích thước
+
+Kích thước, trọng lượng:
+
+Dài 321.3 mm - Rộng 216.2 mm - Dày 16.74 mm - Nặng 1.36 kg
+Chất liệu:
+
+Vỏ nhựa - nắp lưng bằng kim loại
+ 
+Cân nặng
+
+1.36Kg
+
+Hệ điều hành
+
+Win 10 Home SL 64
+
+Phụ kiện đi kèm
+
+AC Adapter

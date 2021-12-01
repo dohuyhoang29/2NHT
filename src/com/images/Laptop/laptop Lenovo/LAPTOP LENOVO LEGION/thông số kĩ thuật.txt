@@ -1,0 +1,27 @@
+Hãng sản xuất	Lenovo
+Chủng loại	Lenovo Legion 7
+Part Number	82N60039VN
+Mầu sắc	Xám
+Chất liệu	Nhôm
+Bộ vi xử lý	AMD Ryzen™ 9 5900HX
+Chipset	AMD SoC Platform
+Bộ nhớ trong	32G
+Số khe cắm	2
+Số khe RAM chờ	0
+Dung lượng tối đa	32G
+VGA	NVIDIA® GeForce® RTX™ 3080 16GB GDDR6
+Ổ cứng	1TB SSD M.2 2280 PCIe 3.0x4 NVMe
+Ổ quang	none
+Card Reader	none
+Bảo mật, công nghệ	Stereo speakers, 2W x2, Nahimic Audio, HARMAN-branded, Smart AMP with super line speaker, Firmware TPM 2.0, E-Camera shutter
+Màn hình	16" WQXGA (2560x1600) IPS 500nits Anti-glare, 165Hz, 100% sRGB, Dolby® Vision™, HDR 400, Free-Sync, G-Sync, DC dimmer
+Webcam	720p with E-camera Shutter
+Audio	High Definition (HD) Audio, Realtek® ALC3306 codec
+Giao tiếp mạng	100/1000M
+Giao tiếp không dây	Killer Wi-Fi® 6 AX1650 11ax, 2x2 + BT5.1
+Cổng giao tiếp	-          1x Power connector-          1x Ethernet (RJ-45)-          1x USB 3.2 Gen 1 (Always On)-          1x USB-C 3.2 Gen 1 (support data transfer only)-          1x USB-C 3.2 Gen 2 (support data transfer and DisplayPort™ 1.4)-          1x Headphone / microphone combo jack (3.5mm)-          2x USB 3.2 Gen 1-          1x HDMI® 2.1 1x USB-C 3.2 Gen 2 (support data transfer, Power Delivery 100W and DisplayPort 1.4)
+Pin	Integrated 80Wh
+Kích thước (rộng x dài x cao)	360 x 260 x 20.1-23.5 mm
+Cân nặng	2.5 kg
+Hệ điều hành	Windows® 10 Home 64, English
+Phụ kiện đi kèm	adapter

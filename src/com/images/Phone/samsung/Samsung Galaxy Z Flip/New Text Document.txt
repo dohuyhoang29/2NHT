@@ -1,0 +1,12 @@
+Màn hình	6.7", FHD+, Chính: Dynamic AMOLED, phụ: Super AMOLED, 1080 x 2636 Pixel
+Camera sau	12.0 MP + 12.0 MP
+Camera Selfie	10.0 MP
+RAM 	8 GB
+Bộ nhớ trong	256 GB
+CPU	Snapdragon 855+
+GPU	Adreno 640 700MHz
+Dung lượng pin	3300 mAh
+Thẻ sim	2, 1 eSIM, 1 Nano SIM
+Hệ điều hành	Android 10.0
+Xuất xứ	Việt Nam
+Thời gian ra mắt	02/2020

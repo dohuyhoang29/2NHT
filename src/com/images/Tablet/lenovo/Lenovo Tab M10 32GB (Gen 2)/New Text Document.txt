@@ -1,0 +1,12 @@
+Màn hình	10.1" , HD , IPS , 1280 x 800 Pixel
+Camera sau	8.0 MP
+Camera Selfie	5.0 MP
+RAM 	2 GB
+Bộ nhớ trong	32 GB
+CPU	MediaTek Helio P22 (MT6762R)
+GPU	IMG PowerVR GE8320
+Dung lượng pin	5000 mAh
+Thẻ sim	1 , Nano SIM
+Hệ điều hành	Android 10.0
+Xuất xứ	Trung Quốc
+Thời gian ra mắt	07/2020

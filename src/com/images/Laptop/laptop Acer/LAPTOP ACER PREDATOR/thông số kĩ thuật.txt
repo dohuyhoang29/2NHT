@@ -1,0 +1,28 @@
+Hãng sản xuất	Acer
+Chủng loại	Predator Helios 300 PH315-54-75YD (2021)
+Part Number	NH.QC2SV.002
+Mầu sắc, chất liệu	Đen
+Cover A,C: nhômCover B,D: nhựa cứng Polycarbonate
+Bộ vi xử lý	Intel® Core™ i7-11800H (2.4Ghz/24MB cache)– CPU thế hệ 11 mới nhất
+Chipset	Intel
+Bộ nhớ trong	16GB DDR4 3200Mhz (2* 8GB)
+Số khe cắm	2
+Dung lượng tối đa	
+32GB
+VGA	NVIDIA® GeForce® RTX 3060 6G-GDDR6
+Ổ cứng	512GB SSD PCIe NVMe
+(nâng cấp tối đa 2TB SSD PCIe NVMe và 2TB HDD 2.5-inch 5400 RPM)
+Ổ quang	None
+Card Reader	None
+Bảo mật, công nghệ	Đèn bàn phím RGB 4 Zone; Quạt Aero Blade 3D thế hệ thứ 5; Firmware Trusted Platform Module (TPM) solution BIOS user, supervisor, HDD passwords, Kensington lock slot
+Màn hình	15.6 inch QHD (2560x1440) 165Hz SlimBezel, 300nits Acer ComfyView LED-backlit
+Webcam	HD
+Audio	Acer TrueHarmony technology; Acer Purified
+Giao tiếp mạng	Gigabit
+Giao tiếp không dây	 802.11 ax +Bluetooth 5.1
+Cổng giao tiếp	USB Type-C port: USB 3.2 Gen 2 (up to 10 Gbps)• DisplayPort over USB-C• Thunderbolt 4• USB charging 5 V; 3 A1 x USB 3.2 Gen 2 port featuring power-off USB charging, 2 x USB 3.2 Gen 1 ports, 1 x HDMI®2.1, 1 x Mini DisplayPort 1.4, 3.5 mm headphone/speaker jack, DC-in jack for AC adapter
+Pin	59 Wh
+Kích thước (rộng x dài x cao)	363 (W) x 255 (D) x 22.9 (H) mm
+Cân nặng	2.3kg 
+Hệ điều hành	Win 10 Home
+Phụ kiện đi kèm	Cable + Sạc

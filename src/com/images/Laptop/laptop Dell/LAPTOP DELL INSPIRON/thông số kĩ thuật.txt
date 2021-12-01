@@ -1,0 +1,25 @@
+Hãng sản xuất	Dell
+Chủng loại	Inspiron 7400 – Bảo hành tận nơi
+Part number	N4I5134W
+Mầu sắc	Bạc
+Bộ vi xử lý	Intel Core i5 1135G7 (2.4Ghz Upto 4.2Ghz/8MB cache)
+Chipset	Intel
+Bộ nhớ trong	16GB LPDDR4X 4267Mhz
+Số khe cắm	No
+Dung lượng tối đa	 
+VGA	Nvidia Geforce MX350 2G DDR5
+Ổ cứng	512GB PCIe NVMe SSD
+Ổ quang	No
+Card Reader	Micro SD
+Bảo mật, công nghệ	Finger Print
+Màn hình	14.5 inch IPS QHD (2560x1600) 16:10 Truelife 300nits 100%sGRB
+Webcam	HD
+Audio	Realtek ALC3204, 2x2.5W
+Giao tiếp mạng	 
+Giao tiếp không dây	Intel® Wi-Fi 6 2x2 (Gig+) and Bluetooth
+Cổng giao tiếp	1x USB 3.2, 2x USB 3.2, 1x HDMI 2.0, Audio jack (3.5 mm)
+Pin	4 cell 52Wh
+Kích thước	321.6 x 224.5 x 14.2 (mm)
+Cân nặng	1.45Kg
+Hệ điều hành	Win 10 Home SL 64
+Phụ kiện đi kèm	AC Adapter

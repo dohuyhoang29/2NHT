@@ -1,0 +1,12 @@
+Màn hình	10.4" , FHD , TFT LCD , 1200 x 2000 Pixel
+Camera sau	8.0 MP
+Camera Selfie	5.0 MP
+RAM 	3 GB
+Bộ nhớ trong	64 GB
+CPU	Snapdragon 662
+GPU	Adreno 610
+Dung lượng pin	7040 mAh
+Thẻ sim	1 , Nano SIM
+Hệ điều hành	Android 10.0
+Xuất xứ	Việt Nam
+Thời gian ra mắt	09/2020

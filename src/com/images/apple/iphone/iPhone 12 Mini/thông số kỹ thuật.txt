@@ -1,0 +1,71 @@
+Màn hình
+
+Kích thước màn hình	5.4 inches
+Công nghệ màn hình	OLED
+Độ phân giải màn hình	1080 x 2340 pixels (FullHD+)
+Tính năng màn hình	HDR10
+Dolby Vision
+True-tone 
+Camera sau
+
+Camera sau	12 MP, f/1.6, 26mm (wide), 1.4µm, dual pixel PDAF, OIS
+12 MP, f/2.4, 120˚, 13mm (ultrawide), 1/3.6"
+Quay video	Trước: 4K@24/30/60fps, 1080p@30/60/120fps, gyro-EIS
+Sau: 4K@24/30/60fps, 1080p@30/60/120/240fps, HDR, Dolby Vision HDR (up to 30fps), stereo sound rec.
+Tính năng camera	Nhãn dán (AR Stickers)
+Retina Flash
+Ban đêm (Night Mode)
+Trôi nhanh thời gian (Time Lapse)
+Quay chậm (Slow Motion)
+Xóa phông
+Zoom quang học
+Toàn cảnh (Panorama)
+Tự động lấy nét (AF)
+Nhận diện khuôn mặt
+HDR 
+Camera trước
+
+Camera trước	12 MP, f/2.2, 23mm (wide), 1/3.6"
+SL 3D, (depth/biometrics sensor)
+Quay video trước	4K@24/30/60fps, 1080p@30/60/120fps, gyro-EIS 
+Vi xử lý & đồ họa
+
+Chipset	Apple A14 Bionic (5 nm)
+Loại CPU	Hexa-core
+GPU	Apple GPU (4-core graphics) 
+RAM & lưu trữ
+
+Dung lượng RAM	4 GB
+Bộ nhớ trong	64 GB
+Khe cắm thẻ nhớ	Không 
+Pin & công nghệ sạc
+
+Pin	Li-Ion, sạc nhanh 20W, sạc không dây 15W, USB Power Delivery 2.0
+Công nghệ sạc	Sạc nhanh 20W
+Sạc nhanh không dây 15W
+Power Delivery 2.0
+Cổng sạc	Lightning 
+Giao tiếp & kết nối
+
+Thẻ SIM	2 SIM (nano‑SIM và eSIM)
+Hệ điều hành	iOS 14.1 hoặc cao hơn (Tùy vào phiên bản phát hành)
+Hồng ngoại	Không
+Jack tai nghe 3.5	Không
+Công nghệ NFC	Có
+Wi-Fi	Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot
+Bluetooth	5.0, A2DP, LE
+GPS	A-GPS, GLONASS, GALILEO, QZSS 
+Thiết kế & Trọng lượng
+
+Kích thước	131.5 x 64.2 x 7.4 mm
+Trọng lượng	135 g
+Chất liệu mặt lưng	Kính
+Chất liệu khung viền	Kim loại 
+Thông số khác
+
+Chỉ số kháng nước, bụi	IP68 
+Tiện ích khác
+
+Cảm biến vân tay	Không
+Các loại cảm biến	Cảm biến ánh sáng, Cảm biến áp kế, Cảm biến gia tốc, Cảm biến tiệm cận, Con quay hồi chuyển, La bàn
+Tính năng đặc biệt	Sạc không dây

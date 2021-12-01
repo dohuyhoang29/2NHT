@@ -1,0 +1,12 @@
+Màn hình	6.5", HD+, IPS LCD, 720 x 1600 Pixel
+Camera sau	13.0 MP + 2.0 MP
+Camera Selfie	8.0 MP
+RAM 	4 GB
+Bộ nhớ trong	64 GB
+CPU	Helio G85
+GPU	Mali-G52 MC2
+Dung lượng pin	6000 mAh
+Thẻ sim	2, Nano SIM
+Hệ điều hành	Android 10.0
+Xuất xứ	Trung Quốc
+Thời gian ra mắt	03/2021

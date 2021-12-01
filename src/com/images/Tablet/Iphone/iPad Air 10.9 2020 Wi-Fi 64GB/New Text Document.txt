@@ -1,0 +1,11 @@
+Màn hình	10.9" , Liquid Retina HD , IPS LCD , 2360 x 1640 Pixel
+Camera sau	12.0 MP
+Camera Selfie	7.0 MP
+RAM 	4 GB
+Bộ nhớ trong	64 GB
+CPU	A14 Bionic
+GPU	Apple GPU 4 nhân
+Thẻ sim	0
+Hệ điều hành	iPadOS
+Xuất xứ	Trung Quốc
+Thời gian ra mắt	09/2020

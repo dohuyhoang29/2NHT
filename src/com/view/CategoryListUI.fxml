@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.CategoryListController">
+  <top>
+    <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" spacing="10.0" styleClass="background_main" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+      <children>
+        <HBox alignment="CENTER" prefHeight="81.0" prefWidth="223.0" styleClass="background-logo" stylesheets="@../css/style.css">
+          <children>
+            <ImageView fitHeight="60.0" fitWidth="190.0" onMousePressed="#goToDashboard" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/logo.png" />
+              </image>
+            </ImageView>
+          </children>
+          <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+          </padding>
+        </HBox>
+        <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+        <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="84.0" prefWidth="246.0" spacing="10.0">
+          <children>
+            <ImageView fx:id="changeLanguage" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#showChangeLanguageMousePressed" onMousePressed="#showChangeLanguageMousePressed" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/ic_usa.png" />
+              </image>
+              <HBox.margin>
+                <Insets right="15.0" />
+              </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/user.png" />
+              </image>
+            </ImageView>
+            <Label fx:id="username" text="Do Huy Hoang" textFill="#667777">
+              <font>
+                <Font size="16.0" />
+              </font>
+            </Label>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_logout.png" />
+                     </image>
+                  </ImageView>
+          </children>
+        </HBox>
+      </children>
+         <padding>
+            <Insets right="50.0" />
+         </padding>
+    </HBox>
+  </top>
+  <left>
+    <VBox alignment="TOP_CENTER" prefHeight="870.0" prefWidth="223.0" spacing="10.0" styleClass="background-logo" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+      <children>
+        <HBox fx:id="dashboard" alignment="CENTER_LEFT" onMousePressed="#goToDashboard" spacing="5.0" style="-fx-background-color: #234;">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/ic_dashboard.png" />
+              </image>
+              <HBox.margin>
+                <Insets left="30.0" />
+              </HBox.margin>
+            </ImageView>
+            <Label text="%dashboard" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="20.0" />
+              </font>
+            </Label>
+          </children>
+        </HBox>
+        <HBox fx:id="addProduct" alignment="CENTER_LEFT" onMousePressed="#goToInsertProduct" spacing="5.0" style="-fx-background-color: #234;">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" onMousePressed="#goToInsertProduct" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/ic_product.png" />
+              </image>
+              <HBox.margin>
+                <Insets left="30.0" />
+              </HBox.margin>
+            </ImageView>
+            <Label text="%addProduct" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="20.0" />
+              </font>
+            </Label>
+          </children>
+        </HBox>
+        <HBox fx:id="productList" alignment="CENTER_LEFT" onMousePressed="#goToProductList" spacing="5.0" style="-fx-background-color: #234;">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/ic_product_list.png" />
+              </image>
+              <HBox.margin>
+                <Insets left="30.0" />
+              </HBox.margin>
+            </ImageView>
+            <Label text="%productList" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="20.0" />
+              </font>
+            </Label>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" onMouseClicked="#goToAccountList" spacing="5.0" style="-fx-background-color: #234;">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/ic_account.png" />
+              </image>
+              <HBox.margin>
+                <Insets left="30.0" />
+              </HBox.margin>
+            </ImageView>
+            <Label text="%accountList" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="20.0" />
+              </font>
+            </Label>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" onMouseClicked="#goToCategoryList" spacing="5.0" style="-fx-background-color: #234;">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/ic_category.png" />
+              </image>
+              <HBox.margin>
+                <Insets left="30.0" />
+              </HBox.margin>
+            </ImageView>
+            <Label text="%categoryList" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="20.0" />
+              </font>
+            </Label>
+          </children>
+        </HBox>
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#goToOrder" spacing="5.0" style="-fx-background-color: #234;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_order.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="%orders" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+      </children>
+      <padding>
+        <Insets top="15.0" />
+      </padding>
+    </VBox>
+  </left>
+  <center>
+    <StackPane BorderPane.alignment="CENTER">
+      <children>
+        <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+          <children>
+            <VBox fx:id="changeLanguageContainer" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-background-radius: 5;" styleClass="background_main" stylesheets="@../css/style.css" visible="false">
+              <children>
+                <HBox alignment="CENTER" maxWidth="-Infinity">
+                  <children>
+                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../images/ic_usa.png" />
+                      </image>
+                    </ImageView>
+                    <Label text="American" textFill="#667777">
+                      <font>
+                        <Font size="14.0" />
+                      </font>
+                    </Label>
+                  </children>
+                  <VBox.margin>
+                    <Insets />
+                  </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER" maxWidth="-Infinity">
+                  <children>
+                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../images/ic_vietnam.png" />
+                      </image>
+                    </ImageView>
+                    <Label text="Vietnamese" textFill="#667777">
+                      <font>
+                        <Font size="14.0" />
+                      </font>
+                    </Label>
+                  </children>
+                  <VBox.margin>
+                    <Insets />
+                  </VBox.margin>
+                </HBox>
+              </children>
+              <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+              </padding>
+              <HBox.margin>
+                <Insets right="100.0" />
+              </HBox.margin>
+            </VBox>
+          </children>
+        </HBox>
+        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="background" stylesheets="@../css/style.css">
+          <children>
+            <Label text="Category List">
+              <font>
+                <Font name="System Bold" size="20.0" />
+              </font>
+              <VBox.margin>
+                <Insets bottom="15.0" top="15.0" />
+              </VBox.margin>
+            </Label>
+            <VBox prefHeight="507.0" prefWidth="730.0" spacing="10.0" style="-fx-background-color: fff; -fx-background-radius: 10;">
+              <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+              </padding>
+              <children>
+                <Button fx:id="btnAddCategory" mnemonicParsing="false" onAction="#addCategory" style="-fx-background-color: #56d;" text="+   Add Category" textFill="WHITE">
+                  <font>
+                    <Font size="16.0" />
+                  </font>
+                </Button>
+                <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="967.0" spacing="10.0">
+                  <children>
+                    <TextField fx:id="txtSearchCategory" prefHeight="30.0" prefWidth="274.0" promptText="Search">
+                      <font>
+                        <Font size="14.0" />
+                      </font>
+                    </TextField>
+                    <Button fx:id="btnSearch" mnemonicParsing="false" style="-fx-background-color: #56d;" text="Search" textFill="WHITE">
+                      <font>
+                        <Font size="14.0" />
+                      </font>
+                    </Button>
+                  </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="967.0">
+                  <children>
+                    <Label prefHeight="25.0" prefWidth="197.0" text="Name">
+                      <font>
+                        <Font size="16.0" />
+                      </font>
+                    </Label>
+                    <Label prefHeight="25.0" prefWidth="611.0" text="Description">
+                      <font>
+                        <Font size="16.0" />
+                      </font>
+                    </Label>
+                    <Label alignment="CENTER" prefHeight="25.0" prefWidth="148.0" text="Actions">
+                      <font>
+                        <Font size="16.0" />
+                      </font>
+                    </Label>
+                  </children>
+                  <padding>
+                    <Insets left="10.0" />
+                  </padding>
+                </HBox>
+                <ScrollPane prefHeight="200.0" prefWidth="967.0" style="-fx-background-color: #fff;" styleClass="transparent" stylesheets="@../css/style.css" VBox.vgrow="ALWAYS">
+                  <content>
+                    <VBox fx:id="itemLayout" prefHeight="327.0" prefWidth="970.0" style="-fx-background-color: #fff;" />
+                  </content>
+                </ScrollPane>
+              </children>
+            </VBox>
+          </children>
+          <padding>
+            <Insets bottom="10.0" left="25.0" right="10.0" top="10.0" />
+          </padding>
+        </VBox>
+      </children>
+    </StackPane>
+  </center>
+</BorderPane>

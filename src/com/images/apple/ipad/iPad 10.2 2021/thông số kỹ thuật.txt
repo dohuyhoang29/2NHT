@@ -1,0 +1,35 @@
+Màn hình
+
+Kích thước màn hình	10.2 inches
+Công nghệ màn hình	Liquid Retina
+Tính năng màn hình	Retina IPS LCD, 500 nits (typ) 
+Camera sau
+
+Camera sau	Camera góc siêu rộng 12MP
+Quay video	1080p@25/30fps, 720p@120fps; gyro-EIS 
+Vi xử lý & đồ họa
+
+Chipset	A13 Bionic
+GPU	Apple GPU 4 nhân 
+RAM & lưu trữ
+
+Bộ nhớ trong	256 GB 
+Pin & công nghệ sạc
+
+Pin	32.4 Wh (~ 8600 mAh)
+Công nghệ sạc	Sạc nhanh 20W
+Cổng sạc	Lightning 
+Giao tiếp & kết nối
+
+Hệ điều hành	iOS
+Jack tai nghe 3.5	Có
+Công nghệ NFC	Không
+Wi-Fi	Wi-Fi 802.11 a/b/g/n/ac, Wi-Fi Direct, Wi-Fi hotspot
+Bluetooth	A2DP, LE, v4.2 
+Thiết kế & Trọng lượng
+
+Kích thước	(250.6 x 174.1 x 7.5 mm
+Trọng lượng	498g 
+Tiện ích khác
+
+Các loại cảm biến	Cảm biến ánh sáng, Cảm biến áp kế, Cảm biến tiệm cận, Con quay hồi chuyển

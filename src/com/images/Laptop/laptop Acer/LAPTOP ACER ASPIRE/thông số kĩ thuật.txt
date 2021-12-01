@@ -1,0 +1,27 @@
+Hãng sản xuất	Acer
+Chủng loại	Aspire 7 A715-42G-R6ZR (2021) – model giải trí, gaming
+Part Number	NH.QAYSV.003
+Mầu sắc	Đen (Charcoal Black)
+Bộ vi xử lý	AMD Ryzen™ 5 5500U (2.1GHz/8MB cache)
+Chipset	 
+Bộ nhớ trong	8GB DDR4
+Số khe cắm	2
+Dung lượng tối đa	
+32GB
+VGA	NVIDIA® GeForce® GTX 1650 4G-GDDR6
+Ổ cứng	512GB SSD PCIe NVMe
+(nâng cấp tối đa 1TB SSD)
+Ổ quang	None
+Card Reader	None
+Bảo mật, công nghệ	Đèn bàn phím; 2 quạt Tản nhiệt ; bản lề mở góc 180o
+Màn hình	15.6 inch FHD IPS (1920 x 1080) ComfyView IPS LED LCD 144Hz
+Webcam	HD
+Audio	Two built-in stereo speakers
+Giao tiếp mạng	Gigabit
+Giao tiếp không dây	 802.11a/b/g/n/acR2+ax +Bluetooth 5.1
+Cổng giao tiếp	2 x USB 3.2 Gen 1 ports with one featuring power-off USB charging , 1 x USB Type-C port: USB 3.2 Gen 1 (up to 5 Gbps), 1 x USB 2.0 port, 1 x 3.5 mm headphone/speaker jack, supporting headsets with built-in, microphone, 1 x HDMI® port with HDCP support , 1 x Ethernet (RJ-45) port,1 x DC-in jack for AC adapter
+Pin	48Wh Li-ion battery
+Kích thước (rộng x dài x cao)	363.4 (W) x 254.5 (D) x 22.9 (H) mm
+Cân nặng	2.1kg 
+Hệ điều hành	Win 10 Home
+Phụ kiện đi kèm	Cable + Sạc

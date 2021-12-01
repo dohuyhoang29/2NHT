@@ -1,0 +1,25 @@
+Hãng sản xuất	DELL
+Chủng loại	XPS 13 9310 (2021)
+Part Number	JGNH62
+Mầu sắc, chất liệu	Bạc – Vỏ nhôm khối
+Bộ vi xử lý	Intel® Core™ i7 1165G7 (2.8GHz upto 4.7Ghz, 12MB cache)
+Chipset	Intel®
+Bộ nhớ trong	16GB LPDDR4 4267Mhz (onboard)
+Số khe cắm	No
+Dung lượng tối đa	 
+VGA	Intel Iris Xe Graphics
+Ổ cứng	512GB  M.2 2280 PCIe NVMe Gen3 x4
+Ổ quang	No
+Card Reader	Micro SD
+Bảo mật, Công nghệ	Led Keyboard, Finger Print
+Màn hình	13.4-inch UHD+ (3840 x 2400), 60 Hz, anti-reflective, touch, InfinityEdge, 90% DCI-P3 typical, 500 nits, wide-viewing angle
+Webcam	HD
+Audio	speakers (2.5W x 2) with Waves MaxxAudio® Pro 
+Giao tiếp mạng	 
+Giao tiếp không dây	802.11 AX;  Bluetooth 5.1
+Cổng giao tiếp	2 Thunderbolt™ 4 (USB Type C) (w/ power delivery) ; 1 Headphone/ Microphone Combo jack
+Pin	4 cell – 52Whr
+Kích thước (rộng x dài x cao)	 
+Cân nặng	1.27kg
+Hệ điều hành	Win 10 Home
+Phụ kiện đi kèm	AC Adapter

@@ -1,0 +1,27 @@
+Hãng sản xuất	Lenovo
+Chủng loại	IdeaPad 5 14ALC05
+Part Number	82LM00D5VN
+Mầu sắc	Xám
+Chất liệu	Mặt A nhôm, Mặt dưới nhựa ABS
+Bộ vi xử lý	AMD Ryzen™ 7 5700U
+Chipset	AMD SoC Platform
+Bộ nhớ trong	8GB onboard
+Số khe cắm	0
+Số khe RAM chờ	0 (không hỗ trợ nâng cấp)
+Dung lượng tối đa	8GB
+VGA	Integrated AMD Radeon™ Graphics
+Ổ cứng	512GB SSD M.2 2242 PCIe 3.0x4 NVMe (không còn slot trống)
+Ổ quang	none
+Card Reader	4-in-1 Card Reader
+Bảo mật, công nghệ	Firmware TPM 2.0, Touch Style, Camera privacy shutter
+Màn hình	14" FHD
+Webcam	720p with Privacy Shutter
+Audio	High Definition (HD) Audio, Realtek® ALC3287 codec, Stereo speakers, 2W x2, Dolby® Audio™
+Giao tiếp mạng	None
+Giao tiếp không dây	11ac, 2x2 + BT5.0
+Cổng giao tiếp	-          1x card reader-          1x USB 3.2 Gen 1-          1x USB 3.2 Gen 1 (Always On)-          1x HDMI® 1.4b-          1x headphone / microphone combo jack (3.5mm) 1x USB-C 3.2 Gen 1 (support data transfer, Power Delivery 3.0 and DisplayPort™ 1.2-          1x power connector (plastic bottom models only)
+Pin	Integrated 44.5Wh
+Kích thước (rộng x dài x cao)	321.57 x 211.59 x 17.9-19.9 mm
+Cân nặng	1.39 kg
+Hệ điều hành	Win 10 home 64
+Phụ kiện đi kèm	Adapter

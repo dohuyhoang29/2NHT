@@ -1,0 +1,10 @@
+Màn hình	8.0" , WXGA , IPS , 1280 x 800 Pixel
+Camera sau	5.0 MP
+Camera Selfie	2.0 MP
+RAM 	1 GB
+Bộ nhớ trong	8 GB
+GPU	Mali-T400
+Dung lượng pin	4000 mAh
+Thẻ sim	2 , Micro SIM
+Hệ điều hành	Android 8.1
+Xuất xứ	--

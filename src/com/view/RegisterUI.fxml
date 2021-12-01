@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="350.0" style="-fx-background-color: #fff;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.RegisterController">
+   <children>
+      <ImageView fitHeight="532.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/background.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtEmail" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="372.0" prefHeight="40.0" prefWidth="310.0" promptText="          Email" style="-fx-background-radius: 50;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <TextField fx:id="txtPhone" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="427.0" prefHeight="40.0" prefWidth="310.0" promptText="          Mobile phone" style="-fx-background-radius: 50;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <TextField fx:id="txtUsername" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="207.0" prefHeight="40.0" prefWidth="310.0" promptText="        Username" style="-fx-background-radius: 50;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="show_tf" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="262.0" prefHeight="40.0" prefWidth="310.0" promptText="Show password" style="-fx-background-radius: 50;" visible="false" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <ImageView disable="true" fitHeight="15.0" fitWidth="22.0" layoutX="44.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/user-1.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="15.0" fitWidth="22.0" layoutX="44.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/mail.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="15.0" fitWidth="22.0" layoutX="44.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/phone.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="txtPassword" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="262.0" prefHeight="40.0" prefWidth="310.0" promptText="          Password" style="-fx-background-radius: 50;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <ImageView disable="true" fitHeight="15.0" fitWidth="22.0" layoutX="44.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lock.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="268.0" layoutY="64.0" mnemonicParsing="false" text="Button" visible="false" />
+      <PasswordField fx:id="txtConfirmPassword" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="317.0" prefHeight="40.0" prefWidth="310.0" promptText="          Password Verification" style="-fx-background-radius: 50;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <ImageView disable="true" fitHeight="15.0" fitWidth="22.0" layoutX="44.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lock.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnCreate" layoutX="116.0" layoutY="541.0" mnemonicParsing="false" onAction="#createUserAccount" prefHeight="37.0" prefWidth="118.0" style="-fx-background-color: #2c2c2c;" text="Register" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtAddress" alignment="CENTER" focusTraversable="false" layoutX="19.0" layoutY="482.0" prefHeight="40.0" prefWidth="310.0" promptText="      Address" style="-fx-background-radius: 50;" />
+      <ImageView disable="true" fitHeight="25.0" fitWidth="25.0" layoutX="39.0" layoutY="490.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/address.png" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="rdShowPass" focusTraversable="false" layoutX="302.0" layoutY="274.0" mnemonicParsing="false" onAction="#show_Password" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo_2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="28.0" fitWidth="31.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@../images/back_arrow.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="errUsername" layoutX="38.0" layoutY="247.0" textFill="RED" />
+      <Label fx:id="errAddress" layoutX="38.0" layoutY="521.0" textFill="RED" />
+      <Label fx:id="errPhone" layoutX="38.0" layoutY="467.0" textFill="RED" />
+      <Label fx:id="errEmail" layoutX="38.0" layoutY="412.0" textFill="RED" />
+      <Label fx:id="errConfirmPassword" layoutX="38.0" layoutY="357.0" textFill="RED" />
+      <Label fx:id="errPassword" layoutX="38.0" layoutY="302.0" textFill="RED" />
+   </children>
+</AnchorPane>

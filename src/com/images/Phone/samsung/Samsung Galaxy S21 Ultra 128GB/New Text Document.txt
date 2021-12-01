@@ -1,0 +1,12 @@
+Màn hình	6.8", WQHD+, Dynamic AMOLED 2X, 1440 x 3200 Pixel
+Camera sau	108.0 MP + 10.0 MP + 12.0 MP + 10.0 MP
+Camera Selfie	40.0 MP
+RAM 	12 GB
+Bộ nhớ trong	128 GB
+CPU	Exynos 2100
+GPU	ARM Mali-G78 MP14
+Dung lượng pin	5000 mAh
+Thẻ sim	2, 2 Nano SIM hoặc 1 eSIM, 1 Nano SIM
+Hệ điều hành	Android 11
+Xuất xứ	Việt Nam
+Thời gian ra mắt	01/2021

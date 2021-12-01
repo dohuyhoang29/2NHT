@@ -1,0 +1,33 @@
+Hãng sản xuất	Asus
+Chủng loại	G513IM-HN057T
+Part Number	90NR0522-M02660
+Mầu sắc	Eclipse Gray
+Bộ vi xử lý	AMD Ryzen™ 7 4800H Processor 2.9 GHz (8M Cache, up to 4.2 GHz)
+Chipset	N/A
+Tổng bộ nhớ hệ thống	16GB DDR4-3200 SO-DIMM
+Dung lượng tối đa	32GB
+IGPU	AMD Radeon™ Graphics
+Ổ cứng	512GB M.2 NVMe™ PCIe® 3.0 SSD
+Ổ quang	N/A
+Công nghệ đồng bộ hóa thích ứng	Adaptive-Sync
+Khe cắm bộ nhớ	2x SO-DIMM slots
+Cổng hỗ trợ M.2 SSD	M.2 512GB PCIeM.2 1TB PCIe
+Bảo mật, Công nghệ	BIOS Administrator Password and User Password Protection
+Màn hình	15.6-inch, FHD (1920 x 1080) 16:9,NTSC:45%,SRGB:62,5% , Brightness :250 nits 
+Webcam	N/A
+Audio Tech	AI mic noise-canceling
+Dolby Atmos Software
+Smart Amp Technology
+Hiển thị đầu ra	1x HDMI 2.0b
+Webcam	N/A
+Loại bàn phím	Backlit Chiclet Keyboard 4-Zone RGB
+Giao tiếp không dây	Wi-Fi 6(802.11ax)+Bluetooth 5.1 (Dual band) 2*2
+(*BT version may change with OS upgrades.) -RangeBoost
+Cổng giao tiếp	1x USB 3.2 Gen 2 Type-C support DisplayPort™ / power delivery
+3x USB 3.2 Gen 1 Type-A//1x 3.5mm Combo Audio Jack
+Pin	90WHrs, 4S1P, 4-cell Li-ion
+Kích thước (rộng x dài x cao)	35.4 x 25.9 x 2.26 ~ 2.72 cm
+1.80 kg	2.30 Kg
+Power	ø6.0, 240W AC Adapter, Output: 20V DC, 12A, 240W, Input: 100~240C AC 50/60Hz universal
+Hệ điều hành	Windows 10 bản quyền.
+Phụ kiện đi kèm	Dây sạc, pin sạc, sách hướng dẫn sử dụng

@@ -1,0 +1,25 @@
+Hãng sản xuất	Asus
+Chủng loại	ASUS ExpertBook B9400CE (1A – STAR BLACK)
+Part Number	 
+Mầu sắc	 
+Bộ vi xử lý	11th Gen Intel Core i7-1165G7 Processor (4 x 2.80 GHz), Max Turbo Frequency : 4.70 GHz
+Chipset	 
+Bộ nhớ trong	16GB onboard LPDDR4x/ 4267MHz
+Số khe cắm	 
+Dung lượng tối đa	 
+VGA	Intel Iris Xe Graphics
+Ổ cứng	1TB SSD1 PCIe (M.2 2280)
+Ổ quang	 
+Card Reader	 
+Bảo mật, Công nghệ	Fingerprint ; Face unlock ; Administrator/ User Password ; Set Admin Password ; I/O Interface Security : LAN Network Interface, Wireless Network and BlueTooth Interface, HD Audio Interface ; USB Interface Security : USB Interface, External Ports, CMOS Camera ; TPM ; Kensington lock slot
+Màn hình	14.0” inch FHD (1920 x 1080) Wide view, LED Backlit ; Anti-glare
+Webcam	HD UVC WebCam (privacy shutter) and IR UVC WebCam with array quad microphone
+Audio	Realtek High Definition Audio (sound by harman/kardon)
+Giao tiếp mạng	 
+Giao tiếp không dây	Bluetooth 5.0
+Cổng giao tiếp	1 x USB 3.1 Gen 2 Type-A ; 2 x USB Type-C (supports Thunderbolt 4, Power Delivery, DisplayPort) ; 1 x HDMI ; 1 x RJ45 via micro HDMI ; 1 x Headphone/Microphone combo audio jack ; 1 x SSD2 PCIe (M.2 2280)
+Pin	4 Cell Int (66Wh)
+Kích thước (rộng x dài x cao)	32.00 x 20.30 x 0.90 ~ 1.49 cm (W x D x H)
+Cân nặng	0.995 kg
+Hệ điều hành	Windows 10 Home Single Language 64-bit
+Phụ kiện đi kèm	

@@ -1,0 +1,12 @@
+Màn hình	8.0" , HD , IPS HD , 1280 x 800 Pixel
+Camera sau	5.0 MP
+Camera Selfie	2.0 MP
+RAM 	2 GB
+Bộ nhớ trong	32 GB
+CPU	Helio A22
+GPU	Integrated IMG PowerVR GE-class GPU
+Dung lượng pin	5000 mAh
+Thẻ sim	1 , Nano SIM
+Hệ điều hành	Android 9.0
+Xuất xứ	Trung Quốc
+Thời gian ra mắt	10/2019

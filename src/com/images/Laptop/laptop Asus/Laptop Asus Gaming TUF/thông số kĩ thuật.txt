@@ -1,0 +1,107 @@
+Hãng sản xuất
+
+Asus
+
+Chủng loại
+
+ASUS TUF Gaming F15
+
+Part Number
+
+FX506LH-HN002T
+
+Mầu sắc
+
+Fortress Gray
+
+Bộ vi xử lý
+
+Intel® Core™ i5-10300H Processor 2.5 GHZ (8M Cache, up to 4.5 GHz, 4 cores)
+
+Chipset
+
+Mobile Intel® HM470 Express Chipsets
+
+Bộ nhớ trong
+
+8GB DDR4 SO-DIMM(2933MHz for i5-10300H/i7-10750H/i7-10870H)
+
+Số khe cắm
+
+2x SO-DIMM slots
+
+Dung lượng tối đa
+
+ Up to 32GB
+
+VGA
+
+NVIDIA GeForce GTX 1650/ 4GB GDDR6
+
+Ổ cứng
+
+512GB M.2 NVMe™ PCIe® 3.0 SSD
+
+Ổ quang
+
+None
+
+Card Reader
+
+ 
+
+Bảo mật, Công nghệ
+
+ 
+
+Màn hình
+
+15.6" inch (16:9) LED-backlit FHD (1920 x 1080) 144Hz Anti-Glare IPS-level Panel with 45% NTSC with Adaptive GSyncN/A , 250 nits, Adobe % 47.1%, SRGB 62.5%.
+
+Webcam
+
+720P HD camera
+
+Audio
+
+HD Audio (DTS:X Ultra)
+
+Giao tiếp mạng
+
+10/100/1000 Mbps
+
+Giao tiếp không dây
+
+Intel Wi-Fi 6(Gig+)(802.11ax)+Bluetooth 5.1 (Dual band) 2*2
+(*BT version may change with OS upgrades.) -RangeBoost
+
+Cổng giao tiếp
+
+1x Type A USB 2.0
+
+1x Type C USB 3.2 Gen 2 with Display Port and G-Sync
+
+2x Type A USB 3.2 Gen 1//1x 3.5mm Combo Audio Jack
+
+Pin
+
+48WHrs, 3S1P, 3-cell Li-ion
+
+Kích thước (rộng x dài x cao)
+
+35.9 x 25.6 x 2.47 ~ 2.49 cm
+
+Cân nặng
+
+2.30 Kg
+
+Hệ điều hành
+
+Windows 10 Home - ASUS recommends Windows 10 Pro for business,
+
+1-month trial for new Microsoft 365 customers. Credit card required.
+
+Phụ kiện đi kèm
+
+ø6.0, 150W AC Adapter, Output: 20V DC, 7.5A, 150W, Input: 100~240V AC, 50/60Hz universal
+

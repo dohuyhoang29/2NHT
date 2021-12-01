@@ -1,0 +1,12 @@
+Màn hình	6.67", FHD+, IPS LCD, 2440 x 1080 Pixel
+Camera sau	108.0 MP + 13.0 MP + 5.0 MP
+Camera Selfie	20.0 MP
+RAM 	8 GB
+Bộ nhớ trong	128 GB
+CPU	Snapdragon 865
+GPU	Adreno 650
+Dung lượng pin	5000 mAh
+Thẻ sim	2, Nano SIM
+Hệ điều hành	Android 10.0
+Xuất xứ	Trung Quốc
+Thời gian ra mắt	09/2020

@@ -1,0 +1,115 @@
+Hãng sản xuất
+
+Lenovo
+
+Chủng loại
+
+Thinkbook 13s Gen 2
+
+Part Number
+
+20V9002GVN
+
+Mầu sắc
+
+Xám
+
+Chất liệu
+
+Nhôm
+
+Bộ vi xử lý
+
+Intel Core i7-1165G7
+
+Chipset
+
+Intel SoC Platform
+
+Bộ nhớ trong
+
+8GB Soldered LPDDR4x-4266 (ram hàn chết trên main)
+
+Số khe cắm
+
+0
+
+Số khe RAM chờ
+
+Không
+
+Dung lượng tối đa
+
+8GB
+
+VGA
+
+Integrated Intel Iris Xe Graphics
+
+Ổ cứng
+
+512GB SSD M.2 2242 PCIe 3.0x4 NVMe
+
+Ổ quang
+
+Không
+
+Card Reader
+
+Không
+
+Bảo mật, công nghệ
+
+Stereo speakers, 2W x2, Dolby Audio, HARMAN-branded, Discrete TPM 2.0, Touch Style, Kensington Nano Security Slot, ThinkShutter camera cover
+
+Màn hình
+
+13.3" WQXGA (2560x1600) Low power IPS 300nits Anti-glare, 100% sRGB, Dolby Vision
+
+Webcam
+
+720p with ThinkShutter
+
+Audio
+
+High Definition (HD) Audio, Realtek ALC3306 codec
+
+Giao tiếp mạng
+
+Không
+
+Giao tiếp không dây
+
+Intel AX201 11ax, 2x2 + BT5.1
+
+Cổng giao tiếp
+
+1x USB 3.2 Gen 1
+
+1x USB 3.2 Gen 1 (Always On)
+
+1x Thunderbolt 4 / USB4 40Gbps (support data transfer, Power Delivery 3.0 and DisplayPort 1.4)
+
+1x HDMI 2.0b
+
+1x headphone / microphone combo jack (3.5mm)
+
+Pin
+
+Integrated 56Wh
+
+Kích thước (rộng x dài x cao)
+
+299 x 210 x 14.9 mm
+
+Cân nặng
+
+1.26 kg
+
+Hệ điều hành
+
+Win 10 home
+
+Phụ kiện đi kèm
+
+Adapter

@@ -1,0 +1,103 @@
+Hãng sản xuất
+
+Acer
+
+Chủng loại
+
+Nitro 5 AN515-45-R9SC (2021)
+
+Part Number
+
+NH.QBRSV.001
+
+Mầu sắc
+
+Đen
+
+Bộ vi xử lý
+
+AMD Ryzen 7 5800H (8*3.2Ghz, upto 4.4Ghz)
+
+Chipset
+
+AMD
+
+Bộ nhớ trong
+
+8GB DDR4 3200Mhz
+
+Số khe cắm
+
+2
+
+Dung lượng tối đa
+
+ 
+
+32GB
+
+VGA
+
+NVIDIA® GeForce RTX™ 3070 with 8GB GDDR6
+
+Ổ cứng
+
+512GB SSD PCIe NVMe
+(nâng cấp tối đa 2TB SSD và 2TB HDD 2.5-inch)
+
+Ổ quang
+
+None
+
+Card Reader
+
+None
+
+Bảo mật, công nghệ
+
+Đèn bàn phím RGB 4 Zone; Tản nhiệt 2 quạt
+
+Màn hình
+
+15.6 inch FHD IPS (1920 x 1080) 144Hz slim benzel
+
+Webcam
+
+HD
+
+Audio
+
+Acer TrueHarmony technology; Acer Purified
+
+Giao tiếp mạng
+
+Gigabit
+
+Giao tiếp không dây
+
+ 802.11 SX +Bluetooth 5.0
+
+Cổng giao tiếp
+
+1 x USB 3.2 Gen 2 port featuring power-off USB charging; 2 x USB 3.2 Gen 1 ports; 1 x HDMI® 2.0 port with HDCP support; 1 x Ethernet (RJ-45) port; 1 x USB Type-C port: USB 3.2 Gen 2 (up to 10 Gbps); 1 x 3.5 mm headphone/speaker jack, supporting headsets with built-in
+microphone; 1 x DC-in jack for AC adapter
+
+Pin
+
+57 Wh
+
+Kích thước (rộng x dài x cao)
+
+363.4 (W) x 255 (D) x 23.9 (H) mm
+
+Cân nặng
+
+2.2 kg 
+
+Hệ điều hành
+
+Win 10 Home
+
+Phụ kiện đi kèm
+
+Cable + Sạc

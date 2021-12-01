@@ -1,0 +1,99 @@
+Hãng sản xuất
+
+HP
+
+Chủng loại
+
+HP ProBook 430 G8 (SILVER)
+
+Part Number
+
+2H0P0PA
+
+Mầu sắc
+
+Silver
+
+Bộ vi xử lý
+
+11th Gen Intel Core i7-1165G7 Processor (2.80 GHz), Max Turbo Frequency : 4.70 GHz
+
+Chipset
+
+Intel
+
+Bộ nhớ trong
+
+2 x4GB DDR4/ 3200MHz (2 slots)
+
+Số khe cắm
+
+2
+
+Dung lượng tối đa
+
+32GB
+
+VGA
+
+Intel Iris Xe Graphics
+
+Ổ cứng
+
+512GB SSD PCIe (M.2 2280) (không còn khe trống, nâng cấp thay thế)
+
+Ổ quang
+
+No
+
+Card Reader
+
+Micro-SD card (support SD/SDHC/SDXC)
+
+Bảo mật, công nghệ
+
+Fingerprint ; BIOS Administrator Password ; POST Power-On Password ; TPM Embedded Security ; BIOS Sure Start ; Secure Boot Configuration ; Secure Platform Management (SPM) ; Security cable slot
+
+Màn hình
+
+13.3" inch diagonal FHD (1920 x 1080) 60Hz ; Anti-glare
+
+Webcam
+
+HP HD Camera with dual-array microphone
+
+Audio
+
+Realtek High Definition Audio
+
+Giao tiếp mạng
+
+ 
+
+Giao tiếp không dây
+
+Bluetooth 5.0, 802.11 ax
+
+Cổng giao tiếp
+
+1 x USB 3.1 Gen 1 Type-A (supports power port) ; 1 x USB 3.1 Gen 1 Type-A (supports charging) ; 1 x USB 3.1 Gen 1 Type-C (supports DisplayPort) ; 1 x HDMI ; 1 x Headphone/Microphone combo audio jack
+
+Pin
+
+3 Cell Int (45Wh)
+
+Kích thước (rộng x dài x cao)
+
+30.69 x 20.84 x 1.59 cm (W x D x H)
+
+Cân nặng
+
+1.264 kg
+
+Hệ điều hành
+
+Windows 10 Home Single Language 64-bit
+
+Phụ kiện đi kèm
+
+Sách hướng dẫn, AC Adapter 65W

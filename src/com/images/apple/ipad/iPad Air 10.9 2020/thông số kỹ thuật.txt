@@ -1,0 +1,42 @@
+Màn hình
+
+Kích thước màn hình	10.9 inches
+Công nghệ màn hình	IPS LCD
+Độ phân giải màn hình	1640 x 2360 pixels 
+Camera sau
+
+Camera sau	12 MP góc rộng,khẩu độ f/1.8
+Quay video	Trước: 1080p@30/60fps
+Sau: 4K@24/30/60fps
+1080p@30/60/120/240fps; 
+Camera trước
+
+Camera trước	7 MP, khẩu độ f/2.2 
+Vi xử lý & đồ họa
+
+Chipset	Apple A14 Bionic
+Loại CPU	2 nhân 3.0GHz
+4 nhân 1.8GHz
+GPU	Apple GPU 
+RAM & lưu trữ
+
+Bộ nhớ trong	256 GB 
+Pin & công nghệ sạc
+
+Pin	Khoảng 7600 mAh
+Công nghệ sạc	Sạc nhanh 20W
+Cổng sạc	USB Type-C 
+Giao tiếp & kết nối
+
+Hệ điều hành	iOS
+Wi-Fi	802.11ax Wi-Fi 6, dual-band, hotspot
+Bluetooth	Bluetooth 5.0
+GPS	GPS/GNSS 
+Thiết kế & Trọng lượng
+
+Kích thước	Dài 247.6 mm - Ngang 178.5 mm - Dày 6.1 mm
+Trọng lượng	458 g
+Chất liệu mặt lưng	Kim loại 
+Tiện ích khác
+
+Cảm biến vân tay	Cảm biến vân tay cạnh bên

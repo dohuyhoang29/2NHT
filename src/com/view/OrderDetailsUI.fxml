@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.OrderDetailsController">
+  <top>
+    <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" spacing="10.0" styleClass="background_main" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+      <children>
+        <HBox alignment="CENTER" prefHeight="81.0" prefWidth="223.0" styleClass="background-logo" stylesheets="@../css/style.css">
+          <children>
+            <ImageView fitHeight="60.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/logo.png" />
+              </image>
+            </ImageView>
+          </children>
+          <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+          </padding>
+        </HBox>
+        <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+        <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="84.0" prefWidth="246.0" spacing="10.0">
+          <children>
+            <ImageView fx:id="changeLanguage" fitHeight="30.0" fitWidth="30.0" onMousePressed="#showChangeLanguageMousePressed" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/ic_usa.png" />
+              </image>
+              <HBox.margin>
+                <Insets right="15.0" />
+              </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/user.png" />
+              </image>
+            </ImageView>
+            <Label fx:id="username" text="Do Huy Hoang" textFill="#667777">
+              <font>
+                <Font size="16.0" />
+              </font>
+            </Label>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_logout.png" />
+                     </image>
+                  </ImageView>
+          </children>
+        </HBox>
+      </children>
+         <padding>
+            <Insets right="50.0" />
+         </padding>
+    </HBox>
+  </top>
+  <left>
+
+    <VBox alignment="TOP_CENTER" prefHeight="570.0" prefWidth="223.0" spacing="10.0" styleClass="background-logo" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+      <children>
+        <HBox fx:id="dashboard" alignment="CENTER_LEFT" onMousePressed="#goToDashboard" spacing="5.0">
+          <children>
+            <ImageView fx:id="imgdashboard" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/ic_dashboard.png" />
+              </image>
+            </ImageView>
+            <Label fx:id="lbdashboard" text="%dashboard" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="20.0" />
+              </font>
+            </Label>
+          </children>
+          <VBox.margin>
+            <Insets left="30.0" />
+          </VBox.margin>
+        </HBox>
+        <HBox fx:id="addProduct2" alignment="CENTER_LEFT" onMousePressed="#goToInsertProduct" spacing="5.0" style="-fx-background-color: #234;">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/ic_product.png" />
+              </image>
+              <HBox.margin>
+                <Insets left="30.0" />
+              </HBox.margin>
+            </ImageView>
+            <Label text="%addProduct" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="20.0" />
+              </font>
+            </Label>
+          </children>
+        </HBox>
+        <HBox fx:id="productsList" alignment="CENTER_LEFT" onMousePressed="#goToProductList" spacing="5.0" style="-fx-background-color: #234;">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/ic_product_list.png" />
+              </image>
+              <HBox.margin>
+                <Insets left="30.0" />
+              </HBox.margin>
+            </ImageView>
+            <Label text="%productList" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="20.0" />
+              </font>
+            </Label>
+          </children>
+        </HBox>
+        <HBox fx:id="accountList" alignment="CENTER_LEFT" onMouseClicked="#goToAccountList" spacing="5.0" style="-fx-background-color: #234;">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/ic_account.png" />
+              </image>
+              <HBox.margin>
+                <Insets left="30.0" />
+              </HBox.margin>
+            </ImageView>
+            <Label text="%accountList" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="20.0" />
+              </font>
+            </Label>
+          </children>
+        </HBox>
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#goToOrder" spacing="5.0" style="-fx-background-color: #234;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_order.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="%orders" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+      </children>
+      <padding>
+        <Insets top="15.0" />
+      </padding>
+    </VBox>
+  </left>
+  <center>
+    <StackPane BorderPane.alignment="CENTER">
+      <children>
+        <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+          <children>
+            <VBox fx:id="changeLanguageContainer" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-background-radius: 5;" styleClass="background_main" stylesheets="@../css/style.css" visible="false">
+              <children>
+                <HBox alignment="CENTER" maxWidth="-Infinity">
+                  <children>
+                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../images/ic_usa.png" />
+                      </image>
+                    </ImageView>
+                    <Label text="American" textFill="#667777">
+                      <font>
+                        <Font size="14.0" />
+                      </font>
+                    </Label>
+                  </children>
+                  <VBox.margin>
+                    <Insets />
+                  </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER" maxWidth="-Infinity">
+                  <children>
+                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../images/ic_vietnam.png" />
+                      </image>
+                    </ImageView>
+                    <Label text="Vietnamese" textFill="#667777">
+                      <font>
+                        <Font size="14.0" />
+                      </font>
+                    </Label>
+                  </children>
+                  <VBox.margin>
+                    <Insets />
+                  </VBox.margin>
+                </HBox>
+              </children>
+              <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+              </padding>
+              <HBox.margin>
+                <Insets right="100.0" />
+              </HBox.margin>
+            </VBox>
+          </children>
+        </HBox>
+        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="background" stylesheets="@../css/style.css">
+          <children>
+            <Label text="Order Details">
+              <font>
+                <Font name="System Bold" size="20.0" />
+              </font>
+              <VBox.margin>
+                <Insets left="25.0" top="15.0" />
+              </VBox.margin>
+            </Label>
+            <VBox prefHeight="507.0" prefWidth="730.0" spacing="20.0" style="-fx-background-color: fff; -fx-background-radius: 10;" VBox.vgrow="ALWAYS">
+              <VBox.margin>
+                <Insets bottom="15.0" left="25.0" right="15.0" top="15.0" />
+              </VBox.margin>
+              <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+              </padding>
+              <children>
+                <VBox prefHeight="319.0" prefWidth="967.0">
+                  <children>
+                    <HBox alignment="CENTER_LEFT" prefHeight="285.0" prefWidth="967.0" spacing="10.0">
+                      <children>
+                        <VBox>
+                          <children>
+                            <Label fx:id="date" text="15/11/2021">
+                              <font>
+                                <Font name="System Bold" size="24.0" />
+                              </font>
+                            </Label>
+                          </children>
+                        </VBox>
+                        <Pane prefHeight="76.0" prefWidth="414.0" />
+                        <ChoiceBox fx:id="cbStatus" prefHeight="38.0" prefWidth="207.0" style="-fx-border-color: #dde; -fx-border-radius: 5;" styleClass="transparent" stylesheets="@../css/style.css" />
+                        <Button fx:id="btnSave" mnemonicParsing="false" onAction="#changeStatus" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: #56d;" text="Save" textFill="WHITE">
+                          <font>
+                            <Font size="18.0" />
+                          </font>
+                        </Button>
+                      </children>
+                    </HBox>
+                    <HBox spacing="10.0">
+                      <children>
+                        <HBox prefHeight="285.0" prefWidth="967.0" spacing="10.0" style="-fx-border-width: 1; -fx-border-color: #eee; -fx-border-radius: 10;">
+                          <children>
+                            <Pane prefHeight="83.0" prefWidth="80.0">
+                              <children>
+                                <Pane layoutX="10.0" layoutY="21.0" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 50; -fx-background-color: #eef;">
+                                  <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                      <image>
+                                        <Image url="@../images/ic_customer.png" />
+                                      </image>
+                                    </ImageView>
+                                  </children>
+                                </Pane>
+                              </children>
+                            </Pane>
+                            <VBox>
+                              <children>
+                                <Label text="Customer">
+                                  <font>
+                                    <Font name="System Bold" size="18.0" />
+                                  </font>
+                                </Label>
+                                <Label fx:id="name" text="Do Huy Hoang">
+                                  <font>
+                                    <Font size="16.0" />
+                                  </font>
+                                </Label>
+                                <Label fx:id="email" text="hoang29092002@gmail.com">
+                                  <font>
+                                    <Font size="16.0" />
+                                  </font>
+                                </Label>
+                                <Label fx:id="phone" text="0866539370">
+                                  <font>
+                                    <Font size="16.0" />
+                                  </font>
+                                </Label>
+                              </children>
+                            </VBox>
+                          </children>
+                        </HBox>
+                        <HBox prefHeight="285.0" prefWidth="967.0" spacing="10.0" style="-fx-border-width: 1; -fx-border-color: #eee; -fx-border-radius: 10;">
+                          <children>
+                            <Pane prefHeight="83.0" prefWidth="80.0">
+                              <children>
+                                <Pane layoutX="10.0" layoutY="21.0" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 50; -fx-background-color: #efe;">
+                                  <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                      <image>
+                                        <Image url="@../images/ic_ship.png" />
+                                      </image>
+                                    </ImageView>
+                                  </children>
+                                </Pane>
+                              </children>
+                            </Pane>
+                            <VBox>
+                              <children>
+                                <Label text="Order Info">
+                                  <font>
+                                    <Font name="System Bold" size="18.0" />
+                                  </font>
+                                </Label>
+                                <HBox>
+                                  <children>
+                                    <Label text="Shipping : ">
+                                      <font>
+                                        <Font name="System Bold" size="16.0" />
+                                      </font>
+                                    </Label>
+                                    <Label text="Shoppe Express">
+                                      <font>
+                                        <Font size="16.0" />
+                                      </font>
+                                    </Label>
+                                  </children>
+                                </HBox>
+                                <HBox>
+                                  <children>
+                                    <Label text="Status : ">
+                                      <font>
+                                        <Font name="System Bold" size="16.0" />
+                                      </font>
+                                    </Label>
+                                    <Label fx:id="status" text="Confirmed">
+                                      <font>
+                                        <Font size="16.0" />
+                                      </font>
+                                    </Label>
+                                  </children>
+                                </HBox>
+                              </children>
+                            </VBox>
+                          </children>
+                        </HBox>
+                        <HBox prefHeight="285.0" prefWidth="967.0" spacing="10.0" style="-fx-border-width: 1; -fx-border-color: #eee; -fx-border-radius: 10;">
+                          <children>
+                            <Pane prefHeight="83.0" prefWidth="80.0">
+                              <children>
+                                <Pane layoutX="10.0" layoutY="21.0" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 50; -fx-background-color: #fee;">
+                                  <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                      <image>
+                                        <Image url="@../images/ic_address.png" />
+                                      </image>
+                                    </ImageView>
+                                  </children>
+                                </Pane>
+                              </children>
+                            </Pane>
+                            <VBox>
+                              <children>
+                                <Label text="Deliver To">
+                                  <font>
+                                    <Font name="System Bold" size="18.0" />
+                                  </font>
+                                </Label>
+                                <HBox prefHeight="18.0" prefWidth="192.0" />
+                                <HBox>
+                                  <children>
+                                    <Label text="Address : ">
+                                      <font>
+                                        <Font name="System Bold" size="16.0" />
+                                      </font>
+                                    </Label>
+                                    <Label fx:id="address" text="Shoppe Express">
+                                      <font>
+                                        <Font size="16.0" />
+                                      </font>
+                                    </Label>
+                                  </children>
+                                </HBox>
+                              </children>
+                            </VBox>
+                          </children>
+                        </HBox>
+                      </children>
+                    </HBox>
+                  </children>
+                </VBox>
+                        <VBox>
+                           <children>
+                              <VBox>
+                                 <children>
+                        <HBox prefHeight="31.0" prefWidth="967.0">
+                          <children>
+                            <Pane prefHeight="31.0" prefWidth="14.0" />
+                            <Label prefHeight="27.0" prefWidth="295.0" text="Product">
+                              <font>
+                                <Font size="18.0" />
+                              </font>
+                            </Label>
+                            <Label prefHeight="27.0" prefWidth="233.0" text="Unit Price">
+                              <font>
+                                <Font size="18.0" />
+                              </font>
+                            </Label>
+                            <Label prefHeight="27.0" prefWidth="221.0" text="Quantity">
+                              <font>
+                                <Font size="18.0" />
+                              </font>
+                            </Label>
+                            <Label prefHeight="27.0" prefWidth="161.0" text="Total">
+                              <font>
+                                <Font size="18.0" />
+                              </font>
+                            </Label>
+                          </children>
+                        </HBox>
+                        <Line endX="858.2929077148438" endY="-1.4483928680419922E-5" startX="-100.0" />
+                                 </children>
+                              </VBox>
+                      <ScrollPane prefHeight="404.0" prefWidth="967.0" style="-fx-background-color: #fff;" styleClass="transparent" stylesheets="@../css/style.css">
+                        <content>
+                          <VBox fx:id="itemLayout" prefHeight="232.0" prefWidth="965.0" style="-fx-background-color: #fff;">
+                            <children>
+                              <VBox />
+                            </children>
+                          </VBox>
+                        </content>
+                      </ScrollPane>
+                           </children>
+                        </VBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="967.0">
+                  <children>
+                    <Label text="Subtotal : ">
+                      <font>
+                        <Font name="System Bold" size="18.0" />
+                      </font>
+                    </Label>
+                    <Label text="\$ ">
+                      <font>
+                        <Font size="18.0" />
+                      </font>
+                    </Label>
+                    <Label fx:id="subtotal" text="9850">
+                      <font>
+                        <Font size="18.0" />
+                      </font>
+                    </Label>
+                  </children>
+                </HBox>
+              </children>
+            </VBox>
+          </children>
+        </VBox>
+      </children>
+    </StackPane>
+  </center>
+</BorderPane>

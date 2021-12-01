@@ -1,0 +1,12 @@
+Màn hình	6.58, FHD+, IPS LCD, 2408 x 1080 Pixel
+Camera sau	64.0 MP + 2.0 MP + 2.0 MP
+Camera Selfie	16.0 MP
+RAM 	8GB + 3GB
+Bộ nhớ trong	128 GB
+CPU	Helio G80
+GPU	Mali-G52
+Dung lượng pin	5000 mAh
+Thẻ sim	2, Nano SIM
+Hệ điều hành	Android 11
+Xuất xứ	Trung Quốc
+Thời gian ra mắt	062021

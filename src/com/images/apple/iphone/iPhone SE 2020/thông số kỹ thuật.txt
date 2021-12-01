@@ -1,0 +1,53 @@
+Thương hiệu	
+Apple
+
+Màu sắc	
+Product RED, White, Black
+
+Bộ nhớ	
+64 GB, 128 GB, 256 GB
+
+Màn hình	
+Retina HD, 4.7-inch LCD, -, 1335 x 750 pixels, 326 ppi, Tương phản 1400:1, True Tone, Chuẩn màu P3, Haptic Touch, Độ sáng tối đa 625 nit, –
+
+Camera	
+Camera đơn 12MP, -, Rộng: khẩu độ ƒ / 1.8, -, -, -, -, Chống rung quang học, -, -, Zoom kỹ thuật số 5x, -, Chụp chân dung tuỳ chỉnh xoá phông, 6 hiệu ứng ánh sáng chụp chân dung (Tự nhiên, Studio, Đường viền, Sân khấu, Sân khấu Mono, High Key Mono), Smart HDR 2
+
+Quay video	
+Quay video 4K ở 24fps, 25 fps, 30 fps, 60 fps, Quay video 1080p HD ở 25 fps, 30 fps, 60 fps, -, Dải nhạy sáng mở rộng cho video tối đa 30fps, Chống rung quang học, -, -, Zoom kỹ thuật số 3x, True Tone flash, -, QuickTake video, Slo-mo video 1080p tại 120fps hoặc 240fps, -, Chống rung Time-lapse, Ghi âm Stereo
+
+Camera trước	
+FaceTime HD camera, 7MP, Khẩu độ ƒ / 2.2, Retina flash, Auto HDR, Chụp chân dung tuỳ chỉnh xoá phông, 6 hiệu ứng ánh sáng chụp chân dung (Tự nhiên, Studio, Đường viền, Sân khấu, Sân khấu Mono, High Key Mono), -, Chống rung video Cinematic, -, -, Quay video 1080p HD ở 24fps, 25 fps, 30 fps, 60 fps, -, -, -, QuickTake video, –
+
+Kết nối mạng	
+GSM/EDGE, UMTS/HSPA+, -, LTE, Wifi 6, Bluetooth 5.0, -, NFC, Wi-Fi calling
+
+Kích thước	
+Dài: 138.4 mm, Rộng: 67.3 mm, Dày: 7.3 mm, Trọng lượng: 148 gram
+
+Chống nước và chống bụi	
+IP 67 (độ sâu tối đa 1 mét trong tối đa 30 phút)
+
+Chip	
+A13 Bionic
+
+Bảo mật	
+Touch ID
+
+Nghe nhạc	
+Stereo, –
+
+Xem video	
+Dolby Vision, HDR10 và HLG
+
+Pin và Sạc	
+Pin lithium‑ion tích hợp bên trong, Sạc không dây Qi, Sạc qua USB máy tính hoặc adaptor, Xem video lên đến 13 giờ, Xem video trước tuyến lên đến 8 giờ, Nghe nhạc lên đến 40 giờ, Sạc 50% trong 30 phút với củ sạc 20W trở lên
+
+Cảm biến	
+-, Con quay hồi chuyển ba trục, Gia tốc kế, Cảm biến tiệm cận, Cảm biến ánh sáng xung quanh, Áp kế
+
+SIM	
+2 SIM (nano-SIM và eSIM)
+
+Kết nối	
+Lightning

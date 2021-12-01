@@ -1,0 +1,12 @@
+Màn hình	10.1" , IPS , IPS , 800 x 1280 Pixel
+Camera sau	5.0 MP
+Camera Selfie	2.0 MP
+RAM 	3 GB
+Bộ nhớ trong	32 GB
+CPU	SC9863A
+GPU	IMG8322
+Dung lượng pin	6000 mAh
+Thẻ sim	2 , Nano SIM
+Hệ điều hành	Android 11
+Xuất xứ	Trung Quốc
+Thời gian ra mắt	09/2021

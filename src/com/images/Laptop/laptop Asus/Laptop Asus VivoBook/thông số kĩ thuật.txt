@@ -1,0 +1,33 @@
+Hãng sản xuất	Asus
+Chủng loại	M513UA-L1240T
+Part Number	90NB0TP2-M03450
+Mầu sắc	Transparent Silver
+Bộ vi xử lý	AMD Ryzen™ 7 5700U Processor 1.8GHz (8M Cache, up to 4.3GHz, 8 cores)
+Chipset	N/A
+Tổng bộ nhớ hệ thống	4GB DDR4 on board + 4GB DDR4 SO-DIMM
+Dung lượng tối đa	32GB
+IGPU	AMD Radeon™ Graphics
+Ổ cứng	512GB M.2 NVMe™ PCIe® 3.0 SSD
+Ổ quang	N/A
+Công nghệ đồng bộ hóa thích ứng	Adaptive-Sync
+Khe cắm mở rộng	1x DDR4 SO-DIMM slot
+1x STD 2.5” SATA HDD
+Bảo mật, Công nghệ	N/A
+Trusted Platform Module (Firmware TPM)
+Màn hình	15.6-inch, FHD (1920 x 1080) 16:9,DCI-P3:100%, Brightness :400 nits 
+Webcam	720p HD camera
+Audio Tech	Built-in speaker
+Built-in microphone//harman/kardon (Mainstream)
+Loại bàn phím	Chiclet Keyboard with Num-key
+Giao tiếp không dây	Wi-Fi 6(802.11ax)+Bluetooth 5.0 (Dual band) 2*2
+Cổng giao tiếp	1x HDMI 1.4
+1x 3.5mm Combo Audio Jack
+1x DC-in//2x USB 2.0
+1x USB3.1 Type A (Gen1)
+1x USB3.1 Type C (Gen 1)//Micro SD card reader
+Pin	42WHrs, 3S1P, 3-cell Li-ion
+Kích thước (rộng x dài x cao)	35.98 x 23.53 x 1.86 ~ 1.86 cm
+1.80 kg	1.80 kg
+Power	ø4.0, 65W AC Adapter, Output: 19V DC, 3.42A, 65W, Input: 100~240V AC 50/60Hz universal
+Hệ điều hành	Windows 10 bản quyền.
+Phụ kiện đi kèm	Dây sạc, pin sạc, sách hướng dẫn sử dụng

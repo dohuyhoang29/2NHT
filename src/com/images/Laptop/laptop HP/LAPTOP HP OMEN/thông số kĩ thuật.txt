@@ -1,0 +1,23 @@
+Hãng sản xuất	HP
+Chủng loại	HP Gaming Omen 16-b0123TX
+Part Number	4Y0W6PA
+Mầu sắc	Đen
+Bộ vi xử lý	Intel® Core™ i7-11800H 2.3Ghz upto 4.6Ghz 24Mb cache
+Chipset	 
+Bộ nhớ trong	2*16 GB DDR4-3200Mhz
+Số khe cắm	2
+Dung lượng tối đa	64Gb
+VGA	NVIDIA® GeForce RTX™ 3070 8GB
+Ổ cứng	2 x 512GB PCIe® NVMe™ M.2 SSD - Raid 0
+ 	2x M.2 SATA/NVMe
+Card Reader	Có
+Màn hình	16.1" FHD (1920 x 1080), 100% sRGB
+Webcam	HP Wide Vision HD camera with integrated dual array digital microphone
+Audio	Audio by B&O; Dual speakers; HP Audio Boost 1.0
+Giao tiếp mạng	LAN, Wifi 6E
+Cổng giao tiếp	1 SuperSpeed USB Type-C® 10Gbps signaling rate (DisplayPort™ 1.4, HP Sleep and Charge);1 SuperSpeed USB Type-A 5Gbps signaling rate (HP Sleep and Charge);2 SuperSpeed USB Type-A 5Gbps signaling rate1 HDMI 2.1, 1 mini DisplayPort™, 1x 3.5 kết hợp
+Bàn phím	Đèn nền bàn phím RGB
+Pin	6-cell, 83 Wh Li-ion polymer
+Kích thước (rộng x dài x cao)	36.92 x 24.8 x 2.3 cm
+Cân nặng	2.3 kg
+Hệ điều hành	Windows 10 Home Single Language 64

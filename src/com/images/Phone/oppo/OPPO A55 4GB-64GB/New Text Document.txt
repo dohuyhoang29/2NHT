@@ -1,0 +1,12 @@
+Màn hình	6.5", HD+, LCD, 720 x 1600 Pixel
+Camera sau	50.0 MP + 2.0 MP + 2.0 MP
+Camera Selfie	16.0 MP
+RAM 	4 GB
+Bộ nhớ trong	64 GB
+CPU	Mediatek Helio G35
+GPU	IMG PowerVR GE8320
+Dung lượng pin	5000 mAh
+Thẻ sim	2, Nano SIM
+Hệ điều hành	Android 11
+Xuất xứ	Trung Quốc
+Thời gian ra mắt	10/2021

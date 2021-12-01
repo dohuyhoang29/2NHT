@@ -1,0 +1,8 @@
+CPU	Apple M1 Pro 8 nhân
+RAM	16GB
+Màn hình	14.2”, 3024 x 1964 Pixel
+Độ phân giải, Tần số quét	Liquid Retina XDR display, 120Hz
+Ổ cứng	512GB/1TB
+Cổng kết nối	HDMI, 3x Thunderbolt 4 USB-C, Jack tai nghe 3.5mm
+Touch ID, Sạc MagSafe	Có
+Kích thước, trọng lượng	Dài 312.6mm - Rộng 221.2mm - Dày 15.5mm - Nặng 1.6kg

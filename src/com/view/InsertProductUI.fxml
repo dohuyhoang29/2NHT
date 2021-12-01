@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.InsertProductController">
+  <top>
+    <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" spacing="10.0" styleClass="background_main" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+      <children>
+        <HBox alignment="CENTER" prefHeight="81.0" prefWidth="223.0" styleClass="background-logo" stylesheets="@../css/style.css">
+          <children>
+            <ImageView fitHeight="60.0" fitWidth="190.0" onMousePressed="#goToDashboard" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/logo.png" />
+              </image>
+            </ImageView>
+          </children>
+          <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+          </padding>
+        </HBox>
+        <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+        <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="84.0" prefWidth="246.0" spacing="10.0">
+          <children>
+            <ImageView fx:id="changeLanguage" fitHeight="30.0" fitWidth="30.0" onMousePressed="#showChangeLanguageMousePressed" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/ic_usa.png" />
+              </image>
+              <HBox.margin>
+                <Insets right="15.0" />
+              </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/user.png" />
+              </image>
+            </ImageView>
+            <Label fx:id="username" text="Do Huy Hoang" textFill="#667777">
+              <font>
+                <Font size="16.0" />
+              </font>
+            </Label>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_logout.png" />
+                     </image>
+                  </ImageView>
+          </children>
+        </HBox>
+      </children>
+         <padding>
+            <Insets right="50.0" />
+         </padding>
+    </HBox>
+  </top>
+  <left>
+    <VBox alignment="TOP_CENTER" prefHeight="870.0" prefWidth="223.0" spacing="10.0" styleClass="background-logo" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+      <children>
+        <HBox fx:id="dashboard" onMousePressed="#goToDashboard" spacing="5.0">
+          <children>
+            <ImageView fx:id="imgdashboard" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/ic_dashboard.png" />
+              </image>
+            </ImageView>
+            <Label fx:id="lbdashboard" text="%dashboard" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="20.0" />
+              </font>
+            </Label>
+          </children>
+          <VBox.margin>
+            <Insets left="30.0" />
+          </VBox.margin>
+        </HBox>
+        <HBox fx:id="addProduct" alignment="CENTER_LEFT" onMousePressed="#goToInsertProduct" spacing="5.0" style="-fx-background-color: #234;">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/ic_product.png" />
+              </image>
+              <HBox.margin>
+                <Insets left="30.0" />
+              </HBox.margin>
+            </ImageView>
+            <Label text="%addProduct" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="20.0" />
+              </font>
+            </Label>
+          </children>
+        </HBox>
+        <HBox fx:id="productsList" alignment="CENTER_LEFT" layoutX="10.0" layoutY="65.0" onMousePressed="#goToProductList" spacing="5.0" style="-fx-background-color: #234;">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/ic_product_list.png" />
+              </image>
+              <HBox.margin>
+                <Insets left="30.0" />
+              </HBox.margin>
+            </ImageView>
+            <Label text="%productList" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="20.0" />
+              </font>
+            </Label>
+          </children>
+        </HBox>
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#goToAccountList" spacing="5.0" style="-fx-background-color: #234;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_account.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="%accountList" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#goToCategoryList" spacing="5.0" style="-fx-background-color: #234;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_category.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="%categoryList" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#goToOrder" spacing="5.0" style="-fx-background-color: #234;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_order.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="%orders" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+      </children>
+      <padding>
+        <Insets top="15.0" />
+      </padding>
+    </VBox>
+  </left>
+  <center>
+    <StackPane BorderPane.alignment="CENTER">
+      <children>
+        <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+          <children>
+            <VBox fx:id="changeLanguageContainer" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-background-radius: 5;" styleClass="background_main" stylesheets="@../css/style.css" visible="false">
+              <children>
+                <HBox alignment="CENTER" maxWidth="-Infinity">
+                  <children>
+                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../images/ic_usa.png" />
+                      </image>
+                    </ImageView>
+                    <Label text="American" textFill="#667777">
+                      <font>
+                        <Font size="14.0" />
+                      </font>
+                    </Label>
+                  </children>
+                  <VBox.margin>
+                    <Insets />
+                  </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER" maxWidth="-Infinity">
+                  <children>
+                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../images/ic_vietnam.png" />
+                      </image>
+                    </ImageView>
+                    <Label text="Vietnamese" textFill="#667777">
+                      <font>
+                        <Font size="14.0" />
+                      </font>
+                    </Label>
+                  </children>
+                  <VBox.margin>
+                    <Insets />
+                  </VBox.margin>
+                </HBox>
+              </children>
+              <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+              </padding>
+              <HBox.margin>
+                <Insets right="100.0" />
+              </HBox.margin>
+            </VBox>
+          </children>
+        </HBox>
+        <VBox prefHeight="200.0" prefWidth="100.0">
+          <children>
+            <Label text="%addProduct">
+              <font>
+                <Font name="System Bold" size="20.0" />
+              </font>
+              <VBox.margin>
+                <Insets left="25.0" top="15.0" />
+              </VBox.margin>
+            </Label>
+            <StackPane VBox.vgrow="ALWAYS">
+              <VBox.margin>
+                <Insets bottom="15.0" left="25.0" right="15.0" top="15.0" />
+              </VBox.margin>
+              <children>
+                <VBox fx:id="basicInfo" spacing="10.0" styleClass="background-center" stylesheets="@../css/style.css">
+                  <children>
+                    <HBox alignment="CENTER" prefHeight="111.0" prefWidth="967.0">
+                      <children>
+                        <Separator prefHeight="0.0" prefWidth="128.0" HBox.hgrow="ALWAYS" />
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="0.0" HBox.hgrow="ALWAYS">
+                          <children>
+                            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="35.0" styleClass="number_insert" stylesheets="@../css/style.css">
+                              <children>
+                                <Label styleClass="lb-number-insert" stylesheets="@../css/style.css" text="1">
+                                  <font>
+                                    <Font name="System Bold" size="18.0" />
+                                  </font>
+                                </Label>
+                              </children>
+                            </HBox>
+                            <Label alignment="CENTER" text="%basicInfo">
+                              <font>
+                                <Font size="14.0" />
+                              </font>
+                            </Label>
+                          </children>
+                        </VBox>
+                        <Separator prefHeight="0.0" prefWidth="128.0" HBox.hgrow="ALWAYS" />
+                        <VBox alignment="CENTER" prefHeight="59.0" prefWidth="45.0" HBox.hgrow="ALWAYS">
+                          <children>
+                            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="35.0" styleClass="number_insert_non" stylesheets="@../css/style.css">
+                              <children>
+                                <Label styleClass="lb-number-insert-non" stylesheets="@../css/style.css" text="2">
+                                  <font>
+                                    <Font name="System Bold" size="18.0" />
+                                  </font>
+                                </Label>
+                              </children>
+                            </HBox>
+                            <Label alignment="CENTER" maxWidth="-Infinity" prefHeight="18.0" text="%productImages">
+                              <font>
+                                <Font size="14.0" />
+                              </font>
+                            </Label>
+                          </children>
+                        </VBox>
+                        <Separator prefHeight="0.0" prefWidth="128.0" HBox.hgrow="ALWAYS" />
+                        <VBox alignment="CENTER" prefHeight="59.0" prefWidth="36.0" HBox.hgrow="ALWAYS">
+                          <children>
+                            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="35.0" styleClass="number_insert_non" stylesheets="@../css/style.css">
+                              <children>
+                                <Label styleClass="lb-number-insert-non" stylesheets="@../css/style.css" text="3">
+                                  <font>
+                                    <Font name="System Bold" size="18.0" />
+                                  </font>
+                                </Label>
+                              </children>
+                            </HBox>
+                            <Label alignment="CENTER" prefHeight="18.0" text="%productData">
+                              <font>
+                                <Font size="14.0" />
+                              </font>
+                            </Label>
+                          </children>
+                        </VBox>
+                        <Separator prefHeight="0.0" prefWidth="128.0" HBox.hgrow="ALWAYS" />
+                      </children>
+                      <VBox.margin>
+                        <Insets bottom="10.0" />
+                      </VBox.margin>
+                    </HBox>
+                    <Label text="%basicInformation">
+                      <font>
+                        <Font size="20.0" />
+                      </font>
+                    </Label>
+                    <Label text="Fill all information bellow" textFill="#667777">
+                      <font>
+                        <Font size="16.0" />
+                      </font>
+                    </Label>
+                    <HBox spacing="5.0">
+                      <children>
+                        <VBox HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="%productCode">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </Label>
+                            <TextField fx:id="txtProductCode">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </TextField>
+                                          <Label fx:id="errProductCode" textFill="RED" />
+                          </children>
+                        </VBox>
+                        <VBox HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="%productName">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </Label>
+                            <TextField fx:id="txtProductName">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </TextField>
+                                          <Label fx:id="errProductName" textFill="RED" />
+                          </children>
+                        </VBox>
+                        <VBox prefHeight="50.0" prefWidth="159.0" HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="%category">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </Label>
+                            <ChoiceBox fx:id="cbCategory" prefHeight="36.0" prefWidth="292.0" styleClass="choice-box-category" stylesheets="@../css/style.css" />
+                                          <Label fx:id="errProductCategory" textFill="RED" />
+                          </children>
+                        </VBox>
+                      </children>
+                    </HBox>
+                    <HBox spacing="5.0">
+                      <children>
+                        <VBox HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="%importPrice">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </Label>
+                            <TextField fx:id="txtImportPrice" VBox.vgrow="ALWAYS">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </TextField>
+                                          <Label fx:id="errImportPrice" textFill="RED" />
+                          </children>
+                        </VBox>
+                        <VBox HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="%price">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </Label>
+                            <TextField fx:id="txtPrice" VBox.vgrow="ALWAYS">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </TextField>
+                                          <Label fx:id="errPrice" textFill="RED" />
+                          </children>
+                        </VBox>
+                      </children>
+                    </HBox>
+                    <HBox spacing="5.0">
+                      <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="%hardDrive">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtHardDrive">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label fx:id="errHardDrive" textFill="RED" />
+                                       </children>
+                                    </VBox>
+                        <VBox prefHeight="50.0" prefWidth="178.0" HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="%origin">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </Label>
+                            <TextField fx:id="txtOrigin">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </TextField>
+                                          <Label fx:id="errOrigin" textFill="RED" />
+                          </children>
+                        </VBox>
+                        <VBox prefHeight="48.0" prefWidth="175.0" HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="%warrantyPeriod">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </Label>
+                                          <TextField fx:id="txtWarrantyPeriod">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label fx:id="errWarrantyPeriod" textFill="RED" />
+                          </children>
+                        </VBox>
+                      </children>
+                    </HBox>
+                    <HBox prefHeight="155.0" prefWidth="700.0">
+                      <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                          <children>
+                            <Button fx:id="btnNextBasicInfo" mnemonicParsing="false" onMousePressed="#setBtnNextBasicInfo" prefHeight="30.0" prefWidth="71.0" style="-fx-background-color: #56d;" stylesheets="@../css/style.css" text="%next" textFill="WHITE">
+                              <font>
+                                <Font name="System Bold" size="14.0" />
+                              </font>
+                            </Button>
+                          </children>
+                        </HBox>
+                      </children>
+                    </HBox>
+                  </children>
+                  <padding>
+                    <Insets left="10.0" right="10.0" top="10.0" />
+                  </padding>
+                </VBox>
+                <VBox fx:id="productImages" prefHeight="507.0" spacing="10.0" styleClass="background-center" stylesheets="@../css/style.css">
+                  <children>
+                    <HBox alignment="CENTER" prefHeight="65.0" prefWidth="720.0">
+                      <children>
+                        <Separator prefHeight="0.0" prefWidth="128.0" HBox.hgrow="ALWAYS" />
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="63.0">
+                          <children>
+                            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="number_insert_non" stylesheets="@../css/style.css">
+                              <children>
+                                <Label styleClass="lb-number-insert-non" stylesheets="@../css/style.css" text="1">
+                                  <font>
+                                    <Font name="System Bold" size="18.0" />
+                                  </font>
+                                </Label>
+                              </children>
+                            </HBox>
+                            <Label text="%basicInfo">
+                              <font>
+                                <Font size="14.0" />
+                              </font>
+                            </Label>
+                          </children>
+                        </VBox>
+                        <Separator prefHeight="0.0" prefWidth="128.0" HBox.hgrow="ALWAYS" />
+                        <VBox alignment="CENTER" maxWidth="-Infinity" prefHeight="65.0" prefWidth="103.0">
+                          <children>
+                            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="number_insert" stylesheets="@../css/style.css">
+                              <children>
+                                <Label styleClass="lb-number-insert" stylesheets="@../css/style.css" text="2">
+                                  <font>
+                                    <Font name="System Bold" size="18.0" />
+                                  </font>
+                                </Label>
+                              </children>
+                            </HBox>
+                            <Label text="%productImages">
+                              <font>
+                                <Font size="14.0" />
+                              </font>
+                            </Label>
+                          </children>
+                        </VBox>
+                        <Separator prefHeight="0.0" prefWidth="128.0" HBox.hgrow="ALWAYS" />
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="83.0">
+                          <children>
+                            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="number_insert_non" stylesheets="@../css/style.css">
+                              <children>
+                                <Label styleClass="lb-number-insert-non" stylesheets="@../css/style.css" text="3">
+                                  <font>
+                                    <Font name="System Bold" size="18.0" />
+                                  </font>
+                                </Label>
+                              </children>
+                            </HBox>
+                            <Label text="%productData">
+                              <font>
+                                <Font size="14.0" />
+                              </font>
+                            </Label>
+                          </children>
+                        </VBox>
+                        <Separator prefHeight="0.0" prefWidth="128.0" HBox.hgrow="ALWAYS" />
+                      </children>
+                      <VBox.margin>
+                        <Insets bottom="10.0" />
+                      </VBox.margin>
+                    </HBox>
+                    <Label text="%productImage">
+                      <font>
+                        <Font size="20.0" />
+                      </font>
+                    </Label>
+                    <HBox spacing="20.0">
+                      <children>
+                        <Label text="%uploadProductImages" textFill="#667777">
+                          <font>
+                            <Font size="16.0" />
+                          </font>
+                        </Label>
+                      </children>
+                    </HBox>
+                              <StackPane VBox.vgrow="ALWAYS">
+                                 <children>
+                          <HBox fx:id="demoImg" alignment="CENTER" spacing="30.0" style="-fx-background-color: #fff; -fx-border-color: #dde; -fx-border-radius: 10;">
+                            <children>
+                                          <ImageView fx:id="imgPreview" fitHeight="207.0" fitWidth="214.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/Laptop/laptop%20Acer/LAPTOP%20ACER%20ASPIRE/61165_laptop_acer_gaming_aspire_7_a715_42g_r6zr_nhqaysv003_den_2021_16.jpg" />
+                                             </image>
+                                          </ImageView>
+                            </children>
+                          </HBox>
+                                    <VBox fx:id="clickUpload" alignment="CENTER" onMouseClicked="#clickChooseImage" style="-fx-background-color: #fff; -fx-border-color: #dde; -fx-border-radius: 10;">
+                                       <children>
+                                          <ImageView fitHeight="56.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/ic_upload.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Click to upload">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                              <Label fx:id="errImgSrc" textFill="RED" />
+                    <HBox prefHeight="38.0" prefWidth="700.0" VBox.vgrow="ALWAYS">
+                      <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                          <children>
+                            <Button fx:id="btnPreviousProductImg" mnemonicParsing="false" onMousePressed="#setBtnPreviousProductImg" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: #56d;" stylesheets="@../css/style.css" text="%previous" textFill="WHITE">
+                              <font>
+                                <Font name="System Bold" size="14.0" />
+                              </font>
+                            </Button>
+                          </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                          <children>
+                            <Button fx:id="btnNextProductImg" mnemonicParsing="false" onMousePressed="#setBtnNextProductImg" prefHeight="30.0" prefWidth="71.0" style="-fx-background-color: #56d;" stylesheets="@../css/style.css" text="%next" textFill="WHITE">
+                              <font>
+                                <Font name="System Bold" size="14.0" />
+                              </font>
+                            </Button>
+                          </children>
+                        </HBox>
+                      </children>
+                    </HBox>
+                  </children>
+                  <padding>
+                    <Insets left="10.0" right="10.0" top="10.0" />
+                  </padding>
+                </VBox>
+                <VBox fx:id="productData" prefHeight="507.0" prefWidth="730.0" spacing="10.0" style="-fx-background-color: fff; -fx-background-radius: 10;" visible="false">
+                  <children>
+                    <HBox alignment="CENTER" prefHeight="76.0" prefWidth="967.0">
+                      <children>
+                        <Separator prefHeight="0.0" prefWidth="128.0" HBox.hgrow="ALWAYS" />
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="63.0">
+                          <children>
+                            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="number_insert_non" stylesheets="@../css/style.css">
+                              <children>
+                                <Label styleClass="lb-number-insert-non" stylesheets="@../css/style.css" text="1">
+                                  <font>
+                                    <Font name="System Bold" size="18.0" />
+                                  </font>
+                                </Label>
+                              </children>
+                            </HBox>
+                            <Label text="%basicInfo">
+                              <font>
+                                <Font size="14.0" />
+                              </font>
+                            </Label>
+                          </children>
+                        </VBox>
+                        <Separator prefHeight="0.0" prefWidth="128.0" HBox.hgrow="ALWAYS" />
+                        <VBox alignment="CENTER" maxWidth="-Infinity" prefHeight="65.0" prefWidth="97.0">
+                          <children>
+                            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="number_insert_non" stylesheets="@../css/style.css">
+                              <children>
+                                <Label styleClass="lb-number-insert-non" stylesheets="@../css/style.css" text="2">
+                                  <font>
+                                    <Font name="System Bold" size="18.0" />
+                                  </font>
+                                </Label>
+                              </children>
+                            </HBox>
+                            <Label text="%productImages">
+                              <font>
+                                <Font size="14.0" />
+                              </font>
+                            </Label>
+                          </children>
+                        </VBox>
+                        <Separator prefHeight="0.0" prefWidth="128.0" HBox.hgrow="ALWAYS" />
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="84.0">
+                          <children>
+                            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="number_insert" stylesheets="@../css/style.css">
+                              <children>
+                                <Label styleClass="lb-number-insert" stylesheets="@../css/style.css" text="3">
+                                  <font>
+                                    <Font name="System Bold" size="18.0" />
+                                  </font>
+                                </Label>
+                              </children>
+                            </HBox>
+                            <Label text="%productData">
+                              <font>
+                                <Font size="14.0" />
+                              </font>
+                            </Label>
+                          </children>
+                        </VBox>
+                        <Separator prefHeight="0.0" prefWidth="128.0" HBox.hgrow="ALWAYS" />
+                      </children>
+                      <VBox.margin>
+                        <Insets bottom="10.0" />
+                      </VBox.margin>
+                    </HBox>
+                    <Label text="%productData">
+                      <font>
+                        <Font size="20.0" />
+                      </font>
+                    </Label>
+                    <Label text="%fillallinformationbellow" textFill="#667777">
+                      <font>
+                        <Font size="16.0" />
+                      </font>
+                    </Label>
+                    <HBox spacing="5.0">
+                      <children>
+                        <VBox prefHeight="50.0" prefWidth="159.0" HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="%cpu">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </Label>
+                            <TextField fx:id="txtCpu">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </TextField>
+                          </children>
+                        </VBox>
+                        <VBox prefHeight="50.0" prefWidth="159.0" HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="%gpu">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </Label>
+                            <TextField fx:id="txtGpu">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </TextField>
+                          </children>
+                        </VBox>
+                        <VBox prefHeight="50.0" prefWidth="159.0" HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="%ram">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </Label>
+                            <TextField fx:id="txtRam">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </TextField>
+                          </children>
+                        </VBox>
+                        <VBox HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="%screen">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </Label>
+                            <TextField fx:id="txtScreen">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </TextField>
+                          </children>
+                        </VBox>
+                      </children>
+                    </HBox>
+                    <HBox spacing="5.0">
+                      <children>
+                        <VBox HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="%rearCamera">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </Label>
+                            <TextField fx:id="txtRearCamera">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </TextField>
+                          </children>
+                        </VBox>
+                        <VBox HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="%selfieCamera">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </Label>
+                            <TextField fx:id="txtSelfieCamera">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </TextField>
+                          </children>
+                        </VBox>
+                        <VBox HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="%dimensions(mm)">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </Label>
+                            <TextField fx:id="txtDimensions">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </TextField>
+                          </children>
+                        </VBox>
+                      </children>
+                    </HBox>
+                    <HBox spacing="5.0">
+                      <children>
+                        <VBox prefHeight="50.0" prefWidth="178.0" HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="%batteryCapacity">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </Label>
+                            <TextField fx:id="txtBatteryCapacity">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </TextField>
+                          </children>
+                        </VBox>
+                        <VBox prefHeight="48.0" prefWidth="212.0" HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="%sim">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </Label>
+                            <TextField fx:id="txtSim" prefHeight="55.0" prefWidth="346.0">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </TextField>
+                          </children>
+                        </VBox>
+                        <VBox prefHeight="48.0" prefWidth="225.0" HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="%operatingSystem">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </Label>
+                            <TextField fx:id="txtOperatingSystem" prefHeight="82.0" prefWidth="225.0">
+                              <font>
+                                <Font size="16.0" />
+                              </font>
+                            </TextField>
+                          </children>
+                        </VBox>
+                                    <VBox prefHeight="48.0" prefWidth="212.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="%weight/kg">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtWeight" prefHeight="55.0" prefWidth="346.0">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                      </children>
+                    </HBox>
+                    <HBox prefHeight="130.0" prefWidth="967.0">
+                      <children>
+                        <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                          <children>
+                            <Button fx:id="btnPreviousProductData" mnemonicParsing="false" onMouseReleased="#setBtnPreviousProductData" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: #56d;" stylesheets="@../css/style.css" text="%previous" textFill="WHITE">
+                              <font>
+                                <Font name="System Bold" size="14.0" />
+                              </font>
+                            </Button>
+                          </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                          <children>
+                            <Button fx:id="btnSave" mnemonicParsing="false" onMousePressed="#clickSave" prefHeight="30.0" prefWidth="71.0" style="-fx-background-color: #56d;" stylesheets="@../css/style.css" text="%save" textFill="WHITE">
+                              <font>
+                                <Font name="System Bold" size="14.0" />
+                              </font>
+                            </Button>
+                          </children>
+                        </HBox>
+                      </children>
+                    </HBox>
+                  </children>
+                  <padding>
+                    <Insets left="10.0" right="10.0" top="10.0" />
+                  </padding>
+                </VBox>
+              </children>
+            </StackPane>
+          </children>
+        </VBox>
+      </children>
+    </StackPane>
+  </center>
+</BorderPane>

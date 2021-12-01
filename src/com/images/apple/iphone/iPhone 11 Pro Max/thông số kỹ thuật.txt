@@ -1,0 +1,60 @@
+Màn hình
+
+Kích thước màn hình	6.5 inches
+Công nghệ màn hình	OLED
+Độ phân giải màn hình	2688 x 1242 pixels
+Tính năng màn hình	HDR10
+Dolby Vision
+True-tone 
+Camera sau
+
+Camera sau	3 Camera 12MP:
+- Camera tele: ƒ/2.0 aperture
+- Camera góc rộng: ƒ/1.8 aperture
+- Camera siêu rộng: ƒ/2.4 aperture
+Quay video	Quay video 4K ở tốc độ 24 fps, 30 fps hoặc 60 fps 
+Camera trước
+
+Camera trước	12 MP ƒ/2.2 aperture
+Quay video trước	4K@24/30/60fps, 1080p@30/60/120fps, gyro-EIS 
+Vi xử lý & đồ họa
+
+Chipset	A13 Bionic
+Loại CPU	Hexa-core
+GPU	Apple GP 
+RAM & lưu trữ
+
+Dung lượng RAM	4 GB
+Bộ nhớ trong	64 GB
+Khe cắm thẻ nhớ	Không 
+Pin & công nghệ sạc
+
+Pin	3969 mAh
+Công nghệ sạc	Sạc nhanh 18W
+Power Delivery 2.0
+Cổng sạc	Lightning 
+Giao tiếp & kết nối
+
+Thẻ SIM	Nano-SIM + eSIM
+Hệ điều hành	iOS 13 hoặc cao hơn (Tùy vào phiên bản phát hành)
+Hồng ngoại	Không
+Jack tai nghe 3.5	Không
+Công nghệ NFC	Có
+Wi-Fi	802.11ax Wi‑Fi 6 with 2x2 MIMO
+Bluetooth	5.0
+GPS	GPS/GNSS 
+Thiết kế & Trọng lượng
+
+Kích thước	158.0mm - 77.8mm - 8.1mm
+Trọng lượng	226g
+Chất liệu mặt lưng	Kính
+Chất liệu khung viền	Kim loại 
+Thông số khác
+
+Chỉ số kháng nước, bụi	IP68
+Kiểu màn hình	Tai thỏ 
+Tiện ích khác
+
+Cảm biến vân tay	Không
+Các loại cảm biến	Cảm biến ánh sáng, Cảm biến áp kế, Cảm biến gia tốc, Cảm biến tiệm cận, Con quay hồi chuyển, La bàn
+Tính năng đặc biệt	Kháng nước, kháng bụi, Sạc không dây, Nhận diện khuôn mặt

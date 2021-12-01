@@ -1,0 +1,12 @@
+Màn hình	5.4", Super Retina XDR, OLED, 1080 x 2340 Pixel
+Camera sau	12.0 MP + 12.0 MP
+Camera Selfie	12.0 MP
+RAM 	4 GB
+Bộ nhớ trong	128 GB
+CPU	A15 Bionic
+GPU	Apple GPU 4 nhân
+Dung lượng pin	2406 mAh
+Thẻ sim	2, 1 eSIM, 1 Nano SIM
+Hệ điều hành	iOS 15
+Xuất xứ	Trung Quốc
+Thời gian ra mắt	09/2021

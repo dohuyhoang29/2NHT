@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ProductListItemController">
+   <children>
+      <HBox fx:id="productListItem" alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="967.0">
+         <children>
+            <Label fx:id="code" prefHeight="25.0" prefWidth="59.0" text="001">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <ImageView fx:id="imgSrc" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Phone/apple/ip13promax/iphone-13-pro-max-blue-select.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="name" prefHeight="25.0" prefWidth="180.0" text="Iphone 13 Pro Max">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Label fx:id="category" prefHeight="25.0" prefWidth="90.0" text="Apple">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="quantity" prefHeight="25.0" prefWidth="75.0" text="10">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="importPrice" prefHeight="25.0" prefWidth="116.0" text="4500">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="price" prefHeight="25.0" prefWidth="79.0" text="4800">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="importDate" prefHeight="25.0" prefWidth="115.0" text="03/11/2021">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="status" prefHeight="25.0" prefWidth="43.0" text="Stock">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="140.0" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="view" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#viewProduct" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_eye.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="edit" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#editProduct" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_pencil.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="delete" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#deleteProduct" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_trash.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </HBox>
+      <Separator prefWidth="200.0" />
+   </children>
+</VBox>

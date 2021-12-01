@@ -1,0 +1,12 @@
+Màn hình	6.9", 2K+, Dynamic AMOLED 2X, 1440 x 3088 Pixel
+Camera sau	108.0 MP + 12.0 MP + 12.0 MP
+Camera Selfie	10.0 MP
+RAM 	8 GB
+Bộ nhớ trong	256 GB
+CPU	Exynos 990
+GPU	ARM Mali-G77 MP11
+Dung lượng pin	4500 mAh
+Thẻ sim	2, 2 Nano SIM hoặc 1 eSIM, 1 Nano SIM
+Hệ điều hành	Android 10.0
+Xuất xứ	Việt Nam
+Thời gian ra mắt	08/2020

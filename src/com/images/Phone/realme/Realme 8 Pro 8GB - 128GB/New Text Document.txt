@@ -1,0 +1,12 @@
+Màn hình	6.4", FHD+, Super AMOLED, 1080 x 2400 Pixel
+Camera sau	108.0 MP + 8.0 MP + 2.0 MP + 2.0 MP
+Camera Selfie	16.0 MP
+RAM 	8 GB
+Bộ nhớ trong	128 GB
+CPU	Snapdragon 720G
+GPU	Adreno 618
+Dung lượng pin	4500 mAh
+Thẻ sim	2, Nano SIM
+Hệ điều hành	Android 11
+Xuất xứ	Trung Quốc
+Thời gian ra mắt	04/2021

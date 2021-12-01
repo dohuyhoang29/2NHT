@@ -1,0 +1,12 @@
+Màn hình	12.4" , WQXGA , TFT
+Camera sau	5.0 MP + 13.0 MP
+Camera Selfie	8.0 MP
+RAM 	4 GB
+Bộ nhớ trong	64 GB
+CPU	Snapdragon 750G
+GPU	--
+Dung lượng pin	10090 mAh
+Thẻ sim	1 , Nano SIM
+Hệ điều hành	Android 10.0
+Xuất xứ	Việt Nam
+Thời gian ra mắt	07/2021

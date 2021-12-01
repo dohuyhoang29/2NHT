@@ -1,0 +1,26 @@
+Mô tả chi tiết
+Hãng sản xuất	Apple
+Chủng loại	Macbook Pro
+Part Number	MK1A3SA/A
+Mầu sắc	Xám (Space Grey)
+Bộ vi xử lý	Apple M1 Max chip with 10-core CPU and 32-core GPU, 16-core Neural Engine
+Chipset	·          
+Bộ nhớ trong	32GB
+Số khe cắm	 
+Dung lượng tối đa	64GB
+VGA	Apple GPU with 32 core
+Ổ cứng	1TB SSD
+Card Reader	·          
+Bảo mật, Công nghệ	Backlit Magic Keyboard; TouchID
+Màn hình	16.2 inch (3456 x 2234) Liquid Retina XDR display
+Webcam	1080p HD
+Audio	Stereo speakers
+Giao tiếp mạng	 
+Giao tiếp không dây	802.11ax Wi-Fi 6 - Bluetooth 5.0
+Cổng giao tiếp	HDMI port; 3.5 mm headphone jack; MagSafe 3 port; Three Thunderbolt 4 (USB-C) ports with support for:Charging DisplayPort, Thunderbolt 4 (up to 40Gb/s), USB 4 (up to 40Gb/s)
+Pin	100wh lithium-polymer battery
+Up to 14 hours wireless web; Up to 21 hours Apple TV app movie playback
+Kích thước (rộng x dài x cao)	 
+Cân nặng	1.6 kg
+Hệ điều hành	Mac OS
+Phụ kiện đi kèm	AC Adapter

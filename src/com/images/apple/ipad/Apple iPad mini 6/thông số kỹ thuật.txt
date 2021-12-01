@@ -1,0 +1,45 @@
+Màn hình
+
+Kích thước màn hình	8.3 inches
+Công nghệ màn hình	Liquid Retina
+Độ phân giải màn hình	2266 x 1488 pixels
+Tính năng màn hình	Độ phủ màu: DCP-P3
+Độ sáng 500 nits
+Công nghệ True Tone 
+Camera sau
+
+Camera sau	12MP khẩu độ f/1.8
+Quay video	4K @24 fps, 25 fps, 30 fps,60 fps
+1080p HD@25 fps, 30 fps, 60 fps
+720p HD@30 fps
+Tính năng camera	Camera trước hỗ trợ tính Center Stage
+Camera sau Zoom 5x 
+Camera trước
+
+Camera trước	12MP góc rộng 
+Vi xử lý & đồ họa
+
+Chipset	A15 Bionic 
+RAM & lưu trữ
+
+Dung lượng RAM	4 GB
+Bộ nhớ trong	256 GB 
+Giao tiếp & kết nối
+
+Hệ điều hành	iPadOS
+Wi-Fi	WiFi 6
+Bluetooth	5.0 
+Thiết kế & Trọng lượng
+
+Kích thước	195.4 × 134.8 × 6.3mm
+Trọng lượng	293g
+Chất liệu mặt lưng	Kim loại
+Chất liệu khung viền	Kim loại 
+Pin & công nghệ sạc
+
+Công nghệ sạc	Sạc nhanh 20W
+Cổng sạc	USB Type-C 
+Tiện ích khác
+
+Cảm biến vân tay	Cảm biến vân tay cạnh bên
+Các loại cảm biến	Cảm biến ánh sáng, Cảm biến áp kế, Cảm biến gia tốc, Cảm biến tiệm cận, Con quay hồi chuyển, La bàn

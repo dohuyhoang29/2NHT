@@ -1,0 +1,27 @@
+Hãng sản xuất	Lenovo
+Chủng loại	Thinkpad X1 carbon gen 9
+Part Number	20XW0076VN
+Mầu sắc	Đen
+Chất liệu	Carbon mặt trên, hợp kim mặt dưới
+Bộ vi xử lý	Intel Core i5-1135G7
+Chipset	Intel SoC Platform
+Bộ nhớ trong	8GB
+Số khe cắm	1
+Số khe RAM chờ	0
+Dung lượng tối đa	8GB
+VGA	Integrated Intel Iris Xe Graphics
+Ổ cứng	512GB SSD M.2 2280 PCIe x4 NVMe Opal2
+Ổ quang	None
+Card Reader	None
+Bảo mật, công nghệ	Discrete TPM 2.0, Touch Style, Match-on-Chip, Kensington Nano Security Slot, IR camera for Windows Hello, Camera privacy shutter
+Màn hình	14" WUXGA (1920x1200) IPS 400nits Anti-glare
+Webcam	IR & 720p with Privacy Shutter
+Audio	High Definition (HD) Audio, Realtek ALC3306 codec
+Giao tiếp mạng	100/1000M (Adapter Needed)
+Giao tiếp không dây	Intel AX201 11ax, 2x2 + BT5.2
+Cổng giao tiếp	-          1x USB 3.2 Gen 1-          1x USB 3.2 Gen 1 (Always On)-          1x Headphone / microphone combo jack (3.5mm)-          1x HDMI 2.0-          2x Thunderbolt 4 / USB4 40Gbps
+Pin	Integrated 57Wh
+Kích thước (rộng x dài x cao)	315 x 221.6 x 14.9 mm
+Cân nặng	1.133 kg
+Hệ điều hành	Windows 10 Pro 64, English
+Phụ kiện đi kèm	Adapter

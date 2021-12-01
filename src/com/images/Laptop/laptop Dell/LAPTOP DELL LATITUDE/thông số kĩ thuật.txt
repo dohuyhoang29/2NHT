@@ -1,0 +1,25 @@
+Hãng sản xuất	Dell
+Chủng loại	Latitude 7420 – bảo hành tận nơi (Pro support)
+Part Number	42LT742000
+Mầu sắc, chất liệu	 Đen, vỏ nhôm
+Bộ vi xử lý	Intel Core™ i5 1135G7(2.4Ghz upto 4.2Ghz, 8MB Cache)
+Chipset	Intel
+Bộ nhớ trong	8GB LPDDR4 4266Mhz (onboard) - không thể nâng cấp
+Số khe cắm	0
+Dung lượng tối đa	8GB
+VGA	Intel Iris Xe Graphics
+Ổ cứng	256GB SSD M2 SATA Class 35 - không có slot trống, nâng cấp thay thế tối đa 2TB
+Ổ quang	No
+Card Reader	Micro SD
+Bảo mật, công nghệ	Finger Print on Power Button
+Màn hình	14.0 inch FHD (1920x1080) Anti-Glare Non-Touch, ComfortView Plus low blue light, WVA,400 nits
+Webcam	HD IR Cam
+Audio	Realtek ALC3281-CG, High-definition audio
+Giao tiếp mạng	Gigabit
+Giao tiếp không dây	Intel AX201, Bluetooth 5.1
+Cổng giao tiếp	1 USB 3.2 Gen 1 port with PowerShare, 2 USB Type C Thunderbolt 4 ports with DisplayPort Alt Mode/ USB4/Power Delivery, 1 HDMI 2.0 port
+Pin	4 cell (63Whr)
+Kích thước	 
+Cân nặng	1.31Kg
+Hệ điều hành	Ubuntu
+Phụ kiện đi kèm	AC Adapter

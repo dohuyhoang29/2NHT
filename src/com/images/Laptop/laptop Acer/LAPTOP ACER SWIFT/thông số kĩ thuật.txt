@@ -1,0 +1,32 @@
+Hãng sản xuất	Acer
+Chủng loại	Acer Swift X SFX14-41G-R61A
+Part Number	NX.AU3SV.001
+Mầu sắc, chất liệu	Vàng (Safari Gold)
+Cover A: nhôm
+Cover B: nhựaCover C: nhôm
+Cover D: nhôm
+Bộ vi xử lý	AMD Ryzen™ 5 5600U
+Chipset	AMD
+Bộ nhớ trong	16 GB LPDDR4X onboard
+Số khe cắm	No
+Dung lượng tối đa	 
+VGA	NVIDIA® GeForce RTX™ 3050Ti 4G DDR6
+Ổ cứng	1TB PCIe NVMe SSD (nâng cấp tối đa 1TB SSD PCIe Gen 3 NVMe)
+Ổ quang	None
+Card Reader	None
+Bảo mật, công nghệ	Led Keyboard; Finger Print; Quạt 59 lá 2 ống đồng
+Màn hình	14.0 inch FHD Acer ComfyView™ IPS LED LCD
+Webcam	720p HD
+Audio	•DTS® Audio, featuring optimized bass response and micro-speaker distortion prevention
+•Acer Purified. Voice technology with two built-in microphones
+•Acer TrueHarmony technology
+•Compatible with Cortana with Voice
+•Two built-in stereo speakers
+Giao tiếp mạng	Gigabit
+Giao tiếp không dây	Intel® Wireless Wi-Fi 6 AX201 2x2 MU-MIMO technology, Bluetooth® 5.1
+Cổng giao tiếp	1 x HDMI® 2.0 port with HDCP support Input and output, 2 x USB 3.2 Gen 1 ports with one featuring power-off USB charging, 1 x DC-in jack for AC adapter, 1 x 3.5 mm headphone/speaker jack, supporting headsets with built-inMicrophone, 1x USB Type-C port: USB 3.2 Gen 2 (up to 10 Gbps)
+Pin	59Wh Li-ion battery
+Kích thước (rộng x dài x cao)	322.8 (W) x 212.2 (D) x 17.9 (H) mm
+Cân nặng	1.39kg
+Hệ điều hành	Win 10 Home
+Phụ kiện đi kèm	Cáp + Sạc

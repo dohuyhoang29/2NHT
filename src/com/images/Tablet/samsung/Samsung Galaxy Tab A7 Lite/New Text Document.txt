@@ -1,0 +1,12 @@
+Màn hình	8.7" , HD+ , WXGA+ , 1340 x 800 Pixel
+Camera sau	8.0 MP
+Camera Selfie	2.0 MP
+RAM 	3 GB
+Bộ nhớ trong	32 GB
+CPU	MediaTek MT8768T
+GPU	--
+Dung lượng pin	5100 mAh
+Thẻ sim	1 , Nano SIM
+Hệ điều hành	Android 10.0
+Xuất xứ	Việt Nam
+Thời gian ra mắt	05/2021

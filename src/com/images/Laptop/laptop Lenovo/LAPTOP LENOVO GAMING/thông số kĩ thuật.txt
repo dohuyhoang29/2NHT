@@ -1,0 +1,109 @@
+Hãng sản xuất
+
+Lenovo
+
+Chủng loại
+
+IdeaPad Gaming 3 15ARH05 (ONYX_BLACK)
+
+Part Number
+
+82EY00LBVN
+
+Mầu sắc
+
+Đen
+
+Bộ vi xử lý
+
+AMD Ryzen 5 4600H Processor (6 x 3.00 GHz), Max Boost Clock up to 4.00 GHz
+
+Chipset
+
+ 
+
+Bộ nhớ trong
+
+1 x 8GB DDR4/ 3200MHz
+
+Số khe cắm
+
+2
+
+Dung lượng tối đa
+
+16 GB
+
+VGA
+
+NVIDIA GeForce GTX 1650 (4GB of GDDR6 SDRAM, Bus Width : 128-bit) ; AMD Radeon Graphics
+
+Ổ cứng
+
+512GB SSD PCIe (M.2 2280) - Hỗ trợ gắn thêm ổ sata 2.5 inch
+
+Ổ quang
+
+ 
+
+Card Reader
+
+ 
+
+Bảo mật, công nghệ
+
+Administrator/User/HDD Password ; Set Administrator/Hard Disk Password ; AMD Platform Security Processor ; Clear AMD PSP Key ; Secure Boot
+
+ 
+
+IdeaPad Gaming 3 ; Game Ready ; FHD IPS Display ; High Performance Thermals
+
+Màn hình
+
+15.6" inch FHD (1920 x 1080) 120Hz IPS LED backlight, 250 nits, 16:9 aspect ratio, 45% NTSC ; Anti-glare
+
+Webcam
+
+HD Web Camera with dual array microphone
+
+Audio
+
+Realtek High Definition Audio (Dolby Audio, stereo speakers, 1.5W x 2)
+
+Giao tiếp mạng
+
+LAN 10/100/1000 Mbps
+
+Giao tiếp không dây
+
+Wireless 802.11 ac,  Bluetooth 5.0
+
+Cổng giao tiếp
+
+2 x USB 3.1 Gen 1 Type-A ; 1 x USB 3.1 Gen 1 Type-C ; 1 x HDMI ; 1 x RJ45 ; 1 x Headphone/Microphone combo audio jack ; 1 x Novo button ; 1 x SATA3
+
+Pin
+
+3 Cell Int (45Wh)
+
+Kích thước (rộng x dài x cao)
+
+Kích thước, trọng lượng:
+
+Dài 351 mm - Rộng 240 mm - Dày 24.9 mm - Nặng 2.2 kg
+Chất liệu:
+
+Vỏ nhựa
+ 
+
+Cân nặng
+
+2.084 kg
+
+Hệ điều hành
+
+Windows 10 Home Single Language 64-bit
+
+Phụ kiện đi kèm
+
+AC adapter

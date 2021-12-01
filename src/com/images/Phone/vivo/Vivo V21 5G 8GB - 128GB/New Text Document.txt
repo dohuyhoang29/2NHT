@@ -1,0 +1,12 @@
+Màn hình	6.44", FHD+, AMOLED, 2404 x 1080 Pixel
+Camera sau	64.0 MP + 8.0 MP + 2.0 MP
+Camera Selfie	44.0 MP
+RAM 	8 GB
+Bộ nhớ trong	128 GB
+CPU	MediaTek Dimensity 800U
+GPU	ARM Mali-G57 MC3
+Dung lượng pin	4000 mAh
+Thẻ sim	2, Nano SIM
+Hệ điều hành	Android 11
+Xuất xứ	Trung Quốc
+Thời gian ra mắt	05/2021

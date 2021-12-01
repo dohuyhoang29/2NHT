@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<VBox xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.CategoryListItemController">
+   <children>
+      <HBox fx:id="productListItem" alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="967.0">
+        <children>
+          <Label fx:id="name" prefHeight="25.0" prefWidth="196.0" text="Phone">
+            <font>
+              <Font size="16.0" />
+            </font>
+          </Label>
+          <Label fx:id="description" prefHeight="25.0" prefWidth="603.0" text="La mot cai dien thoai">
+            <font>
+              <Font size="16.0" />
+            </font>
+          </Label>
+          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="140.0" spacing="10.0" HBox.hgrow="ALWAYS">
+            <children>
+              <ImageView fx:id="edit" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#editCategory" pickOnBounds="true" preserveRatio="true">
+                <image>
+                  <Image url="@../images/ic_pencil.png" />
+                </image>
+              </ImageView>
+              <ImageView fx:id="delete" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#deleteCategory" pickOnBounds="true" preserveRatio="true">
+                <image>
+                  <Image url="@../images/ic_trash.png" />
+                </image>
+              </ImageView>
+            </children>
+          </HBox>
+        </children>
+        <padding>
+          <Insets left="10.0" />
+        </padding>
+      </HBox>
+      <Separator prefWidth="200.0" />
+   </children>
+</VBox>
