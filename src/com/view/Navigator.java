@@ -77,6 +77,7 @@ public class Navigator {
     stage.setScene(scene);
     stage.getIcons().add(new Image(getClass().getResourceAsStream("/com/images/logo_non_text.png")));
     stage.setTitle(title);
+    stage.centerOnScreen();
     if (!stage.isShowing()) {
       stage.show();
     }

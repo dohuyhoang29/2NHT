@@ -5,7 +5,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -16,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ScreenProductController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ScreenProductController">
    <top>
       <HBox alignment="CENTER_LEFT" prefHeight="78.0" prefWidth="1250.0" spacing="20.0" style="-fx-background-color: #26d;" BorderPane.alignment="CENTER">
          <children>
@@ -96,7 +95,7 @@
    <center>
       <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <content>
-            <VBox prefHeight="1619.0" prefWidth="1248.0" spacing="40.0" style="-fx-background-color: #fff;">
+            <VBox prefHeight="1129.0" prefWidth="1285.0" spacing="40.0" style="-fx-background-color: #fff;">
                <children>
                   <HBox spacing="80.0">
                      <children>
@@ -164,31 +163,8 @@
                                  <children>
                                     <HBox fx:id="pointReviewBox">
                                        <children>
-                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/ic_star.png" />
-                                             </image>
-                                          </ImageView>
-                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/ic_star.png" />
-                                             </image>
-                                          </ImageView>
-                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/ic_star.png" />
-                                             </image>
-                                          </ImageView>
-                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/ic_star.png" />
-                                             </image>
-                                          </ImageView>
-                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/ic_half_star.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Label text="Point : " />
+                                          <Label text="5" />
                                        </children>
                                     </HBox>
                                     <Separator orientation="VERTICAL" prefHeight="200.0" />
@@ -569,7 +545,7 @@
                         </VBox>
                         <VBox fx:id="reviews" prefHeight="523.0" prefWidth="948.0">
                            <children>
-                              <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="948.0" spacing="10.0" style="-fx-background-color: #fff;">
+                              <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="948.0" spacing="10.0" style="-fx-background-color: #fff;">
                                  <children>
                                     <Label alignment="CENTER" onMouseClicked="#showInfomation" prefHeight="28.0" prefWidth="216.0" style="-fx-border-color: #fff;" text="Additional Infomation">
                                        <font>
@@ -591,98 +567,38 @@
                                     <Insets bottom="20.0" />
                                  </VBox.margin>
                               </Separator>
-                              <HBox spacing="20.0" style="-fx-background-color: #fff;" VBox.vgrow="ALWAYS">
-                                 <VBox.margin>
-                                    <Insets left="40.0" right="40.0" />
-                                 </VBox.margin>
+                              <VBox>
                                  <children>
-                                    <ScrollPane prefHeight="456.0" prefWidth="927.0" style="-fx-background-color: #fff;" styleClass="transparent" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
+                                    <HBox spacing="10.0" style="-fx-background-color: #fff;">
+                                       <children>
+                                          <Label fx:id="quantityReviewUnder" text="2">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="reviews for">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="nameProductReview" text="iPhone 13 Pro max">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <ScrollPane prefHeight="456.0" prefWidth="927.0" style="-fx-background-color: #fff;" styleClass="transparent" stylesheets="@../css/style.css">
                                        <content>
-                                          <VBox fx:id="reviewBox" prefHeight="454.0" prefWidth="412.0" spacing="10.0" style="-fx-background-color: #fff;">
-                                             <children>
-                                                <HBox spacing="10.0">
-                                                   <children>
-                                                      <Label fx:id="quantityReviewUnder" text="2">
-                                                         <font>
-                                                            <Font size="18.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label text="reviews for">
-                                                         <font>
-                                                            <Font size="18.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label fx:id="nameProductReview" text="iPhone 13 Pro max">
-                                                         <font>
-                                                            <Font size="18.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </children>
-                                                </HBox>
-                                             </children>
-                                          </VBox>
+                                          <VBox fx:id="reviewBox" prefHeight="428.0" prefWidth="983.0" spacing="10.0" style="-fx-background-color: #fff;" />
                                        </content>
                                     </ScrollPane>
-                                    <VBox prefHeight="348.0" prefWidth="948.0" spacing="10.0" style="-fx-background-color: #fff; -fx-border-color: #efefef; -fx-border-width: 2;" HBox.hgrow="ALWAYS">
-                                       <children>
-                                          <Label text="More Reviews">
-                                             <font>
-                                                <Font name="System Bold" size="24.0" />
-                                             </font>
-                                          </Label>
-                                          <Label text="Your email will not be publicly displayed. &#10;Required fields are marked with *">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                          </Label>
-                                          <HBox alignment="CENTER_LEFT" spacing="10.0">
-                                             <children>
-                                                <Label text="Your Rating *">
-                                                   <font>
-                                                      <Font size="18.0" />
-                                                   </font>
-                                                </Label>
-                                                <TextField fx:id="point" prefHeight="25.0" prefWidth="52.0" />
-                                             </children>
-                                          </HBox>
-                                          <Label text="Your Review *">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                          </Label>
-                                          <TextArea fx:id="feedback" prefHeight="157.0" prefWidth="391.0" />
-                                          <Button mnemonicParsing="false" onAction="#feedbackProduct" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #26d;" text="Send" textFill="WHITE">
-                                             <VBox.margin>
-                                                <Insets top="20.0" />
-                                             </VBox.margin>
-                                             <font>
-                                                <Font name="System Bold" size="12.0" />
-                                             </font>
-                                          </Button>
-                                       </children>
-                                       <padding>
-                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                       </padding>
-                                    </VBox>
                                  </children>
-                              </HBox>
+                              </VBox>
                            </children>
                         </VBox>
                      </children>
                   </StackPane>
-                  <VBox prefHeight="435.0" prefWidth="948.0" spacing="20.0">
-                     <children>
-                        <Label text="Similar Product">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <HBox fx:id="similarBox" prefHeight="387.0" prefWidth="926.0" spacing="60.0" style="-fx-background-color: #fff;" />
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </VBox>
                </children>
                <padding>
                   <Insets left="150.0" right="150.0" top="80.0" />

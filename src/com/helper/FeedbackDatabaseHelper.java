@@ -43,7 +43,7 @@ public class FeedbackDatabaseHelper {
     String query = "SELECT f.id, f.feedback, f.point, f.date, a.username, p.name "
         + "FROM feedback AS f "
         + "INNER JOIN product AS p ON f.product_id = p.id "
-        + "INNER JOIN account AS a ON f.account_id = a.id WHERE p.name = ?;";
+        + "INNER JOIN account AS a ON f.account_id = a.id WHERE p.id = ?;";
 
     try (Connection cnt = DatabaseHelper.getConnetion();
         PreparedStatement stm = cnt.prepareStatement(query)) {

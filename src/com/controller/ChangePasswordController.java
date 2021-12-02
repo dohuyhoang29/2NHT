@@ -1,12 +1,20 @@
 package com.controller;
 
 import com.helper.AccountDatabaseHelper;
+import com.helper.CartDatabaseHelper;
+import com.helper.NotificationManager;
 import com.helper.ProjectManager;
 import com.model.Account;
+import com.model.Cart;
 import com.view.Navigator;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -15,7 +23,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 
-public class ChangePasswordController {
+public class ChangePasswordController implements Initializable {
   @FXML
   private TextField txtSearch;
 
@@ -24,6 +32,9 @@ public class ChangePasswordController {
 
   @FXML
   private Label count;
+
+  @FXML
+  private Label account;
 
   @FXML
   private TextField showCurrentPassword;
@@ -58,11 +69,18 @@ public class ChangePasswordController {
   @FXML
   private Button save;
 
+  private String currentPasswordText;
+  private String newPasswordText;
+  private String confirmPasswordText;
+  private List<Cart> listCart = new ArrayList<>();
 
-
-  String currentPasswordText;
-  String newPasswordText;
-  String confirmPasswordText;
+  @Override
+  public void initialize(URL location, ResourceBundle resources) {
+    account.setText(ProjectManager.getInstance().getAccount().getUsername());
+    listCart = CartDatabaseHelper.getAllCartByAccount(ProjectManager.getInstance().getAccount().getUsername());
+    Integer cart = listCart.size();
+    count.setText(cart.toString());
+  }
 
   //Action
   @FXML
@@ -74,12 +92,12 @@ public class ChangePasswordController {
       if (newPassword.getText().equalsIgnoreCase(confirmPassword.getText())) {
         errConfirmPassword.setText("");
         AccountDatabaseHelper.changePassword(newPassword.getText(), account.getId());
+        NotificationManager.getInstance().success("Success", "Change Password Success");
       } else {
         errConfirmPassword.setText("The passwords are not the same");
       }
     } else {
       errCurrentPassword.setText("Incorrect password");
-
     }
   }
 

@@ -48,13 +48,13 @@ public class CartController implements Initializable {
   public void initialize(URL location, ResourceBundle resources) {
     listCart = CartDatabaseHelper.getAllCartByAccount(
         ProjectManager.getInstance().getAccount().getUsername());
-
+    Integer countCart = listCart.size();
+    count.setText(countCart.toString());
     try {
       for (int i = 0; i < listCart.size(); i++) {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/com/view/CartItemUI.fxml"));
         HBox hBox = loader.load();
-
         CartItemController controller = loader.getController();
         sub += controller.setData(listCart.get(i));
         cartBox.getChildren().add(hBox);

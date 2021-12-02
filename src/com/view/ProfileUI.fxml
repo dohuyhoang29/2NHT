@@ -113,7 +113,7 @@
                                     <Image url="@../images/user.png" />
                                  </image>
                               </ImageView>
-                              <Label text="Username">
+                              <Label fx:id="account" text="Username">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -218,11 +218,16 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                            <children>
-                              <TextField fx:id="txtEmail" prefHeight="39.0" prefWidth="860.0">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </TextField>
+                              <VBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <TextField fx:id="txtEmail" prefHeight="39.0" prefWidth="860.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label fx:id="errEmail" textFill="RED" />
+                                 </children>
+                              </VBox>
                            </children>
                         </HBox>
                      </children>
@@ -240,11 +245,16 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                            <children>
-                              <TextField fx:id="txtPhone" prefHeight="25.0" prefWidth="860.0">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </TextField>
+                              <VBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <TextField fx:id="txtPhone" prefHeight="25.0" prefWidth="860.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label fx:id="errPhoneNumber" textFill="RED" />
+                                 </children>
+                              </VBox>
                            </children>
                         </HBox>
                      </children>
@@ -262,11 +272,16 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                            <children>
-                              <TextField fx:id="txtAddress" prefHeight="25.0" prefWidth="860.0">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </TextField>
+                              <VBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <TextField fx:id="txtAddress" prefHeight="25.0" prefWidth="860.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label fx:id="errAddress" textFill="RED" />
+                                 </children>
+                              </VBox>
                            </children>
                         </HBox>
                      </children>

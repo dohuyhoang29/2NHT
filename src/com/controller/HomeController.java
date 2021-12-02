@@ -52,24 +52,24 @@ public class HomeController implements Initializable {
   @FXML
   private GridPane gridProduct;
 
-  private List<Product> listData = new ArrayList<>();
+  private List<Product> listProduct = new ArrayList<>();
   private List<Cart> listCart = new ArrayList<>();
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
 
-    listData = ProductDatabaseHelper.getAllProduct();
+    listProduct = ProductDatabaseHelper.getAllProduct();
     int column = 0;
     int row = 1;
 
     try {
-      for (int i = 0; i < listData.size(); i++) {
+      for (int i = 0; i < listProduct.size(); i++) {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/com/view/ProductItemUI.fxml"));
         VBox vBox = loader.load();
 
         ProductItemController controller = loader.getController();
-        controller.setData(listData.get(i));
+        controller.setData(listProduct.get(i));
 
         if (column == 4) {
           column = 0;

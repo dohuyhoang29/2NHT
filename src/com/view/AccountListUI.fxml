@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.AccountListController">
+<BorderPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.AccountListController">
   <top>
     <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" spacing="10.0" styleClass="background_main" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
       <children>
@@ -25,7 +34,7 @@
         <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
         <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="84.0" prefWidth="246.0" spacing="10.0">
           <children>
-            <ImageView fx:id="changeLanguage" fitHeight="30.0" fitWidth="30.0" onMousePressed="#showChangeLanguageMousePressed" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="changeLanguage" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#showChangeLanguageMousePressed" pickOnBounds="true" preserveRatio="true">
               <image>
                 <Image url="@../images/ic_usa.png" />
               </image>
@@ -260,11 +269,16 @@
                         <Font size="16.0" />
                       </font>
                     </Label>
-                    <Label prefHeight="25.0" prefWidth="529.0" text="Email">
+                    <Label prefHeight="25.0" prefWidth="473.0" text="Email">
                       <font>
                         <Font size="16.0" />
                       </font>
                     </Label>
+                              <Label prefHeight="25.0" prefWidth="109.0" text="Status">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
                     <Label prefHeight="25.0" prefWidth="78.0" text="Type">
                       <font>
                         <Font size="16.0" />
@@ -282,7 +296,60 @@
                 </HBox>
                 <ScrollPane prefHeight="200.0" prefWidth="967.0" style="-fx-background-color: #fff;" styleClass="transparent" stylesheets="@../css/style.css" VBox.vgrow="ALWAYS">
                   <content>
-                    <VBox fx:id="itemLayout" prefHeight="379.0" prefWidth="965.0" style="-fx-background-color: #fff;" />
+                    <VBox fx:id="itemLayout" prefHeight="379.0" prefWidth="965.0" style="-fx-background-color: #fff;">
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <HBox fx:id="productListItem" alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="967.0">
+                                             <children>
+                                                <Label fx:id="username1" prefHeight="25.0" prefWidth="182.0" text="Admin">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="email" prefHeight="25.0" prefWidth="466.0" text="admin@gmail.com">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="type1" prefHeight="25.0" prefWidth="98.0" text="ADMIN">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="type" prefHeight="25.0" prefWidth="83.0" text="ADMIN">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="140.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <ImageView fx:id="view" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#viewAccount" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/ic_eye.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView fx:id="edit" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#editAccount" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/ic_pencil.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView fx:id="delete" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#deleteAccount" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/ic_lock.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <Separator prefWidth="200.0" />
+                                       </children>
+                                    </VBox>
+                                 </children></VBox>
                   </content>
                 </ScrollPane>
               </children>

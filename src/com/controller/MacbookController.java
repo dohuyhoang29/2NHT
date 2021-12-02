@@ -82,7 +82,7 @@ public class MacbookController implements Initializable {
         ProductItemController controller = loader.getController();
         controller.setData(listData.get(i));
 
-        if (column == 3) {
+        if (column == 4) {
           column = 0;
           row++;
         }

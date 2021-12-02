@@ -1,7 +1,9 @@
 package com.controller;
 
+import com.helper.CartDatabaseHelper;
 import com.helper.OrderDetailsDatabaseHelper;
 import com.helper.ProjectManager;
+import com.model.Cart;
 import com.model.Order;
 import com.model.OrderDetail;
 import com.view.Navigator;
@@ -28,6 +30,9 @@ public class PurchaseOrderController implements Initializable {
 
   @FXML
   private Label count;
+
+  @FXML
+  private Label account;
 
   @FXML
   private VBox all;
@@ -60,14 +65,20 @@ public class PurchaseOrderController implements Initializable {
   private VBox completedBox;
 
   List<OrderDetail> listOrderDetail = new ArrayList<>();
+  private List<Cart> listCart = new ArrayList<>();
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
+    account.setText(ProjectManager.getInstance().getAccount().getUsername());
     setDataAll();
     setDataToPay();
     setDataToShip();
     setDataToReceive();
     setDataCompleted();
+
+    listCart = CartDatabaseHelper.getAllCartByAccount(ProjectManager.getInstance().getAccount().getUsername());
+    Integer cart = listCart.size();
+    count.setText(cart.toString());
   }
 
   //setData

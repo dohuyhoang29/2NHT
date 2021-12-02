@@ -52,11 +52,6 @@ public class AccountListController implements Initializable {
   @FXML
   private VBox changeLanguageContainer;
 
-  @FXML
-  private Button btnAddAccount;
-
-  @FXML
-  private ChoiceBox<?> cpType;
 
   @FXML
   private TextField txtSearchAccount;

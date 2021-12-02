@@ -24,6 +24,6 @@ public class NotificationManager {
         tray.setTitle(title);
         tray.setMessage(message);
         tray.setNotificationType(NotificationType.SUCCESS);
-        tray.showAndDismiss(Duration.millis(50));
+        tray.showAndDismiss(Duration.millis(1));
     }
 }
