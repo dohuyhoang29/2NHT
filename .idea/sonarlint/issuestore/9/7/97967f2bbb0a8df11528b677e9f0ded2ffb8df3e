@@ -1,0 +1,8 @@
+
+h	java:S116#"SRename this field "Feedback" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÃÓÜ
+j
+java:S1845#"TRename field "Feedback" to prevent any misunderstanding/clash with field "feedback".(ŠÃÓÜ
+u
+java:S1450""ZRemove the "orderDetail" field and declare it as a local variable in the relevant methods.(ÌÂü²úÿÿÿÿ
+J
+java:S1068""/Remove this unused "orderDetail" private field.(ÌÂü²úÿÿÿÿ

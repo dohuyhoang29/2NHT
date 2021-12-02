@@ -1,0 +1,10 @@
+
+P
+java:S1118":Add a private constructor to hide the implicit public one.(ŠªØú
+H
+java:S1168"+Return an empty collection instead of null.(¥¹ï8ùÈä·×/
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8úóå·×/
+M
+java:S1128	"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ûóå·×/
+k	java:S117*"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£„èüÿÿÿÿ

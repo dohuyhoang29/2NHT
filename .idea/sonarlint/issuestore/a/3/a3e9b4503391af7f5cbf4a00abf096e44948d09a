@@ -1,0 +1,5 @@
+
+m
+java:S1858B"K"getWarrantyPeriod" returns a string, there's no need to call "toString()".(üÁ˜×øÿÿÿÿ8Ý»¦¸×/
+P
+java:S3655W"5Call "option.isPresent()" before accessing the value.(Ï¬ÚÃúÿÿÿÿ

@@ -1,0 +1,31 @@
+
+P
+java:S1118":Add a private constructor to hide the implicit public one.(ÒüŒ›
+^
+java:S11926"HDefine a constant instead of duplicating this literal "address" 3 times.(ÔéÑ¸
+d
+java:S11924"IDefine a constant instead of duplicating this literal "quantity" 3 times.(Äš¢™ûÿÿÿÿ
+c
+java:S11922"HDefine a constant instead of duplicating this literal "img_src" 3 times.(ŒğèÁüÿÿÿÿ
+Š
+java:S1192#"oDefine a constant instead of duplicating this literal "INNER JOIN `order` AS o ON od.order_id = o.id " 3 times.(ÖÈ²ğşÿÿÿÿ
+‡
+java:S1192$"qDefine a constant instead of duplicating this literal "INNER JOIN product AS p ON od.product_id = p.id " 3 times.(¬à¯
+f
+java:S1192."KDefine a constant instead of duplicating this literal "account_id" 3 times.(òôŠİúÿÿÿÿ
+t
+java:S1192""YDefine a constant instead of duplicating this literal "FROM order_detail AS od " 3 times.(¶ºƒ¿øÿÿÿÿ
+a
+java:S11923"FDefine a constant instead of duplicating this literal "price" 3 times.(ü‘ÄÊşÿÿÿÿ
+a
+java:S1192/"KDefine a constant instead of duplicating this literal "product_id" 3 times.(‘şïÇ
+a
+java:S11920"KDefine a constant instead of duplicating this literal "hard_drive" 3 times.(ÆÔ¿Ì
+Ğ
+java:S1192!"¹Define a constant instead of duplicating this literal "SELECT od.id, o.account_id, od.product_id, p.hard_drive, p.name, p.img_src, p.price, od.quantity, o.`status`, o.address " 3 times.(ØĞ³˜
+]
+java:S11925"GDefine a constant instead of duplicating this literal "status" 3 times.(ïœë
+f	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ©æª
+f	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ©æª
+f	java:S117v"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ©æª
+k	java:S117~"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º†è¿ıÿÿÿÿ

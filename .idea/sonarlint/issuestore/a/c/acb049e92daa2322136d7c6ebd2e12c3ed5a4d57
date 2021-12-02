@@ -1,0 +1,8 @@
+
+P
+java:S1118":Add a private constructor to hide the implicit public one.(·²¦ƒ
+E
+java:S2695"/This "PreparedStatement" only has 7 parameters.(ï£—
+C	java:S108^")Either remove or fill this block of code.(ôÕœçûÿÿÿÿ
+k	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£„èüÿÿÿÿ
+k	java:S117j"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º†è¿ıÿÿÿÿ
