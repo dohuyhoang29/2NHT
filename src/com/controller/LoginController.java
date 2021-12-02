@@ -8,6 +8,7 @@ package com.controller;
 
 
 import com.helper.AccountDatabaseHelper;
+import com.helper.NotificationManager;
 import com.helper.ProjectManager;
 import com.model.Account;
 import com.view.Navigator;
@@ -63,13 +64,13 @@ public class LoginController implements Initializable {
             Account account = AccountDatabaseHelper.getAccountByUsername(username.getText());
             if (username.getText().equalsIgnoreCase(account.getUsername()) || username.getText().equalsIgnoreCase(account.getEmail())) {
                 if (password.getText().equalsIgnoreCase(account.getPassword())) {
+                    NotificationManager.getInstance().success("Success", "Login Success");
                     ProjectManager.getInstance().setAccount(account);
                     if (account.getType().equalsIgnoreCase("ADMIN")) {
                         Navigator.getInstance().goToDashboard();
                     } else {
                         Navigator.getInstance().goToHome();
                     }
-
                 }
             }
         }
