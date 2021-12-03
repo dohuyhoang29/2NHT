@@ -14,12 +14,10 @@
 
 
 -- Dumping database structure for 2nht
-DROP DATABASE IF EXISTS `2nht`;
 CREATE DATABASE IF NOT EXISTS `2nht` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `2nht`;
 
 -- Dumping structure for table 2nht.account
-DROP TABLE IF EXISTS `account`;
 CREATE TABLE IF NOT EXISTS `account` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` text NOT NULL,
@@ -43,7 +41,6 @@ INSERT INTO `account` (`id`, `username`, `email`, `password`, `status`, `type`, 
 /*!40000 ALTER TABLE `account` ENABLE KEYS */;
 
 -- Dumping structure for table 2nht.cart
-DROP TABLE IF EXISTS `cart`;
 CREATE TABLE IF NOT EXISTS `cart` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `quantity` int(11) NOT NULL DEFAULT 0,
@@ -59,30 +56,27 @@ CREATE TABLE IF NOT EXISTS `cart` (
 -- Dumping data for table 2nht.cart: ~0 rows (approximately)
 DELETE FROM `cart`;
 /*!40000 ALTER TABLE `cart` DISABLE KEYS */;
-INSERT INTO `cart` (`id`, `quantity`, `product_id`, `account_id`) VALUES
-	(30, 1, 5, 3);
 /*!40000 ALTER TABLE `cart` ENABLE KEYS */;
 
 -- Dumping structure for table 2nht.categories
-DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL DEFAULT '0',
   `description` text DEFAULT NULL,
+  `status` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table 2nht.categories: ~3 rows (approximately)
 DELETE FROM `categories`;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` (`id`, `name`, `description`) VALUES
-	(1, 'MacBook', 'lkdf;asldkfjads;lkf'),
-	(2, 'iPhone', 'adfasfadsfadsf'),
-	(3, 'iPad', 'adfasdfsfasfsda');
+INSERT INTO `categories` (`id`, `name`, `description`, `status`) VALUES
+	(1, 'MacBook', 'lkdf;asldkfjads;lkf', 'Lock'),
+	(2, 'iPhone', 'adfasfadsfadsf', 'Un-Lock'),
+	(3, 'iPad', 'adfasdfsfasfsda', 'Un-Lock');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 
 -- Dumping structure for table 2nht.feedback
-DROP TABLE IF EXISTS `feedback`;
 CREATE TABLE IF NOT EXISTS `feedback` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `account_id` int(11) NOT NULL DEFAULT 0,
@@ -108,7 +102,6 @@ INSERT INTO `feedback` (`id`, `account_id`, `product_id`, `feedback`, `point`, `
 /*!40000 ALTER TABLE `feedback` ENABLE KEYS */;
 
 -- Dumping structure for table 2nht.order
-DROP TABLE IF EXISTS `order`;
 CREATE TABLE IF NOT EXISTS `order` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `account_id` int(11) NOT NULL DEFAULT 0,
@@ -134,7 +127,6 @@ INSERT INTO `order` (`id`, `account_id`, `name`, `total_price`, `create_date`, `
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
 
 -- Dumping structure for table 2nht.order_detail
-DROP TABLE IF EXISTS `order_detail`;
 CREATE TABLE IF NOT EXISTS `order_detail` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `quantity` int(11) NOT NULL DEFAULT 0,
@@ -160,7 +152,6 @@ INSERT INTO `order_detail` (`id`, `quantity`, `product_id`, `order_id`) VALUES
 /*!40000 ALTER TABLE `order_detail` ENABLE KEYS */;
 
 -- Dumping structure for table 2nht.product
-DROP TABLE IF EXISTS `product`;
 CREATE TABLE IF NOT EXISTS `product` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) DEFAULT NULL,
@@ -202,10 +193,10 @@ INSERT INTO `product` (`id`, `category_id`, `status`, `code`, `name`, `warranty_
 	(12, 2, 'Un-Lock', 'ads', 'adfad', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
 	(13, 2, 'Un-Lock', 'ads', 'afads', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
 	(14, 2, 'Un-Lock', 'ads', 'adfds', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
-	(15, 1, 'Un-Lock', 'ads', 'adfas', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
-	(16, 1, 'Un-Lock', 'ads', 'adfas', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
-	(17, 1, 'Un-Lock', 'ads', 'afads', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
-	(18, 1, 'Un-Lock', 'SD', 'adfds', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas');
+	(15, 1, 'Lock', 'ads', 'adfas', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
+	(16, 1, 'Lock', 'ads', 'adfas', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
+	(17, 1, 'Lock', 'ads', 'afads', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
+	(18, 1, 'Lock', 'SD', 'adfds', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
