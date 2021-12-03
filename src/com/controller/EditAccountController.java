@@ -1,6 +1,7 @@
 package com.controller;
 
 import com.helper.AccountDatabaseHelper;
+import com.helper.NotificationManager;
 import com.helper.ValidationManager;
 import com.model.Account;
 import com.view.Navigator;
@@ -183,6 +184,7 @@ public class EditAccountController implements Initializable {
       Optional<ButtonType> option = alert.showAndWait();
       if (option.get() == ButtonType.OK) {
         AccountDatabaseHelper.editAccount(txtEmail.getText(), pfPassword.getText(), "STAFF", txtAddress.getText(), txtPhoneNumber.getText(), acc.getId());
+        NotificationManager.getInstance().success("Reset Password Success");
         Navigator.getInstance().goToAccountList();
       }
     }

@@ -103,7 +103,7 @@ public class ProfileController implements Initializable {
     if (count == 0) {
       AccountDatabaseHelper.editAccount(txtEmail.getText(), ProjectManager.getInstance().getAccount().getPassword(), ProjectManager.getInstance().getAccount().getType(), txtAddress.getText(), txtPhone.getText(), ProjectManager.getInstance().getAccount().getId());
       ProjectManager.getInstance().setAccount(AccountDatabaseHelper.getAccountByUsername(ProjectManager.getInstance().getAccount().getUsername()));
-      NotificationManager.getInstance().success("Success", "Edit Account Success");
+      NotificationManager.getInstance().success("Edit Account Success");
       Navigator.getInstance().goToProfile();
     }
   }

@@ -20,36 +20,41 @@ import javafx.stage.Stage;
 
 public class AccountListItemController {
   @FXML
-  private HBox productListItem;
-
-  @FXML
-  private Label username;
-
-  @FXML
   private Label email;
 
   @FXML
-  private Label password;
+  private ImageView lock;
+
+  @FXML
+  private Label status;
 
   @FXML
   private Label type;
 
   @FXML
-  private ImageView view;
+  private ImageView unlock;
 
   @FXML
-  private ImageView edit;
-
-  @FXML
-  private ImageView delete;
+  private Label username;
 
   private Account account;
 
   public void setData(Account account) {
     this.account = account;
     username.setText(account.getUsername());
+    status.setText(account.getStatus());
     email.setText(account.getEmail());
     type.setText(account.getType());
+
+    if (account.getStatus().equalsIgnoreCase(Account.UNLOCK)) {
+      lock.setVisible(true);
+      unlock.setVisible(false);
+    }
+
+    if (account.getStatus().equalsIgnoreCase(Account.LOCK)) {
+      lock.setVisible(false);
+      unlock.setVisible(true);
+    }
   }
 
   @FXML
@@ -73,13 +78,25 @@ public class AccountListItemController {
   }
 
   @FXML
-  private void deleteAccount () throws IOException {
+  private void lockAccount () throws IOException {
     Alert alert = new Alert(AlertType.CONFIRMATION);
     alert.setContentText("Are you sure you want to do it?");
 
     Optional<ButtonType> option = alert.showAndWait();
     if (option.get() == ButtonType.OK) {
-      AccountDatabaseHelper.deleteAccount(account.getId());
+      AccountDatabaseHelper.lockAccount(account.getId());
+    }
+    Navigator.getInstance().goToAccountList();
+  }
+
+  @FXML
+  private void unLockAccount () throws IOException {
+    Alert alert = new Alert(AlertType.CONFIRMATION);
+    alert.setContentText("Are you sure you want to do it?");
+
+    Optional<ButtonType> option = alert.showAndWait();
+    if (option.get() == ButtonType.OK) {
+      AccountDatabaseHelper.unLockAccount(account.getId());
     }
     Navigator.getInstance().goToAccountList();
   }

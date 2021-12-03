@@ -1,47 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.AccountListItemController">
+<VBox style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.AccountListItemController">
    <children>
-      <HBox fx:id="productListItem" alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="967.0">
+      <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="967.0">
          <children>
             <Label fx:id="username" prefHeight="25.0" prefWidth="182.0" text="Admin">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="email" prefHeight="25.0" prefWidth="529.0" text="admin@gmail.com">
+            <Label fx:id="email" prefHeight="26.0" prefWidth="419.0" text="admin@gmail.com">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="type" prefHeight="25.0" prefWidth="83.0" text="ADMIN">
+            <Label fx:id="status" prefHeight="26.0" prefWidth="104.0" text="ADMIN">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="type" prefHeight="26.0" prefWidth="105.0" text="ADMIN">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="140.0" spacing="10.0" HBox.hgrow="ALWAYS">
                <children>
-                  <ImageView fx:id="view" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#viewAccount" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#viewAccount" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/ic_eye.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="edit" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#editAccount" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#editAccount" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/ic_pencil.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="delete" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#deleteAccount" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/ic_trash.png" />
-                     </image>
-                  </ImageView>
+                  <StackPane style="-fx-background-color: fff;">
+                     <children>
+                        <ImageView fx:id="lock" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#lockAccount" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/ic_lock.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="unlock" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#unLockAccount" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/ic_unlock.png" />
+                           </image>
+                           <StackPane.margin>
+                              <Insets left="5.0" />
+                           </StackPane.margin>
+                        </ImageView>
+                     </children>
+                  </StackPane>
                </children>
             </HBox>
          </children>

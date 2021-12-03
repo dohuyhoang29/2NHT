@@ -10,17 +10,22 @@ public class Account {
   StringProperty username;
   StringProperty email;
   StringProperty password;
+  StringProperty status;
   StringProperty type;
   StringProperty address;
   StringProperty phone;
 
+  public static final String LOCK = "Lock";
+  public static final String UNLOCK = "Un-Lock";
+
   public Account() {}
 
-  public Account (Integer id, String username, String email, String password, String type, String address, String phone) {
+  public Account (Integer id, String username, String email, String password, String status, String type, String address, String phone) {
     this.id = new SimpleObjectProperty<>(id);
     this.username = new SimpleStringProperty(username);
     this.email = new SimpleStringProperty(email);
     this.password = new SimpleStringProperty(password);
+    this.status = new SimpleStringProperty(status);
     this.type = new SimpleStringProperty(type);
     this.address = new SimpleStringProperty(address);
     this.phone = new SimpleStringProperty(phone);
@@ -72,6 +77,18 @@ public class Account {
 
   public void setPassword(String password) {
     this.password.set(password);
+  }
+
+  public String getStatus() {
+    return status.get();
+  }
+
+  public StringProperty getStatusProperty() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status.set(status);
   }
 
   public String getType() {

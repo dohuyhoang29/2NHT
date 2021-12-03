@@ -22,10 +22,11 @@ public class AccountDatabaseHelper {
         String username = rs.getString("username");
         String email = rs.getString("email");
         String password = rs.getString("password");
+        String status = rs.getString("status");
         String type = rs.getString("type");
         String address = rs.getString("address");
         String phone = rs.getString("phone_number");
-        return new Account(id, username, email, password, type, address, phone);
+        return new Account(id, username, email, password, status, type, address, phone);
       }
     } catch (SQLException throwables) {
       throwables.printStackTrace();
@@ -44,10 +45,11 @@ public class AccountDatabaseHelper {
         String username = rs.getString("username");
         String email = rs.getString("email");
         String password = rs.getString("password");
+        String status = rs.getString("status");
         String type = rs.getString("type");
         String address = rs.getString("address");
         String phone = rs.getString("phone_number");
-        return new Account(Id, username, email, password, type, address, phone);
+        return new Account(Id, username, email, password, status, type, address, phone);
       }
     } catch (SQLException throwables) {
       throwables.printStackTrace();
@@ -67,10 +69,11 @@ public class AccountDatabaseHelper {
         String username = rs.getString("username");
         String email = rs.getString("email");
         String password = rs.getString("password");
+        String status = rs.getString("status");
         String type = rs.getString("type");
         String address = rs.getString("address");
         String phone = rs.getString("phone_number");
-        list.add(new Account(id, username, email, password, type, address, phone));
+        list.add(new Account(id, username, email, password, status, type, address, phone));
       }
     } catch (SQLException throwables) {
       throwables.printStackTrace();
@@ -79,13 +82,14 @@ public class AccountDatabaseHelper {
     return list;
   }
 
-  public static boolean insertAccount(String username, String email, String password,String type, String address, String phone) {
-    String query = "INSERT INTO account (username, email, `password`, type, address, phone_number) VALUES (?,?,?,?,?,?)";
+  public static boolean insertAccount(String username, String email, String password, String type, String address, String phone) {
+    String query = "INSERT INTO account (username, email, `password`, status, type, address, phone_number) VALUES (?,?,?,?,?,?,?)";
     try (Connection cnt = DatabaseHelper.getConnetion();
         PreparedStatement preStm = cnt.prepareStatement(query)) {
       preStm.setString(1, username);
       preStm.setString(2, email);
       preStm.setString(3, password);
+      preStm.setString(4, Account.UNLOCK);
       preStm.setString(4, type);
       preStm.setString(5, address);
       preStm.setString(6, phone);
@@ -165,15 +169,50 @@ public class AccountDatabaseHelper {
         String username = rs.getString("username");
         String email = rs.getString("email");
         String password = rs.getString("password");
+        String status = rs.getString("status");
         String type = rs.getString("type");
         String address = rs.getString("address");
         String phone = rs.getString("phone_number");
-        list.add(new Account(id, username, email, password, type, address, phone));
+        list.add(new Account(id, username, email, password, status, type, address, phone));
       }
     } catch (SQLException throwables) {
       throwables.printStackTrace();
       return null;
     }
     return list;
+  }
+
+  public static boolean lockAccount (Integer id) {
+    String query = "UPDATE account SET status = ? WHERE id = ?";
+
+    try (Connection cnt = DatabaseHelper.getConnetion();
+        PreparedStatement preStm = cnt.prepareStatement(query)) {
+      preStm.setString(1, Account.LOCK);
+      preStm.setInt(2, id);
+
+      if (preStm.executeUpdate() > 0) {
+        return true;
+      }
+    } catch (SQLException throwables) {
+      throwables.printStackTrace();
+    }
+    return false;
+  }
+
+  public static boolean unLockAccount (Integer id) {
+    String query = "UPDATE account SET status = ? WHERE id = ?";
+
+    try (Connection cnt = DatabaseHelper.getConnetion();
+         PreparedStatement preStm = cnt.prepareStatement(query)) {
+      preStm.setString(1, Account.UNLOCK);
+      preStm.setInt(2, id);
+
+      if (preStm.executeUpdate() > 0) {
+        return true;
+      }
+    } catch (SQLException throwables) {
+      throwables.printStackTrace();
+    }
+    return false;
   }
 }

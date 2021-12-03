@@ -62,14 +62,18 @@ public class LoginController implements Initializable {
             errPassword.setText("Username is required");
         } else {
             Account account = AccountDatabaseHelper.getAccountByUsername(username.getText());
-            if (username.getText().equalsIgnoreCase(account.getUsername()) || username.getText().equalsIgnoreCase(account.getEmail())) {
-                if (password.getText().equalsIgnoreCase(account.getPassword())) {
-                    NotificationManager.getInstance().success("Success", "Login Success");
-                    ProjectManager.getInstance().setAccount(account);
-                    if (account.getType().equalsIgnoreCase("ADMIN")) {
-                        Navigator.getInstance().goToDashboard();
+            if (username.getText().equalsIgnoreCase(account.getUsername())) {
+                if (password.getText().equalsIgnoreCase(account.getPassword()) || texfield11.getText().equalsIgnoreCase(account.getPassword())) {
+                    if (account.getStatus().equalsIgnoreCase(Account.UNLOCK)) {
+                        NotificationManager.getInstance().success("Login Success");
+                        ProjectManager.getInstance().setAccount(account);
+                        if (account.getType().equalsIgnoreCase("ADMIN")) {
+                            Navigator.getInstance().goToDashboard();
+                        } else {
+                            Navigator.getInstance().goToHome();
+                        }
                     } else {
-                        Navigator.getInstance().goToHome();
+                        NotificationManager.getInstance().warning("This account has been locked, please login another account");
                     }
                 }
             }

@@ -92,7 +92,7 @@ public class ChangePasswordController implements Initializable {
       if (newPassword.getText().equalsIgnoreCase(confirmPassword.getText())) {
         errConfirmPassword.setText("");
         AccountDatabaseHelper.changePassword(newPassword.getText(), account.getId());
-        NotificationManager.getInstance().success("Success", "Change Password Success");
+        NotificationManager.getInstance().success("Change Password Success");
       } else {
         errConfirmPassword.setText("The passwords are not the same");
       }

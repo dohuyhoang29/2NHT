@@ -17,13 +17,23 @@ public class NotificationManager {
         return notificationManager;
     }
 
-    public void success (String title, String message) {
+    public void success (String message) {
         TrayNotification tray = new TrayNotification();
         AnimationType type = AnimationType.POPUP;
         tray.setAnimationType(type);
-        tray.setTitle(title);
+        tray.setTitle("Success");
         tray.setMessage(message);
         tray.setNotificationType(NotificationType.SUCCESS);
         tray.showAndDismiss(Duration.millis(1));
+    }
+
+    public void warning (String message) {
+        TrayNotification tray = new TrayNotification();
+        AnimationType type = AnimationType.POPUP;
+        tray.setAnimationType(type);
+        tray.setTitle("Warning");
+        tray.setMessage(message);
+        tray.setNotificationType(NotificationType.WARNING);
+        tray.showAndDismiss(Duration.millis(1000));
     }
 }

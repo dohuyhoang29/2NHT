@@ -1,6 +1,7 @@
 package com.controller;
 
 import com.helper.CategoryDatabaseHelper;
+import com.helper.NotificationManager;
 import com.helper.ProductDatabaseHelper;
 import com.helper.ValidationManager;
 import com.model.Category;
@@ -194,6 +195,7 @@ public class InsertProductController implements Initializable {
         txtRearCamera.getText(), txtSelfieCamera.getText(), txtBatteryCapacity.getText(),
         txtSim.getText(), txtDimensions.getText(), txtWeight.getText());
     Files.copy(imgSrc.toPath(), (new File(path + imgSrc.getName())).toPath(), StandardCopyOption.REPLACE_EXISTING);
+    NotificationManager.getInstance().success("Add Product Success");
     Navigator.getInstance().goToInsertProduct();
   }
 
