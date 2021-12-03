@@ -1,5 +1,6 @@
 package com.controller;
 
+import com.Main;
 import com.helper.AccountDatabaseHelper;
 import com.model.Account;
 import com.view.Navigator;
@@ -46,12 +47,12 @@ public class AccountListItemController {
     email.setText(account.getEmail());
     type.setText(account.getType());
 
-    if (account.getStatus().equalsIgnoreCase(Account.UNLOCK)) {
+    if (account.getStatus().equalsIgnoreCase(Main.UNLOCK)) {
       lock.setVisible(true);
       unlock.setVisible(false);
     }
 
-    if (account.getStatus().equalsIgnoreCase(Account.LOCK)) {
+    if (account.getStatus().equalsIgnoreCase(Main.LOCK)) {
       lock.setVisible(false);
       unlock.setVisible(true);
     }

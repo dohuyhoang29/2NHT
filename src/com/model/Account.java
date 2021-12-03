@@ -15,9 +15,6 @@ public class Account {
   StringProperty address;
   StringProperty phone;
 
-  public static final String LOCK = "Lock";
-  public static final String UNLOCK = "Un-Lock";
-
   public Account() {}
 
   public Account (Integer id, String username, String email, String password, String status, String type, String address, String phone) {

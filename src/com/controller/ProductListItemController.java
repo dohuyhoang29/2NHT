@@ -1,5 +1,7 @@
 package com.controller;
 
+import com.Main;
+import com.helper.NotificationManager;
 import com.helper.ProductDatabaseHelper;
 import com.model.Product;
 import com.view.Navigator;
@@ -16,43 +18,40 @@ import javafx.scene.layout.HBox;
 
 public class ProductListItemController {
   @FXML
-  private HBox productListItem;
+  private Label category;
 
   @FXML
   private Label code;
 
   @FXML
+  private ImageView edit;
+
+  @FXML
   private ImageView imgSrc;
-
-  @FXML
-  private Label name;
-
-  @FXML
-  private Label category;
-
-  @FXML
-  private Label quantity;
 
   @FXML
   private Label importPrice;
 
   @FXML
+  private ImageView lock;
+
+  @FXML
+  private Label name;
+
+  @FXML
   private Label price;
 
   @FXML
-  private Label importDate;
+  private HBox productListItem;
 
   @FXML
   private Label status;
 
   @FXML
+  private ImageView unlock;
+
+  @FXML
   private ImageView view;
-
-  @FXML
-  private ImageView edit;
-
-  @FXML
-  private ImageView delete;
 
   Product product;
 
@@ -63,9 +62,19 @@ public class ProductListItemController {
     code.setText(product.getProductCode());
     name.setText(product.getProductName());
     category.setText(product.getCategoryName());
-    importPrice.setText(product.getWarrantyPeriod().toString());
+    importPrice.setText(product.getWarrantyPeriod());
     price.setText(product.getPrice().toString());
+    status.setText(product.getStatus());
 
+    if (product.getStatus().equalsIgnoreCase(Main.LOCK)) {
+      unlock.setVisible(true);
+      lock.setVisible(false);
+    }
+
+    if (product.getStatus().equalsIgnoreCase(Main.UNLOCK)) {
+      lock.setVisible(true);
+      unlock.setVisible(false);
+    }
   }
 
   @FXML
@@ -79,13 +88,28 @@ public class ProductListItemController {
   }
 
   @FXML
-  void deleteProduct() {
+  void unLockProduct() throws IOException {
     Alert alert = new Alert(AlertType.CONFIRMATION);
     alert.setContentText("Are you sure you want to do it?");
 
     Optional<ButtonType> option = alert.showAndWait();
     if (option.get() == ButtonType.OK) {
-      ProductDatabaseHelper.deleteProduct(product.getId());
+      ProductDatabaseHelper.unLockProduct(product.getId());
+      NotificationManager.getInstance().success("Un-Lock Product Success");
+      Navigator.getInstance().goToProductsList();
+    }
+  }
+
+  @FXML
+  void lockProduct() throws IOException {
+    Alert alert = new Alert(AlertType.CONFIRMATION);
+    alert.setContentText("Are you sure you want to do it?");
+
+    Optional<ButtonType> option = alert.showAndWait();
+    if (option.get() == ButtonType.OK) {
+      ProductDatabaseHelper.lockProduct(product.getId());
+      NotificationManager.getInstance().success("Lock Product Success");
+      Navigator.getInstance().goToProductsList();
     }
   }
 }

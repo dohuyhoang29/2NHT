@@ -1,5 +1,6 @@
 package com.helper;
 
+import com.Main;
 import com.model.Account;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -89,7 +90,7 @@ public class AccountDatabaseHelper {
       preStm.setString(1, username);
       preStm.setString(2, email);
       preStm.setString(3, password);
-      preStm.setString(4, Account.UNLOCK);
+      preStm.setString(4, Main.UNLOCK);
       preStm.setString(4, type);
       preStm.setString(5, address);
       preStm.setString(6, phone);
@@ -187,7 +188,7 @@ public class AccountDatabaseHelper {
 
     try (Connection cnt = DatabaseHelper.getConnetion();
         PreparedStatement preStm = cnt.prepareStatement(query)) {
-      preStm.setString(1, Account.LOCK);
+      preStm.setString(1, Main.LOCK);
       preStm.setInt(2, id);
 
       if (preStm.executeUpdate() > 0) {
@@ -204,7 +205,7 @@ public class AccountDatabaseHelper {
 
     try (Connection cnt = DatabaseHelper.getConnetion();
          PreparedStatement preStm = cnt.prepareStatement(query)) {
-      preStm.setString(1, Account.UNLOCK);
+      preStm.setString(1, Main.UNLOCK);
       preStm.setInt(2, id);
 
       if (preStm.executeUpdate() > 0) {
