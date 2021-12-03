@@ -58,7 +58,7 @@ public class HomeController implements Initializable {
   @Override
   public void initialize(URL location, ResourceBundle resources) {
 
-    listProduct = ProductDatabaseHelper.getAllProduct();
+    listProduct = ProductDatabaseHelper.getAllProductHome();
     int column = 0;
     int row = 1;
 

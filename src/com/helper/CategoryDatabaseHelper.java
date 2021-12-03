@@ -1,5 +1,6 @@
 package com.helper;
 
+import com.Main;
 import com.model.Category;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -21,7 +22,8 @@ public class CategoryDatabaseHelper {
           Integer id = rs.getInt("id");
           String name = rs.getString("name");
           String description = rs.getString("description");
-          list.add(new Category(id, name, description));
+          String status = rs.getString("status");
+          list.add(new Category(id, name, description, status));
         }
     } catch (SQLException throwables) {
       throwables.printStackTrace();
@@ -41,7 +43,8 @@ public class CategoryDatabaseHelper {
         Integer id = rs.getInt("id");
         String Name = rs.getString("name");
         String description = rs.getString("description");
-        return new Category(id, Name, description);
+        String status = rs.getString("status");
+        return new Category(id, Name, description, status);
       }
     } catch (SQLException throwables) {
       throwables.printStackTrace();
@@ -50,11 +53,12 @@ public class CategoryDatabaseHelper {
   }
 
   public static boolean insertCategory(String name, String description) {
-    String query = "INSERT INTO categories(name, description) VALUES (?,?);";
+    String query = "INSERT INTO categories(name, description, status) VALUES (?,?,?);";
     try (Connection cnt = DatabaseHelper.getConnetion();
         PreparedStatement preStm = cnt.prepareStatement(query)) {
       preStm.setString(1, name);
       preStm.setString(2, description);
+      preStm.setString(3, Main.UNLOCK);
       if (preStm.executeUpdate() > 0) {
         return true;
       }
@@ -80,11 +84,27 @@ public class CategoryDatabaseHelper {
     return false;
   }
 
-  public static boolean deleteCategory(Integer id) {
-    String query = "DELETE FROM categories WHERE id = ?";
+  public static boolean lockCategory(Integer id) {
+    String query = "UPDATE categories SET status = ? WHERE id = ?";
     try (Connection cnt = DatabaseHelper.getConnetion();
         PreparedStatement preStm = cnt.prepareStatement(query)) {
-      preStm.setInt(1, id);
+      preStm.setString(1, Main.LOCK);
+      preStm.setInt(2, id);
+      if (preStm.executeUpdate() > 0) {
+        return true;
+      }
+    } catch (SQLException throwables) {
+      throwables.printStackTrace();
+    }
+    return false;
+  }
+
+  public static boolean unLockCategory(Integer id) {
+    String query = "UPDATE categories SET status = ? WHERE id = ?";
+    try (Connection cnt = DatabaseHelper.getConnetion();
+         PreparedStatement preStm = cnt.prepareStatement(query)) {
+      preStm.setString(1, Main.UNLOCK);
+      preStm.setInt(2, id);
       if (preStm.executeUpdate() > 0) {
         return true;
       }

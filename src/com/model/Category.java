@@ -10,16 +10,18 @@ public class Category {
   public static final String IPHONE = "iPhone";
   public static final String IPAD = "iPad";
 
-  ObjectProperty<Integer> id;
-  StringProperty name;
-  StringProperty description;
+  private ObjectProperty<Integer> id;
+  private StringProperty name;
+  private StringProperty description;
+  private StringProperty status;
 
   public Category () {}
 
-  public Category (Integer id, String name, String description) {
+  public Category (Integer id, String name, String description, String status) {
     this.id = new SimpleObjectProperty<>(id);
     this.name = new SimpleStringProperty(name);
     this.description = new SimpleStringProperty(description);
+    this.status = new SimpleStringProperty(status);
   }
 
   public Integer getId() {
@@ -56,5 +58,17 @@ public class Category {
 
   public void setDescription(String description) {
     this.description.set(description);
+  }
+
+  public String getStatus() {
+    return status.get();
+  }
+
+  public StringProperty getStatusProperty() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status.set(status);
   }
 }

@@ -6,14 +6,14 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Account {
-  ObjectProperty<Integer> id;
-  StringProperty username;
-  StringProperty email;
-  StringProperty password;
-  StringProperty status;
-  StringProperty type;
-  StringProperty address;
-  StringProperty phone;
+  private ObjectProperty<Integer> id;
+  private StringProperty username;
+  private StringProperty email;
+  private StringProperty password;
+  private StringProperty status;
+  private StringProperty type;
+  private StringProperty address;
+  private StringProperty phone;
 
   public Account() {}
 
