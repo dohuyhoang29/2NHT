@@ -230,7 +230,7 @@
         </HBox>
         <VBox prefHeight="200.0" prefWidth="100.0" styleClass="background" stylesheets="@../css/style.css">
           <children>
-            <Label text="%productsList">
+            <Label text="Products List">
               <font>
                 <Font name="System Bold" size="20.0" />
               </font>
@@ -248,53 +248,58 @@
                      <children>
                         <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="967.0" spacing="10.0">
                            <children>
-                              <Label text="%category">
+                              <Label text="Category">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
                               <ChoiceBox fx:id="cpCategroy" prefHeight="25.0" prefWidth="90.0" />
-                              <Label text="%name">
+                              <Label text="Name">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="txtName" promptText="%key.unspecified" />
+                              <TextField fx:id="txtName" promptText="Search" />
                               <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#apply" style="-fx-background-color: #56d;" text="%search" textFill="WHITE" />
+                                    <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#apply" style="-fx-background-color: #56d;" text="Search" textFill="WHITE" />
                                  </children>
                               </HBox>
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="967.0">
                            <children>
-                              <Label prefHeight="25.0" prefWidth="59.0" text="%iD">
+                              <Label prefHeight="25.0" prefWidth="59.0" text="ID">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="25.0" prefWidth="258.0" text="%productName">
+                              <Label prefHeight="25.0" prefWidth="258.0" text="Product Name">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="25.0" prefWidth="142.0" text="%category">
+                              <Label prefHeight="25.0" prefWidth="142.0" text="Category">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="25.0" prefWidth="142.0" text="%import Price">
+                              <Label prefHeight="25.0" prefWidth="142.0" text="Import Price">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="25.0" prefWidth="162.0" text="%price">
+                              <Label prefHeight="26.0" prefWidth="111.0" text="Price">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <Label alignment="CENTER" prefHeight="25.0" prefWidth="148.0" text="%actions">
+                              <Label prefHeight="26.0" prefWidth="98.0" text="Status">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="25.0" prefWidth="148.0" text="Actions">
                                  <font>
                                     <Font size="16.0" />
                                  </font>

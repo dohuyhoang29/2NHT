@@ -12,6 +12,7 @@ public class Product {
   StringProperty categoryName;
   StringProperty productCode;
   StringProperty productName;
+  StringProperty status;
   StringProperty warrantyPeriod;
   ObjectProperty<Integer> importPrice;
   ObjectProperty<Integer> price;
@@ -39,7 +40,7 @@ public class Product {
 
   // khoi tao contructer
 
-  public Product(Integer id, String categoryName, String productCode, String productName, String warrantyPeriod,
+  public Product(Integer id, String categoryName, String productCode, String productName, String status, String warrantyPeriod,
       Integer importPrice, Integer price, String hardDrive,
       String origin, String color, String imgSrc, String screen, String cpu,
       String gpu, String ram, String operatingSystem, String rearCamera, String selfieCamera,
@@ -48,6 +49,7 @@ public class Product {
     this.categoryName = new SimpleStringProperty(categoryName);
     this.productCode = new SimpleStringProperty(productCode);
     this.productName = new SimpleStringProperty(productName);
+    this.status = new SimpleStringProperty(status);
     this.warrantyPeriod = new SimpleStringProperty(warrantyPeriod);
     this.importPrice = new SimpleObjectProperty<>(importPrice);
     this.price = new SimpleObjectProperty<>(price);
@@ -117,6 +119,18 @@ public class Product {
 
   public void setProductName(String productName) {
     this.productName.set(productName);
+  }
+
+  public String getStatus() {
+    return status.get();
+  }
+
+  public StringProperty getStatusProperty() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status.set(status);
   }
 
   public String getWarrantyPeriod() {

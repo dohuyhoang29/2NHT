@@ -7,6 +7,7 @@ package com.controller;
 
 
 
+import com.Main;
 import com.helper.AccountDatabaseHelper;
 import com.helper.NotificationManager;
 import com.helper.ProjectManager;
@@ -64,7 +65,7 @@ public class LoginController implements Initializable {
             Account account = AccountDatabaseHelper.getAccountByUsername(username.getText());
             if (username.getText().equalsIgnoreCase(account.getUsername())) {
                 if (password.getText().equalsIgnoreCase(account.getPassword()) || texfield11.getText().equalsIgnoreCase(account.getPassword())) {
-                    if (account.getStatus().equalsIgnoreCase(Account.UNLOCK)) {
+                    if (account.getStatus().equalsIgnoreCase(Main.UNLOCK)) {
                         NotificationManager.getInstance().success("Login Success");
                         ProjectManager.getInstance().setAccount(account);
                         if (account.getType().equalsIgnoreCase("ADMIN")) {

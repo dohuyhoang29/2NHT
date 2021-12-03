@@ -100,7 +100,7 @@
    <center>
       <ScrollPane fx:id="scroll" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <content>
-            <VBox prefHeight="2000.0" prefWidth="1248.0" spacing="20.0" style="-fx-background-color: #fff;">
+            <VBox prefWidth="1280.0" spacing="20.0" style="-fx-background-color: #fff;">
                <children>
                   <ScrollPane prefHeight="361.0" prefWidth="1248.0">
                      <content>
