@@ -6,14 +6,14 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Cart {
-  ObjectProperty<Integer> id;
-  ObjectProperty<Integer> quantity;
-  ObjectProperty<Integer> productID;
-  ObjectProperty<Integer> accountID;
-  StringProperty imgSrc;
-  StringProperty name;
-  StringProperty hardDrive;
-  ObjectProperty<Integer> price;
+  private ObjectProperty<Integer> id;
+  private ObjectProperty<Integer> quantity;
+  private ObjectProperty<Integer> productID;
+  private ObjectProperty<Integer> accountID;
+  private StringProperty imgSrc;
+  private StringProperty name;
+  private  StringProperty hardDrive;
+  private ObjectProperty<Integer> price;
 
   public Cart (Integer id, Integer quantity, Integer productID, Integer accountID, String imgSrc, String name, String hardDrive, Integer price) {
     this.id = new SimpleObjectProperty<>(id);

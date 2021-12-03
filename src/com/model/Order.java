@@ -13,15 +13,15 @@ public class Order {
   public final static String TO_RECEIVE = "To Receive";
   public final static String COMPLETED = "Completed";
 
-  ObjectProperty<Integer> id;
-  ObjectProperty<Integer> accountID;
-  StringProperty name;
-  ObjectProperty<Integer> totalPrice;
-  LocalDate createDate;
-  StringProperty createDateProperty;
-  StringProperty status;
-  StringProperty address;
-  StringProperty phoneNumber;
+  private ObjectProperty<Integer> id;
+  private ObjectProperty<Integer> accountID;
+  private StringProperty name;
+  private ObjectProperty<Integer> totalPrice;
+  private LocalDate createDate;
+  private StringProperty createDateProperty;
+  private StringProperty status;
+  private StringProperty address;
+  private StringProperty phoneNumber;
 
   public Order (Integer id, Integer accountID, String name, Integer totalPrice, LocalDate createDate, String status, String address, String phoneNumber) {
     this.id = new SimpleObjectProperty<>(id);

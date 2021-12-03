@@ -8,30 +8,30 @@ import javafx.beans.property.StringProperty;
 public class Product {
 
   // khoi tao properties
-  ObjectProperty<Integer> id;
-  StringProperty categoryName;
-  StringProperty productCode;
-  StringProperty productName;
-  StringProperty status;
-  StringProperty warrantyPeriod;
-  ObjectProperty<Integer> importPrice;
-  ObjectProperty<Integer> price;
-  StringProperty hardDrive;
-  StringProperty origin;
-  StringProperty color;
-  StringProperty imgSrc;
+ private ObjectProperty<Integer> id;
+ private StringProperty categoryName;
+ private StringProperty productCode;
+ private StringProperty productName;
+ private StringProperty status;
+ private StringProperty warrantyPeriod;
+ private ObjectProperty<Integer> importPrice;
+ private ObjectProperty<Integer> price;
+ private StringProperty hardDrive;
+ private StringProperty origin;
+ private StringProperty color;
+ private StringProperty imgSrc;
 
-  StringProperty screen;
-  StringProperty cpu;
-  StringProperty gpu;
-  StringProperty ram;
-  StringProperty operatingSystem;
-  StringProperty rearCamera;
-  StringProperty selfieCamera;
-  StringProperty batteryCapacity;
-  StringProperty sim;
-  StringProperty weight;
-  StringProperty dimensions;
+ private StringProperty screen;
+ private StringProperty cpu;
+ private StringProperty gpu;
+ private StringProperty ram;
+ private StringProperty operatingSystem;
+ private StringProperty rearCamera;
+ private StringProperty selfieCamera;
+ private StringProperty batteryCapacity;
+ private StringProperty sim;
+ private StringProperty weight;
+ private StringProperty dimensions;
 
   // khoi tao contructer mac dinh
   public Product() {

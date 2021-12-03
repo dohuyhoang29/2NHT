@@ -6,16 +6,16 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class OrderDetail {
-  ObjectProperty<Integer> id;
-  ObjectProperty<Integer> accountID;
-  ObjectProperty<Integer> productID;
-  StringProperty hardDrive;
-  StringProperty imgSrc;
-  StringProperty name;
-  ObjectProperty<Integer> price;
-  ObjectProperty<Integer> quantity;
-  StringProperty status;
-  StringProperty address;
+ private ObjectProperty<Integer> id;
+ private ObjectProperty<Integer> accountID;
+ private ObjectProperty<Integer> productID;
+ private StringProperty hardDrive;
+ private StringProperty imgSrc;
+ private StringProperty name;
+ private ObjectProperty<Integer> price;
+ private ObjectProperty<Integer> quantity;
+ private StringProperty status;
+ private StringProperty address;
 
   public OrderDetail (Integer id, Integer accountID, Integer productId, String hardDrive, String imgSrc, String name, Integer price, Integer quantity, String status, String address)  {
     this.id = new SimpleObjectProperty<>(id);

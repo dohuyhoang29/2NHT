@@ -7,13 +7,13 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Feedback  {
-  ObjectProperty<Integer> id;
-  StringProperty feedback;
-  StringProperty username;
-  StringProperty name;
-  ObjectProperty<Integer> point;
-  LocalDate date;
-  StringProperty dateProperty;
+  private ObjectProperty<Integer> id;
+  private StringProperty feedback;
+  private StringProperty username;
+  private StringProperty name;
+  private ObjectProperty<Integer> point;
+  private LocalDate date;
+  private StringProperty dateProperty;
 
   public Feedback (Integer id, String feedback, String username, String name, Integer point, LocalDate date) {
     this.id = new SimpleObjectProperty<>(id);
