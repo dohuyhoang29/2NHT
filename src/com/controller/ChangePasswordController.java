@@ -191,4 +191,7 @@ public class ChangePasswordController implements Initializable {
   void goToPurchaseOrder (MouseEvent event) throws IOException {
     Navigator.getInstance().goToPurchaseOrder();
   }
+
+
+
 }

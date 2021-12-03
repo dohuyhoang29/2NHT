@@ -131,4 +131,20 @@ public class MacbookController implements Initializable {
   void goToIPad(MouseEvent event) throws IOException {
     Navigator.getInstance().goToIPad();
   }
+
+  @FXML
+  void goToSearch (MouseEvent event) throws IOException {
+    Navigator.getInstance().goToSearch(txtSearch.getText());
+  }
+
+  @FXML
+  void goToProfile (MouseEvent event) throws IOException {
+    Navigator.getInstance().goToProfile();
+  }
+
+  @FXML
+  void goToLogin (MouseEvent event) throws IOException {
+    Navigator.getInstance().goToLogin();
+  }
+
 }

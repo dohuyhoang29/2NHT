@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.CartController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.CartController">
    <top>
       <HBox alignment="CENTER_LEFT" prefHeight="78.0" prefWidth="1250.0" spacing="20.0" style="-fx-background-color: #26d;" BorderPane.alignment="CENTER">
          <children>
@@ -24,25 +24,25 @@
                </image>
             </ImageView>
             <Pane prefHeight="61.0" prefWidth="39.0" />
-            <Label text="MacBook" textFill="WHITE">
+            <Label text="%macBook" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label text="iPhone" textFill="WHITE">
+            <Label text="%iphone" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label text="iPad" textFill="WHITE">
+            <Label text="%ipad" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
             <Pane prefHeight="76.0" prefWidth="311.0" HBox.hgrow="ALWAYS" />
-            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="34.0" prefWidth="215.0" style="-fx-background-color: #fff; -fx-background-radius: 100;">
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#goToSearch" prefHeight="34.0" prefWidth="215.0" style="-fx-background-color: #fff; -fx-background-radius: 100;">
                <children>
-                  <TextField fx:id="txtSearch" promptText="Search" styleClass="transparent" stylesheets="@../css/style.css">
+                  <TextField fx:id="txtSearch" onMouseClicked="#goToSearch" promptText="%search" styleClass="transparent" stylesheets="@../css/style.css">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -58,12 +58,7 @@
                   </Pane>
                </children>
             </HBox>
-            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/ic_my_account.png" />
-               </image>
-            </ImageView>
-            <StackPane>
+            <StackPane onMouseClicked="#goToCart">
                <children>
                   <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -84,6 +79,16 @@
                   </Pane>
                </children>
             </StackPane>
+            <ImageView fitHeight="35.0" fitWidth="35.0" onMouseClicked="#goToProfile" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ic_my_account.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="27.0" onMouseClicked="#goToLogin" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ic_logout1.png" />
+               </image>
+            </ImageView>
             <HBox alignment="CENTER" />
          </children>
          <padding>
@@ -99,32 +104,32 @@
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="1170.0" style="-fx-background-color: #eff2f7;">
                <children>
-                  <Label prefHeight="27.0" prefWidth="102.0" text="Product">
+                  <Label prefHeight="27.0" prefWidth="102.0" text="%product">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="27.0" prefWidth="310.0" text="Product Desc">
+                  <Label prefHeight="27.0" prefWidth="310.0" text="%productDesc">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="27.0" prefWidth="143.0" text="Price">
+                  <Label prefHeight="27.0" prefWidth="143.0" text="%price">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="27.0" prefWidth="373.0" text="Quantity">
+                  <Label prefHeight="27.0" prefWidth="373.0" text="%quantity">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="27.0" prefWidth="166.0" text="Total">
+                  <Label prefHeight="27.0" prefWidth="166.0" text="%total">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="27.0" text="Action">
+                  <Label prefHeight="27.0" text="%action">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -141,7 +146,7 @@
             </ScrollPane>
             <HBox alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="1170.0" style="-fx-background-color: #eff2f7;">
                <children>
-                  <Label prefHeight="27.0" text="Sub Total : ">
+                  <Label prefHeight="27.0" text="%subtotal:">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -156,7 +161,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="pay" mnemonicParsing="false" onAction="#clickPay" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: #26d; -fx-background-radius: 10;" text="Purchase" textFill="WHITE">
+                  <Button fx:id="pay" mnemonicParsing="false" onAction="#clickPay" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: #26d; -fx-background-radius: 10;" text="%purchase" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>

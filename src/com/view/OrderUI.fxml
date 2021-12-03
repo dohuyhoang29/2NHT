@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.OrderController">
+<BorderPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.OrderController">
   <top>
     <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" spacing="10.0" styleClass="background_main" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
       <children>
@@ -215,7 +215,7 @@
         </HBox>
         <VBox prefHeight="200.0" prefWidth="100.0" styleClass="background" stylesheets="@../css/style.css">
           <children>
-            <Label text="Add Account">
+            <Label text="%addAccount">
               <font>
                 <Font name="System Bold" size="20.0" />
               </font>
@@ -233,16 +233,16 @@
               <children>
                 <HBox prefHeight="10.0" prefWidth="967.0" spacing="10.0">
                   <children>
-                    <TextField fx:id="txtSearch" prefHeight="25.0" prefWidth="182.0" promptText="Search Product">
+                    <TextField fx:id="txtSearch" prefHeight="25.0" prefWidth="182.0" promptText="%earchProduct">
                       <font>
                         <Font size="14.0" />
                       </font>
                     </TextField>
                     <ChoiceBox fx:id="cbStatus" prefHeight="30.0" prefWidth="150.0" />
-                    <DatePicker fx:id="dpFrom" prefHeight="30.0" prefWidth="174.0" promptText="From" />
-                    <DatePicker fx:id="dpTo" prefHeight="30.0" prefWidth="174.0" promptText="To" />
+                    <DatePicker fx:id="dpFrom" prefHeight="30.0" prefWidth="174.0" promptText="%from" />
+                    <DatePicker fx:id="dpTo" prefHeight="30.0" prefWidth="174.0" promptText="%to" />
                     <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                    <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#search" prefHeight="29.0" prefWidth="67.0" style="-fx-background-color: #56d;" text="Search" textFill="WHITE">
+                    <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#search" prefHeight="29.0" prefWidth="67.0" style="-fx-background-color: #56d;" text="%search" textFill="WHITE">
                                  <font>
                                     <Font size="14.0" />
                                  </font></Button>
@@ -253,27 +253,27 @@
                   <HBox prefHeight="31.0" prefWidth="967.0">
                     <children>
                       <Pane prefHeight="31.0" prefWidth="14.0" />
-                      <Label prefHeight="27.0" prefWidth="440.0" text="Customer Name">
+                      <Label prefHeight="27.0" prefWidth="440.0" text="%customerName">
                         <font>
                           <Font size="18.0" />
                         </font>
                       </Label>
-                      <Label prefHeight="27.0" prefWidth="124.0" text="Price">
+                      <Label prefHeight="27.0" prefWidth="124.0" text="%price">
                         <font>
                           <Font size="18.0" />
                         </font>
                       </Label>
-                      <Label prefHeight="27.0" prefWidth="123.0" text="Status">
+                      <Label prefHeight="27.0" prefWidth="123.0" text="%status">
                         <font>
                           <Font size="18.0" />
                         </font>
                       </Label>
-                      <Label prefHeight="27.0" prefWidth="161.0" text="Date">
+                      <Label prefHeight="27.0" prefWidth="161.0" text="%date">
                         <font>
                           <Font size="18.0" />
                         </font>
                       </Label>
-                      <Label text="Action">
+                      <Label text="%action">
                         <font>
                           <Font size="18.0" />
                         </font>

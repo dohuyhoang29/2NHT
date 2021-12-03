@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="153.0" prefWidth="1070.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.PurchaseOrderItemController">
+<VBox prefHeight="153.0" prefWidth="1070.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.PurchaseOrderItemController">
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
          <children>
@@ -29,7 +29,7 @@
                   </Label>
                   <HBox>
                      <children>
-                        <Label text="Hard Drive : ">
+                        <Label text="%harddrive:">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -43,7 +43,7 @@
                   </HBox>
                   <HBox>
                      <children>
-                        <Label text="Quantity : ">
+                        <Label text="%qUantity:">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -72,7 +72,7 @@
          <children>
             <HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="1068.0" spacing="20.0">
                <children>
-                  <Label text="Total : ">
+                  <Label text="%tOtal:">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -89,7 +89,7 @@
             </HBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="1068.0" spacing="20.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#rePurchase" style="-fx-background-color: #26d;" text="Repurchase" textFill="WHITE">
+                  <Button mnemonicParsing="false" onAction="#rePurchase" style="-fx-background-color: #26d;" text="%Repurchase" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -101,7 +101,7 @@
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="review" mnemonicParsing="false" onAction="#feedback" prefHeight="30.0" prefWidth="99.0" style="-fx-background-color: #26d;" text="Review" textFill="WHITE">
+                        <Button fx:id="review" mnemonicParsing="false" onAction="#feedback" prefHeight="30.0" prefWidth="99.0" style="-fx-background-color: #26d;" text="%review" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>

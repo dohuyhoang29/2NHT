@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="600.0" spacing="10.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ViewReviewController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="600.0" spacing="10.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ViewReviewController">
    <children>
-      <Label text="Product Reviews">
+      <Label text="%productReviews">
          <font>
             <Font size="20.0" />
          </font>
@@ -33,7 +33,7 @@
                   </Label>
                   <HBox>
                      <children>
-                        <Label text="Hard Drive : ">
+                        <Label text="%harddrive:">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -64,7 +64,7 @@
                         <Label fx:id="username" text="username" />
                         <HBox>
                            <children>
-                              <Label text="Point : " />
+                              <Label text="%pOint:" />
                               <Label fx:id="point" text="5" />
                            </children>
                         </HBox>
@@ -82,7 +82,7 @@
       </HBox>
       <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#goToEditFeedback" prefHeight="30.0" prefWidth="81.0" style="-fx-background-color: #26d;" text="Edit" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#goToEditFeedback" prefHeight="30.0" prefWidth="81.0" style="-fx-background-color: #26d;" text="%edit" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>

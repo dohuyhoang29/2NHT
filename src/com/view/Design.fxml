@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="1129.0" prefWidth="1248.0" spacing="40.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="1129.0" prefWidth="1248.0" spacing="40.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox spacing="80.0">
          <children>
@@ -33,7 +33,7 @@
                      <children>
                         <HBox>
                            <children>
-                              <Label prefHeight="32.0" prefWidth="134.0" text="Hard Drive : ">
+                              <Label prefHeight="32.0" prefWidth="134.0" text="%harddrive:">
                                  <font>
                                     <Font name="System Bold" size="22.0" />
                                  </font>
@@ -70,7 +70,7 @@
                               <Font size="20.0" />
                            </font>
                         </TextField>
-                        <Button fx:id="btnAddToCart" mnemonicParsing="false" onAction="#clickAddToCart" prefHeight="39.0" prefWidth="161.0" style="-fx-background-color: #26d; -fx-background-radius: 20;" text="Add to cart" textFill="WHITE">
+                        <Button fx:id="btnAddToCart" mnemonicParsing="false" onAction="#clickAddToCart" prefHeight="39.0" prefWidth="161.0" style="-fx-background-color: #26d; -fx-background-radius: 20;" text="%addtocart" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
@@ -81,13 +81,13 @@
                      <children>
                         <HBox fx:id="pointReviewBox">
                            <children>
-                              <Label text="Point : " />
+                              <Label text="%pOint:" />
                               <Label text="5" />
                            </children>
                         </HBox>
                         <Separator orientation="VERTICAL" prefHeight="200.0" />
                         <Label fx:id="quantityReviewTop" prefHeight="17.0" prefWidth="0.0" text="5" />
-                        <Label text="Reviews" />
+                        <Label text="%reviews" />
                      </children>
                   </HBox>
                </children>
@@ -465,12 +465,12 @@
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="948.0" spacing="10.0" style="-fx-background-color: #fff;">
                      <children>
-                        <Label alignment="CENTER" onMouseClicked="#showInfomation" prefHeight="28.0" prefWidth="216.0" style="-fx-border-color: #fff;" text="Additional Infomation">
+                        <Label alignment="CENTER" onMouseClicked="#showInfomation" prefHeight="28.0" prefWidth="216.0" style="-fx-border-color: #fff;" text="%additionalInfomation">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" onMouseClicked="#showReviews" prefHeight="27.0" prefWidth="112.0" style="-fx-border-color: #000; -fx-border-width: 1 0 0 0;" text="Reviews">
+                        <Label alignment="CENTER" onMouseClicked="#showReviews" prefHeight="27.0" prefWidth="112.0" style="-fx-border-color: #000; -fx-border-width: 1 0 0 0;" text="%reviews">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
@@ -494,7 +494,7 @@
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <Label text="reviews for">
+                              <Label text="%reviewsfoR">
                                  <font>
                                     <Font size="18.0" />
                                  </font>

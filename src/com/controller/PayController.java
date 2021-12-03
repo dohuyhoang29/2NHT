@@ -84,4 +84,20 @@ public class PayController implements Initializable {
   void goToCart (MouseEvent event) throws IOException {
     Navigator.getInstance().goToCart();
   }
+
+  @FXML
+  void goToSearch (MouseEvent event) throws IOException {
+    Navigator.getInstance().goToSearch(txtSearch.getText());
+  }
+
+  @FXML
+  void goToProfile (MouseEvent event) throws IOException {
+    Navigator.getInstance().goToProfile();
+  }
+
+  @FXML
+  void goToLogin (MouseEvent event) throws IOException {
+    Navigator.getInstance().goToLogin();
+  }
+
 }

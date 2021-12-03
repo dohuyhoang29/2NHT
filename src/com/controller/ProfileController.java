@@ -158,4 +158,7 @@ public class ProfileController implements Initializable {
   void goToPurchaseOrder (MouseEvent event) throws IOException {
     Navigator.getInstance().goToPurchaseOrder();
   }
+
+
+
 }

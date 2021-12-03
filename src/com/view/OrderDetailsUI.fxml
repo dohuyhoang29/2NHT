@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.OrderDetailsController">
+<BorderPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.OrderDetailsController">
   <top>
     <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" spacing="10.0" styleClass="background_main" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
       <children>
@@ -213,7 +213,7 @@
         </HBox>
         <VBox prefHeight="200.0" prefWidth="100.0" styleClass="background" stylesheets="@../css/style.css">
           <children>
-            <Label text="Order Details">
+            <Label text="%orderDetails">
               <font>
                 <Font name="System Bold" size="20.0" />
               </font>
@@ -244,7 +244,7 @@
                         </VBox>
                         <Pane prefHeight="76.0" prefWidth="414.0" />
                         <ChoiceBox fx:id="cbStatus" prefHeight="38.0" prefWidth="207.0" style="-fx-border-color: #dde; -fx-border-radius: 5;" styleClass="transparent" stylesheets="@../css/style.css" />
-                        <Button fx:id="btnSave" mnemonicParsing="false" onAction="#changeStatus" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: #56d;" text="Save" textFill="WHITE">
+                        <Button fx:id="btnSave" mnemonicParsing="false" onAction="#changeStatus" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: #56d;" text="%save" textFill="WHITE">
                           <font>
                             <Font size="18.0" />
                           </font>
@@ -270,7 +270,7 @@
                             </Pane>
                             <VBox>
                               <children>
-                                <Label text="Customer">
+                                <Label text="%customer">
                                   <font>
                                     <Font name="System Bold" size="18.0" />
                                   </font>
@@ -311,14 +311,14 @@
                             </Pane>
                             <VBox>
                               <children>
-                                <Label text="Order Info">
+                                <Label text="%orderInfo">
                                   <font>
                                     <Font name="System Bold" size="18.0" />
                                   </font>
                                 </Label>
                                 <HBox>
                                   <children>
-                                    <Label text="Shipping : ">
+                                    <Label text="%shipping:">
                                       <font>
                                         <Font name="System Bold" size="16.0" />
                                       </font>
@@ -332,7 +332,7 @@
                                 </HBox>
                                 <HBox>
                                   <children>
-                                    <Label text="Status : ">
+                                    <Label text="%status:">
                                       <font>
                                         <Font name="System Bold" size="16.0" />
                                       </font>
@@ -365,7 +365,7 @@
                             </Pane>
                             <VBox>
                               <children>
-                                <Label text="Deliver To">
+                                <Label text="%deliverTo">
                                   <font>
                                     <Font name="System Bold" size="18.0" />
                                   </font>
@@ -373,7 +373,7 @@
                                 <HBox prefHeight="18.0" prefWidth="192.0" />
                                 <HBox>
                                   <children>
-                                    <Label text="Address : ">
+                                    <Label text="%adDress:">
                                       <font>
                                         <Font name="System Bold" size="16.0" />
                                       </font>
@@ -400,22 +400,22 @@
                         <HBox prefHeight="31.0" prefWidth="967.0">
                           <children>
                             <Pane prefHeight="31.0" prefWidth="14.0" />
-                            <Label prefHeight="27.0" prefWidth="295.0" text="Product">
+                            <Label prefHeight="27.0" prefWidth="295.0" text="%product">
                               <font>
                                 <Font size="18.0" />
                               </font>
                             </Label>
-                            <Label prefHeight="27.0" prefWidth="233.0" text="Unit Price">
+                            <Label prefHeight="27.0" prefWidth="233.0" text="%unitPrice">
                               <font>
                                 <Font size="18.0" />
                               </font>
                             </Label>
-                            <Label prefHeight="27.0" prefWidth="221.0" text="Quantity">
+                            <Label prefHeight="27.0" prefWidth="221.0" text="%quantity">
                               <font>
                                 <Font size="18.0" />
                               </font>
                             </Label>
-                            <Label prefHeight="27.0" prefWidth="161.0" text="Total">
+                            <Label prefHeight="27.0" prefWidth="161.0" text="%total">
                               <font>
                                 <Font size="18.0" />
                               </font>
@@ -438,7 +438,7 @@
                         </VBox>
                 <HBox alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="967.0">
                   <children>
-                    <Label text="Subtotal : ">
+                    <Label text="%subtotal:">
                       <font>
                         <Font name="System Bold" size="18.0" />
                       </font>

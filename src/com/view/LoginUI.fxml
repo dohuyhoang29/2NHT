@@ -20,12 +20,12 @@
          </image>
       </ImageView>
       
-      <Text layoutX="90.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account?">
+      <Text layoutX="90.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%don'thaveanaccount?">
          <font>
             <Font name="Times New Roman" size="15.0" />
          </font>
       </Text>
-      <Text layoutX="230.0" layoutY="552.0" onMouseClicked="#goToRegister" strokeType="OUTSIDE" strokeWidth="0.0" text=" Create" underline="true">
+      <Text layoutX="230.0" layoutY="552.0" onMouseClicked="#goToRegister" strokeType="OUTSIDE" strokeWidth="0.0" text="%create" underline="true">
          <font>
             <Font name="Times New Roman Bold" size="15.0" />
          </font>
@@ -33,7 +33,7 @@
             <Cursor fx:constant="OPEN_HAND" />
          </cursor>
       </Text>
-      <TextField fx:id="username" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="253.0" prefHeight="40.0" prefWidth="310.0" promptText="username" style="-fx-background-radius: 50;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+      <TextField fx:id="username" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="253.0" prefHeight="40.0" prefWidth="310.0" promptText="%username" style="-fx-background-radius: 50;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
          <font>
             <Font size="14.0" />
          </font>
@@ -43,7 +43,7 @@
             <Font size="14.0" />
          </font>
       </TextField>
-      <PasswordField fx:id="password" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="329.0" prefHeight="40.0" prefWidth="310.0" promptText="Password" style="-fx-background-radius: 50;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <PasswordField fx:id="password" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="329.0" prefHeight="40.0" prefWidth="310.0" promptText="%password" style="-fx-background-radius: 50;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
       <ImageView disable="true" fitHeight="15.0" fitWidth="22.0" layoutX="37.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/user-1.png" />
@@ -54,7 +54,7 @@
             <Image url="@../images/lock.png" />
          </image>
       </ImageView>
-      <Text fill="#8a8282" layoutX="106.0" layoutY="488.0" onMouseClicked="#forgotPassword" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot your password?">
+      <Text fill="#8a8282" layoutX="106.0" layoutY="488.0" onMouseClicked="#forgotPassword" strokeType="OUTSIDE" strokeWidth="0.0" text="%forgotyourpassword?">
          <font>
             <Font name="Times New Roman" size="15.0" />
          </font>
@@ -68,7 +68,7 @@
             <Image url="@../images/logo_2.png" />
          </image>
       </ImageView>
-      <Button layoutX="113.0" layoutY="415.0" mnemonicParsing="false" onMouseClicked="#goToDashBoard" prefHeight="37.0" prefWidth="131.0" style="-fx-background-color: #2c2c2c;" text="Sign in" textFill="WHITE">
+      <Button layoutX="113.0" layoutY="415.0" mnemonicParsing="false" onMouseClicked="#goToDashBoard" prefHeight="37.0" prefWidth="131.0" style="-fx-background-color: #2c2c2c;" text="%signin" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>

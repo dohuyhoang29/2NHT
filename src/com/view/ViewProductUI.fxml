@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ViewProductController">
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ViewProductController">
   <top>
     <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" spacing="10.0" styleClass="background_main" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
       <children>
@@ -220,7 +226,7 @@
         </HBox>
         <VBox prefHeight="200.0" prefWidth="100.0" styleClass="background" stylesheets="@../css/style.css">
           <children>
-            <Label text="View Product">
+            <Label text="%viewProduct">
               <font>
                 <Font name="System Bold" size="20.0" />
               </font>
@@ -244,47 +250,47 @@
                            <children>
                               <VBox prefHeight="391.0" prefWidth="192.0" spacing="5.0">
                                  <children>
-                                    <Label text="Code">
+                                    <Label text="%code">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Warranty Period">
+                                    <Label text="%warrantyPeriod">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Import Price">
+                                    <Label text="%importPrice">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Price">
+                                    <Label text="%price">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Hard Drive">
+                                    <Label text="%harddrive:">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Origin">
+                                    <Label text="%origin">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="SIM">
+                                    <Label text="%sim">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Weight">
+                                    <Label text="%weight">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Dimensions">
+                                    <Label text="%dimensions">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
@@ -342,47 +348,47 @@
                               </VBox>
                               <VBox prefHeight="391.0" prefWidth="192.0" spacing="5.0">
                                  <children>
-                                    <Label text="Screen">
+                                    <Label text="%screen">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="CPU">
+                                    <Label text="%cpu">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="GPU">
+                                    <Label text="%gpu">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="RAM">
+                                    <Label text="%ram">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Color">
+                                    <Label text="%color">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Operating System">
+                                    <Label text="%operatingSystem">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Rear Camera">
+                                    <Label text="%rearCamera">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Selfie Camera">
+                                    <Label text="%selfieCamera">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Battery Capacity">
+                                    <Label text="%batteryCapacity">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
@@ -440,7 +446,7 @@
                               </VBox>
                            </children>
                         </HBox>
-                        <Button layoutX="14.0" layoutY="435.0" mnemonicParsing="false" onMouseClicked="#back" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: #56d;" text="Back" textFill="WHITE">
+                        <Button layoutX="14.0" layoutY="435.0" mnemonicParsing="false" onMouseClicked="#back" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: #56d;" text="%back" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font></Button>

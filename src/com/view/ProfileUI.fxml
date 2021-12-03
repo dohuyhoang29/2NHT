@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ProfileController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ProfileController">
    <top>
       <HBox alignment="CENTER_LEFT" prefHeight="78.0" prefWidth="1250.0" spacing="20.0" style="-fx-background-color: #26d;" BorderPane.alignment="CENTER">
          <children>
@@ -24,25 +24,25 @@
                </image>
             </ImageView>
             <Pane prefHeight="61.0" prefWidth="39.0" />
-            <Label onMouseClicked="#goToMacBook" text="MacBook" textFill="WHITE">
+            <Label onMouseClicked="#goToMacBook" text="%macBook" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label onMouseClicked="#goToIPhone" text="iPhone" textFill="WHITE">
+            <Label onMouseClicked="#goToIPhone" text="%iphone" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label onMouseClicked="#goToIPad" text="iPad" textFill="WHITE">
+            <Label onMouseClicked="#goToIPad" text="%ipad" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
             <Pane prefHeight="76.0" prefWidth="311.0" HBox.hgrow="ALWAYS" />
-            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="34.0" prefWidth="215.0" style="-fx-background-color: #fff; -fx-background-radius: 100;">
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#goToSearch" prefHeight="34.0" prefWidth="215.0" style="-fx-background-color: #fff; -fx-background-radius: 100;">
                <children>
-                  <TextField fx:id="txtSearch" promptText="Search" styleClass="transparent" stylesheets="@../css/style.css">
+                  <TextField fx:id="txtSearch" promptText="%search" styleClass="transparent" stylesheets="@../css/style.css">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -113,7 +113,7 @@
                                     <Image url="@../images/user.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="account" text="Username">
+                              <Label fx:id="account" text="%username">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -130,7 +130,7 @@
                               <Image url="@../images/ic_my_account_gray.png" />
                            </image>
                         </ImageView>
-                        <Label text="My Account">
+                        <Label text="%myAccount">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -144,7 +144,7 @@
                               <Image url="@../images/ic_purchase_order.png" />
                            </image>
                         </ImageView>
-                        <Label text="Purchase Order">
+                        <Label text="%purchaseOrder">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -158,7 +158,7 @@
                               <Image url="@../images/ic_key.png" />
                            </image>
                         </ImageView>
-                        <Label text="Change Password">
+                        <Label text="%changePassword">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -172,12 +172,12 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </padding>
                <children>
-                  <Label text="My Profile">
+                  <Label text="%myProfile">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label text="Manage profile information for account security">
+                  <Label text="%manageprofileinformationforaccountsecurity">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -187,7 +187,7 @@
                      <children>
                         <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Label text="Username ">
+                              <Label text="%username">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -209,7 +209,7 @@
                      <children>
                         <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Label text="Email">
+                              <Label text="%email">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -236,7 +236,7 @@
                      <children>
                         <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Label text="Phone Number">
+                              <Label text="%phoneNumber">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -263,7 +263,7 @@
                      <children>
                         <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Label text="Address">
+                              <Label text="%address">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -290,7 +290,7 @@
                      <children>
                         <HBox alignment="CENTER_RIGHT" prefHeight="74.0" prefWidth="302.0">
                            <children>
-                              <Button fx:id="save" mnemonicParsing="false" onAction="#editAccount" prefHeight="34.0" prefWidth="82.0" style="-fx-background-color: #26d;" text="Save" textFill="WHITE">
+                              <Button fx:id="save" mnemonicParsing="false" onAction="#editAccount" prefHeight="34.0" prefWidth="82.0" style="-fx-background-color: #26d;" text="%save" textFill="WHITE">
                                  <font>
                                     <Font size="18.0" />
                                  </font>

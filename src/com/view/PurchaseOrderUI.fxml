@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.PurchaseOrderController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.PurchaseOrderController">
    <top>
       <HBox alignment="CENTER_LEFT" prefHeight="78.0" prefWidth="1250.0" spacing="20.0" style="-fx-background-color: #26d;" BorderPane.alignment="CENTER">
          <children>
@@ -24,25 +24,25 @@
                </image>
             </ImageView>
             <Pane prefHeight="61.0" prefWidth="39.0" />
-            <Label onMouseClicked="#goToMacBook" text="MacBook" textFill="WHITE">
+            <Label onMouseClicked="#goToMacBook" text="%macBook" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label onMouseClicked="#goToIPhone" text="iPhone" textFill="WHITE">
+            <Label onMouseClicked="#goToIPhone" text="%iphone" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label onMouseClicked="#goToIPad" text="iPad" textFill="WHITE">
+            <Label onMouseClicked="#goToIPad" text="%ipad" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
             <Pane prefHeight="76.0" prefWidth="311.0" HBox.hgrow="ALWAYS" />
-            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="34.0" prefWidth="215.0" style="-fx-background-color: #fff; -fx-background-radius: 100;">
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#goToSearch" prefHeight="34.0" prefWidth="215.0" style="-fx-background-color: #fff; -fx-background-radius: 100;">
                <children>
-                  <TextField fx:id="txtSearch" promptText="Search" styleClass="transparent" stylesheets="@../css/style.css">
+                  <TextField fx:id="txtSearch" promptText="%search" styleClass="transparent" stylesheets="@../css/style.css">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -113,7 +113,7 @@
                                     <Image url="@../images/user.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="account" text="Username">
+                              <Label fx:id="account" text="%username">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -130,7 +130,7 @@
                               <Image url="@../images/ic_my_account_gray.png" />
                            </image>
                         </ImageView>
-                        <Label text="My Account">
+                        <Label text="%myAccount">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -144,7 +144,7 @@
                               <Image url="@../images/ic_purchase_order.png" />
                            </image>
                         </ImageView>
-                        <Label text="Purchase Order">
+                        <Label text="%purchaseOrder">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -158,7 +158,7 @@
                               <Image url="@../images/ic_key.png" />
                            </image>
                         </ImageView>
-                        <Label text="Change Password">
+                        <Label text="%changePassword">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -175,7 +175,7 @@
                            <children>
                               <HBox alignment="CENTER" onMouseClicked="#goToAllBox" prefWidth="218.0" styleClass="purchase-order-choose" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="All" textFill="#2266dd" HBox.hgrow="ALWAYS">
+                                    <Label text="%all" textFill="#2266dd" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -184,7 +184,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToPayBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="To Pay" HBox.hgrow="ALWAYS">
+                                    <Label text="%toPay" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -193,7 +193,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToShipBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="To Ship" HBox.hgrow="ALWAYS">
+                                    <Label text="%toShip" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -202,7 +202,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToReceiveBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="To Receive" HBox.hgrow="ALWAYS">
+                                    <Label text="%toReceive" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -211,7 +211,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToCompletedBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="Completed" HBox.hgrow="ALWAYS">
+                                    <Label text="%completed" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
