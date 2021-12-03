@@ -284,7 +284,7 @@ public class ProductDatabaseHelper {
                                         String sim, String weight, String dimensions) {
         String query =
                 "INSERT INTO product (category_id, code, name, status, warranty_period, import_price, price, hard_drive, origin, img_src, screen, cpu, gpu, ram, operating_system, rear_camera, selfie_camera, battery_capacity, sim, weight, dimensions) "
-                        + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                        + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         try (Connection cnt = DatabaseHelper.getConnetion();
              PreparedStatement preStm = cnt.prepareStatement(query)) {

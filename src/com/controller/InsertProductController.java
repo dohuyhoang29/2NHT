@@ -173,7 +173,7 @@ public class InsertProductController implements Initializable {
 
   private File imgSrc;
   final FileChooser fileChooser = new FileChooser();
-  String path = "D:/App/IntelliJ IDEA 2021.2/Project/2NHT_v1/src/com/images/";
+  String path = "C:/Users/hoang/IdeaProjects/2NHT/src/com/images/";
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {

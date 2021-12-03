@@ -57,7 +57,7 @@ public class ProductListItemController {
 
   public void setData(Product product) {
     this.product = product;
-    Image image = new Image(getClass().getResourceAsStream("/com/images/" + product.getImgSrc()));
+    Image image = new Image("file:///C:/Users/hoang/IdeaProjects/2NHT/src/com/images/" + product.getImgSrc());
     imgSrc.setImage(image);
     code.setText(product.getProductCode());
     name.setText(product.getProductName());
