@@ -62,8 +62,10 @@ public class LoginController implements Initializable {
             errUsername.setText("Username is required");
             errPassword.setText("Username is required");
         } else {
+            errUsername.setText("");
+            errPassword.setText("");
             Account account = AccountDatabaseHelper.getAccountByUsername(username.getText());
-            if (username.getText().equalsIgnoreCase(account.getUsername())) {
+            if (account != null) {
                 if (password.getText().equalsIgnoreCase(account.getPassword()) || texfield11.getText().equalsIgnoreCase(account.getPassword())) {
                     if (account.getStatus().equalsIgnoreCase(Main.UNLOCK)) {
                         NotificationManager.getInstance().success("Login Success");
@@ -76,7 +78,11 @@ public class LoginController implements Initializable {
                     } else {
                         NotificationManager.getInstance().warning("This account has been locked, please login another account");
                     }
+                } else  {
+                    errPassword.setText("Incorrect password");
                 }
+            } else {
+                errUsername.setText("Account does not exist");
             }
         }
     }

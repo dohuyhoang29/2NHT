@@ -6,6 +6,7 @@ import com.helper.ProductDatabaseHelper;
 import com.model.Product;
 import com.view.Navigator;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.Optional;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -55,9 +56,11 @@ public class ProductListItemController {
 
   Product product;
 
+  String path = Paths.get(".").toAbsolutePath().normalize().toString();
+
   public void setData(Product product) {
     this.product = product;
-    Image image = new Image("file:///C:/Users/hoang/IdeaProjects/2NHT/src/com/images/" + product.getImgSrc());
+    Image image = new Image("file:///" + path + "/src/com/images/" + product.getImgSrc());
     imgSrc.setImage(image);
     code.setText(product.getProductCode());
     name.setText(product.getProductName());

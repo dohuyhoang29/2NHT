@@ -1,0 +1,20 @@
+
+U
+java:S1118":Add a private constructor to hide the implicit public one.(±’©†şÿÿÿÿ
+H
+java:S1168$"+Return an empty collection instead of null.(¥¹ï8ÍÌïŞ×/
+H
+java:S1168A"+Return an empty collection instead of null.(¥¹ï8ÒÌïŞ×/
+_
+java:S1192"IDefine a constant instead of duplicating this literal "feedback" 3 times.( ıéÎ
+‹
+java:S1192"pDefine a constant instead of duplicating this literal "INNER JOIN product AS p ON f.product_id = p.id " 3 times.(Ü½ş“üÿÿÿÿ
+i
+java:S1192"TDefine a constant instead of duplicating this literal "FROM feedback AS f " 3 times.(´Úİ
+™
+java:S1192"~Define a constant instead of duplicating this literal "SELECT f.id, f.feedback, f.point, f.date, a.username, p.name " 3 times.(íáÉœûÿÿÿÿ
+a
+java:S1192"FDefine a constant instead of duplicating this literal "point" 3 times.(ß†°³şÿÿÿÿ
+_
+java:S1192"IDefine a constant instead of duplicating this literal "username" 3 times.(ê­¯
+f	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ©æª

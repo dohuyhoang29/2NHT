@@ -1,0 +1,7 @@
+
+r
+java:S1450?"WRemove the "listCart" field and declare it as a local variable in the relevant methods.(õ”¨üÿÿÿÿ
+V
+java:S1117Q"9Rename "count" which hides the field declared at line 30.(æÕ¿¼8Ï°ßá×/
+o
+java:S1192U"RDefine a constant instead of duplicating this literal "Email is required" 3 times.(ÈÍ†³8¾ûáá×/
