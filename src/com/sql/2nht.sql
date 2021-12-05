@@ -91,14 +91,9 @@ CREATE TABLE IF NOT EXISTS `feedback` (
   CONSTRAINT `FK2_Product_Feedback` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table 2nht.feedback: ~4 rows (approximately)
+-- Dumping data for table 2nht.feedback: ~0 rows (approximately)
 DELETE FROM `feedback`;
 /*!40000 ALTER TABLE `feedback` DISABLE KEYS */;
-INSERT INTO `feedback` (`id`, `account_id`, `product_id`, `feedback`, `point`, `date`) VALUES
-	(1, 3, 3, 'Very Good', 5, '2021-11-04'),
-	(4, 3, 5, 'Awnsome', 5, '2021-11-21'),
-	(5, 3, 12, 'abc', 5, '2021-12-01'),
-	(6, 3, 13, 'adfa', 3, '2021-12-01');
 /*!40000 ALTER TABLE `feedback` ENABLE KEYS */;
 
 -- Dumping structure for table 2nht.order
@@ -116,14 +111,9 @@ CREATE TABLE IF NOT EXISTS `order` (
   CONSTRAINT `FK1_account` FOREIGN KEY (`account_id`) REFERENCES `account` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table 2nht.order: ~4 rows (approximately)
+-- Dumping data for table 2nht.order: ~0 rows (approximately)
 DELETE FROM `order`;
 /*!40000 ALTER TABLE `order` DISABLE KEYS */;
-INSERT INTO `order` (`id`, `account_id`, `name`, `total_price`, `create_date`, `status`, `address`, `phone_number`) VALUES
-	(6, 3, 'hoang', 4525, '2021-11-23', 'To Ship', 'VN', '012345678'),
-	(7, 3, 'hoang', 4525, '2021-11-24', 'To Receive', 'VN', '012345678'),
-	(8, 3, 'hoang', 18102, '2021-11-24', 'To Pay', 'VN', '012345678'),
-	(9, 3, 'hoang', 4525, '2021-11-24', 'Completed', 'VN', '012345678');
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
 
 -- Dumping structure for table 2nht.order_detail
@@ -139,16 +129,9 @@ CREATE TABLE IF NOT EXISTS `order_detail` (
   CONSTRAINT `FK__product` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table 2nht.order_detail: ~6 rows (approximately)
+-- Dumping data for table 2nht.order_detail: ~1 rows (approximately)
 DELETE FROM `order_detail`;
 /*!40000 ALTER TABLE `order_detail` DISABLE KEYS */;
-INSERT INTO `order_detail` (`id`, `quantity`, `product_id`, `order_id`) VALUES
-	(12, 1, 5, 6),
-	(13, 2, 5, 7),
-	(14, 1, 3, 8),
-	(15, 1, 5, 8),
-	(16, 1, 9, 8),
-	(17, 1, 10, 8);
 /*!40000 ALTER TABLE `order_detail` ENABLE KEYS */;
 
 -- Dumping structure for table 2nht.product
@@ -179,24 +162,18 @@ CREATE TABLE IF NOT EXISTS `product` (
   PRIMARY KEY (`id`),
   KEY `FK1_Catergories` (`category_id`),
   CONSTRAINT `FK1_Catergories` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table 2nht.product: ~12 rows (approximately)
+-- Dumping data for table 2nht.product: ~5 rows (approximately)
 DELETE FROM `product`;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
 INSERT INTO `product` (`id`, `category_id`, `status`, `code`, `name`, `warranty_period`, `import_price`, `price`, `hard_drive`, `origin`, `color`, `img_src`, `screen`, `cpu`, `gpu`, `ram`, `operating_system`, `rear_camera`, `selfie_camera`, `battery_capacity`, `sim`, `weight`, `dimensions`) VALUES
-	(3, 3, 'Un-Lock', 'adsf', 'adfads', '2021-11-10', 4255, 4524, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
-	(5, 3, 'Un-Lock', 'adsf', 'adfads', '2021-11-10', 42536, 4525, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
-	(9, 3, 'Un-Lock', 'adsf', 'adfads', '2021-11-10', 42537, 4526, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
-	(10, 3, 'Un-Lock', 'adsf', 'adfads', '2021-11-10', 42538, 4527, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
-	(11, 2, 'Un-Lock', 'ads', 'adfas', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
-	(12, 2, 'Un-Lock', 'ads', 'adfad', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
-	(13, 2, 'Un-Lock', 'ads', 'afads', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
-	(14, 2, 'Un-Lock', 'ads', 'adfds', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
-	(15, 1, 'Lock', 'ads', 'adfas', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
-	(16, 1, 'Lock', 'ads', 'adfas', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
-	(17, 1, 'Lock', 'ads', 'afads', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas'),
-	(18, 1, 'Lock', 'SD', 'adfds', '2021-11-10', 4253, 452, 'sfg', 'sfg', 'sfdgsdg', 'demo_ipad.png', 'asdfasdfa', 'asdf', 'adfas', 'fasdf', 'adfasdfadf', 'f', 'adfads', 'adfad', 'fafasd', 'fasdfasdf', 'sdfas');
+	(19, 3, 'Un-Lock', '001', 'adfa', '123', 1341324, 13414, 'adfaf', 'adfasf', NULL, 'ipadmini65_1.jpg', '', '', '', '', '', '', '', '', '', '', ''),
+	(20, 1, 'Un-Lock', 'afdsf', 'dfsd', 'addfas', 1123, 123123, 'adfafd', 'adfasf', NULL, 'ipadmini65_1.jpg', '', '', '', '', '', '', '', '', '', '', ''),
+	(21, 2, 'Un-Lock', 'adf', 'adf', '123', 123, 1231, 'adf', 'asdf', NULL, 'demo_ipad.png', '', '', '', '', '', '', '', '', '', '', ''),
+	(22, 3, 'Un-Lock', 'adsf', 'adfs', '12', 123, 12312, 'afd', 'asfda', NULL, 'demo_ipad.png', '', '', '', '', '', '', '', '', '', '', ''),
+	(23, 3, 'Un-Lock', 'adfasf', 'afdafds', '123', 123, 123123, 'adf', 'adf', NULL, 'ipad-pro-11-2021-1_4.jpg', 'adf', 'adf', 'adf', 'adf', 'asfas', 'fas', 'dfdf', 'asfasdf', 'fasdf', 'adf', 'fdaf'),
+	(24, 3, 'Un-Lock', 'adf', 'asdfasf', 'adfas', 1341, 134124, 'df', 'adfasf', NULL, 'ipad-air-4-wifi-256gb-9.jpg', 'asdf', 'adf', 'adsf', 'adsf', 'asdf', 'sdfasfd', 'asdfa', 'afdasdf', 'asdf', 'sdf', 'asdf');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
