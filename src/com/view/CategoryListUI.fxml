@@ -250,12 +250,12 @@
                         <Font size="16.0" />
                       </font>
                     </Label>
-                              <Label alignment="CENTER" prefHeight="25.0" prefWidth="148.0" text="Status">
+                              <Label alignment="CENTER" prefHeight="25.0" prefWidth="148.0" text="%status">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                    <Label alignment="CENTER" prefHeight="25.0" prefWidth="148.0" text="%actions">
+                    <Label alignment="CENTER" prefHeight="25.0" prefWidth="148.0" text="%action">
                       <font>
                         <Font size="16.0" />
                       </font>

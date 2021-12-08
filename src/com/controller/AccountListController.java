@@ -1,6 +1,8 @@
 package com.controller;
 
 import com.helper.AccountDatabaseHelper;
+import com.helper.ProjectManager;
+import com.helper.TranslateManager;
 import com.model.Account;
 import com.view.Navigator;
 import java.io.IOException;
@@ -91,12 +93,14 @@ public class AccountListController implements Initializable {
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
+    username.setText(ProjectManager.getInstance().getAccount().getUsername());
     listAccount = AccountDatabaseHelper.getAllAccount();
 
     try {
       for (Account acc : listAccount) {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/com/view/AccountListItemUI.fxml"));
+        fxmlLoader.setResources(TranslateManager.getRb());
         VBox vBox = fxmlLoader.load();
         AccountListItemController accountListItemController = fxmlLoader.getController();
         accountListItemController.setData(acc);

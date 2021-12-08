@@ -11,6 +11,7 @@ import com.Main;
 import com.helper.AccountDatabaseHelper;
 import com.helper.NotificationManager;
 import com.helper.ProjectManager;
+import com.helper.TranslateManager;
 import com.model.Account;
 import com.view.Navigator;
 import java.io.IOException;
@@ -58,12 +59,23 @@ public class LoginController implements Initializable {
 
     @FXML
     private void goToDashBoard() throws IOException {
-        if (username.getText().isEmpty() || password.getText().isEmpty()) {
+        int count = 0;
+        if (username.getText().isEmpty()) {
             errUsername.setText("Username is required");
-            errPassword.setText("Username is required");
+            count++;
         } else {
             errUsername.setText("");
+        }
+
+        if (password.getText().isEmpty() && texfield11.getText().isEmpty()) {
+            errPassword.setText("Password is required");
+            count++;
+        } else {
             errPassword.setText("");
+        }
+
+
+        if (count == 0) {
             Account account = AccountDatabaseHelper.getAccountByUsername(username.getText());
             if (account != null) {
                 if (password.getText().equalsIgnoreCase(account.getPassword()) || texfield11.getText().equalsIgnoreCase(account.getPassword())) {
@@ -114,6 +126,7 @@ public class LoginController implements Initializable {
     void forgotPassword() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/com/view/ForgotUI.fxml"));
+        fxmlLoader.setResources(TranslateManager.getRb());
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage viewAccount = new Stage();

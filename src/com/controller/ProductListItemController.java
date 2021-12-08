@@ -56,16 +56,16 @@ public class ProductListItemController {
 
   Product product;
 
-  String path = Paths.get(".").toAbsolutePath().normalize().toString();
+  String path = Paths.get(".").toAbsolutePath().normalize() + "/src/com/images/";
 
   public void setData(Product product) {
     this.product = product;
-    Image image = new Image("file:///" + path + "/src/com/images/" + product.getImgSrc());
+    Image image = new Image("file:///" + path + product.getImgSrc());
     imgSrc.setImage(image);
     code.setText(product.getProductCode());
     name.setText(product.getProductName());
     category.setText(product.getCategoryName());
-    importPrice.setText(product.getWarrantyPeriod());
+    importPrice.setText(product.getImportPrice().toString());
     price.setText(product.getPrice().toString());
     status.setText(product.getStatus());
 

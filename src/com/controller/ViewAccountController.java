@@ -26,7 +26,6 @@ public class ViewAccountController {
   public void setData(Account account) {
     username.setText(account.getUsername());
     email.setText(account.getEmail());
-    password.setText(account.getPassword());
     type.setText(account.getType());
     if (account.getAddress() != null) {
       address.setText(account.getAddress());

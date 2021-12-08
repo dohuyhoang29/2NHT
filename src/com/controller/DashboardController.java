@@ -1,5 +1,6 @@
 package com.controller;
 
+import com.helper.ProjectManager;
 import com.view.Navigator;
 import java.io.IOException;
 import java.net.URL;
@@ -59,11 +60,12 @@ public class DashboardController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        username.setText(ProjectManager.getInstance().getAccount().getUsername());
 
         ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
-                new PieChart.Data("Phone", 30),
-                new PieChart.Data("Laptop", 30),
-                new PieChart.Data("Tablet", 30)
+                new PieChart.Data("Phone", 150),
+                new PieChart.Data("Laptop", 250),
+                new PieChart.Data("Tablet", 123)
         );
         pcSalesAnalytics.setData(pieChartData);
 

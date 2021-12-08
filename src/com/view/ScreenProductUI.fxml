@@ -8,6 +8,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
@@ -15,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ScreenProductController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ScreenProductController">
    <top>
       <HBox alignment="CENTER_LEFT" prefHeight="78.0" prefWidth="1250.0" spacing="20.0" style="-fx-background-color: #26d;" BorderPane.alignment="CENTER">
          <children>
@@ -118,11 +119,16 @@
                                     <Font name="System Bold" size="28.0" />
                                  </font>
                               </Label>
-                              <VBox prefHeight="80.0" prefWidth="631.0" spacing="10.0">
+                              <VBox prefHeight="30.0" prefWidth="448.0" spacing="10.0">
                                  <children>
                                     <HBox>
                                        <children>
-                                          <Label prefHeight="32.0" prefWidth="134.0" text="%harddrive:">
+                                          <Label prefHeight="32.0" prefWidth="123.0" text="%hardDrive">
+                                             <font>
+                                                <Font name="System Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="32.0" text=" : ">
                                              <font>
                                                 <Font name="System Bold" size="22.0" />
                                              </font>
@@ -154,11 +160,29 @@
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="411.0" spacing="40.0">
                                  <children>
-                                    <TextField fx:id="quantity" prefHeight="42.0" prefWidth="54.0" text="1">
-                                       <font>
-                                          <Font size="20.0" />
-                                       </font>
-                                    </TextField>
+                                    <AnchorPane onMouseEntered="#quantityEntered" onMouseExited="#quantityExited">
+                                       <children>
+                                          <TextField fx:id="quantity" prefHeight="44.0" prefWidth="65.0" text="1">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </TextField>
+                                          <VBox fx:id="quantityBox" alignment="CENTER" layoutX="47.0" layoutY="12.0" prefHeight="20.0" prefWidth="13.0" style="-fx-background-color: #e7e7e7;" visible="false">
+                                             <children>
+                                                <ImageView fitHeight="10.0" fitWidth="10.0" onMouseClicked="#up" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/ic_up.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <ImageView fitHeight="10.0" fitWidth="10.0" onMouseClicked="#down" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/ic_down.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
                                     <Button fx:id="btnAddToCart" mnemonicParsing="false" onAction="#clickAddToCart" prefHeight="39.0" prefWidth="161.0" style="-fx-background-color: #26d; -fx-background-radius: 20;" text="%addtocart" textFill="WHITE">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
@@ -170,7 +194,8 @@
                                  <children>
                                     <HBox fx:id="pointReviewBox">
                                        <children>
-                                          <Label text="%pOint:" />
+                                          <Label text="%point" />
+                                          <Label text=" : " />
                                           <Label text="5" />
                                        </children>
                                     </HBox>
@@ -192,12 +217,12 @@
                            <children>
                               <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="948.0" spacing="10.0" style="-fx-background-color: #fff;">
                                  <children>
-                                    <Label alignment="CENTER" onMouseClicked="#showInfomation" prefHeight="28.0" prefWidth="216.0" style="-fx-border-color: #000; -fx-border-width: 1 0 0 0;" text="Additional Infomation">
+                                    <Label alignment="CENTER" onMouseClicked="#showInfomation" prefHeight="28.0" prefWidth="216.0" style="-fx-border-color: #000; -fx-border-width: 1 0 0 0;" text="%additionalInfomation">
                                        <font>
                                           <Font name="System Bold" size="16.0" />
                                        </font>
                                     </Label>
-                                    <Label alignment="CENTER" onMouseClicked="#showReviews" prefHeight="27.0" prefWidth="112.0" text="Reviews">
+                                    <Label alignment="CENTER" onMouseClicked="#showReviews" prefHeight="27.0" prefWidth="112.0" text="%reviews">
                                        <font>
                                           <Font name="System Bold" size="16.0" />
                                        </font>
@@ -219,7 +244,7 @@
                                  <children>
                                     <HBox alignment="CENTER" prefHeight="35.0" prefWidth="162.0" style="-fx-border-color: #eee; -fx-border-width: 0 1 0 0;">
                                        <children>
-                                          <Label text="Hard Drive">
+                                          <Label text="%hardDrive">
                                              <font>
                                                 <Font name="System Bold" size="18.0" />
                                              </font>
@@ -244,7 +269,7 @@
                                  <children>
                                     <HBox alignment="CENTER" prefHeight="35.0" prefWidth="162.0" style="-fx-border-color: #eee; -fx-border-width: 0 1 0 0;">
                                        <children>
-                                          <Label text="Screen">
+                                          <Label text="%screen">
                                              <font>
                                                 <Font name="System Bold" size="18.0" />
                                              </font>
@@ -272,7 +297,7 @@
                                  <children>
                                     <HBox alignment="CENTER" prefHeight="35.0" prefWidth="162.0" style="-fx-border-color: #eee; -fx-border-width: 0 1 0 0;">
                                        <children>
-                                          <Label text="Rear Camera">
+                                          <Label text="%rearCamera">
                                              <font>
                                                 <Font name="System Bold" size="18.0" />
                                              </font>
@@ -300,7 +325,7 @@
                                  <children>
                                     <HBox alignment="CENTER" prefHeight="35.0" prefWidth="162.0" style="-fx-border-color: #eee; -fx-border-width: 0 1 0 0;">
                                        <children>
-                                          <Label text="Selfie Camera">
+                                          <Label text="%selfieCamera">
                                              <font>
                                                 <Font name="System Bold" size="18.0" />
                                              </font>
@@ -328,7 +353,7 @@
                                  <children>
                                     <HBox alignment="CENTER" prefHeight="35.0" prefWidth="162.0" style="-fx-border-color: #eee; -fx-border-width: 0 1 0 0;">
                                        <children>
-                                          <Label text="Battery Capacity">
+                                          <Label text="%batteryCapacity">
                                              <font>
                                                 <Font name="System Bold" size="18.0" />
                                              </font>
@@ -356,7 +381,7 @@
                                  <children>
                                     <HBox alignment="CENTER" prefHeight="35.0" prefWidth="162.0" style="-fx-border-color: #eee; -fx-border-width: 0 1 0 0;">
                                        <children>
-                                          <Label text="SIM">
+                                          <Label text="%sim">
                                              <font>
                                                 <Font name="System Bold" size="18.0" />
                                              </font>
@@ -384,7 +409,7 @@
                                  <children>
                                     <HBox alignment="CENTER" prefHeight="35.0" prefWidth="162.0" style="-fx-border-color: #eee; -fx-border-width: 0 1 0 0;">
                                        <children>
-                                          <Label text="CPU">
+                                          <Label text="%cpu">
                                              <font>
                                                 <Font name="System Bold" size="18.0" />
                                              </font>
@@ -412,7 +437,7 @@
                                  <children>
                                     <HBox alignment="CENTER" prefHeight="35.0" prefWidth="162.0" style="-fx-border-color: #eee; -fx-border-width: 0 1 0 0;">
                                        <children>
-                                          <Label text="GPU">
+                                          <Label text="%gpu">
                                              <font>
                                                 <Font name="System Bold" size="18.0" />
                                              </font>
@@ -440,7 +465,7 @@
                                  <children>
                                     <HBox alignment="CENTER" prefHeight="35.0" prefWidth="162.0" style="-fx-border-color: #eee; -fx-border-width: 0 1 0 0;">
                                        <children>
-                                          <Label text="RAM">
+                                          <Label text="%ram">
                                              <font>
                                                 <Font name="System Bold" size="18.0" />
                                              </font>
@@ -468,7 +493,7 @@
                                  <children>
                                     <HBox alignment="CENTER" prefHeight="35.0" prefWidth="162.0" style="-fx-border-color: #eee; -fx-border-width: 0 1 0 0;">
                                        <children>
-                                          <Label text="Operation System">
+                                          <Label text="%operatingSystem">
                                              <font>
                                                 <Font name="System Bold" size="18.0" />
                                              </font>
@@ -496,7 +521,7 @@
                                  <children>
                                     <HBox alignment="CENTER" prefHeight="35.0" prefWidth="162.0" style="-fx-border-color: #eee; -fx-border-width: 0 1 0 0;">
                                        <children>
-                                          <Label text="Weight">
+                                          <Label text="%weight">
                                              <font>
                                                 <Font name="System Bold" size="18.0" />
                                              </font>
@@ -524,7 +549,7 @@
                                  <children>
                                     <HBox alignment="CENTER" prefHeight="35.0" prefWidth="162.0" style="-fx-border-color: #eee; -fx-border-width: 0 1 0 0;">
                                        <children>
-                                          <Label text="Dimensions">
+                                          <Label text="%dimension">
                                              <font>
                                                 <Font name="System Bold" size="18.0" />
                                              </font>
@@ -550,7 +575,7 @@
                               </HBox>
                            </children>
                         </VBox>
-                        <VBox fx:id="reviews" prefHeight="523.0" prefWidth="948.0">
+                        <VBox fx:id="reviews" prefHeight="523.0" prefWidth="948.0" visible="false">
                            <children>
                               <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="948.0" spacing="10.0" style="-fx-background-color: #fff;">
                                  <children>
@@ -583,7 +608,7 @@
                                                 <Font size="18.0" />
                                              </font>
                                           </Label>
-                                          <Label text="%reviewsfoR">
+                                          <Label text="%reviewFor">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
@@ -608,7 +633,7 @@
                   </StackPane>
                </children>
                <padding>
-                  <Insets left="150.0" right="150.0" top="80.0" />
+                  <Insets left="150.0" right="150.0" top="50.0" />
                </padding>
             </VBox>
          </content>

@@ -91,9 +91,9 @@ public class AccountDatabaseHelper {
       preStm.setString(2, email);
       preStm.setString(3, password);
       preStm.setString(4, Main.UNLOCK);
-      preStm.setString(4, type);
-      preStm.setString(5, address);
-      preStm.setString(6, phone);
+      preStm.setString(5, type);
+      preStm.setString(6, address);
+      preStm.setString(7, phone);
       if (preStm.executeUpdate() > 0) {
         return true;
       }
@@ -114,6 +114,22 @@ public class AccountDatabaseHelper {
       preStm.setString(4, address);
       preStm.setString(5, phone);
       preStm.setInt(6, id);
+      if (preStm.executeUpdate() > 0) {
+        return true;
+      }
+    } catch (SQLException throwables) {
+      throwables.printStackTrace();
+    }
+
+    return false;
+  }
+
+  public static boolean resetPassword(String password, Integer id) {
+    String query = "UPDATE account SET `password` = ? WHERE id = ?";
+    try (Connection cnt = DatabaseHelper.getConnetion();
+        PreparedStatement preStm = cnt.prepareStatement(query)) {
+      preStm.setString(1, password);
+      preStm.setInt(2, id);
       if (preStm.executeUpdate() > 0) {
         return true;
       }

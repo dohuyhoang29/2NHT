@@ -17,11 +17,15 @@ public class FeedbackItemController {
   private HBox pointBox;
 
   @FXML
+  private Label point;
+
+  @FXML
   private Label feedback;
 
   public void setData (Feedback feedback) {
     username.setText(feedback.getUsername());
     date.setText(feedback.getDateProperty());
+    point.setText(feedback.getPoint().toString());
     this.feedback.setText(feedback.getFeedback());
   }
 

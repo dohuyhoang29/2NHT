@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="329.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ViewAccountController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="329.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ViewAccountController">
   <children>
     <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
       <image>
@@ -29,25 +27,16 @@
       <children>
         <HBox>
           <children>
-            <Label text="%PAssword:">
+            <Label text="%type">
               <font>
                 <Font size="16.0" />
               </font>
             </Label>
-            <Label fx:id="password" text="pass">
-              <font>
-                <Font size="16.0" />
-              </font>
-            </Label>
-          </children>
-        </HBox>
-        <HBox>
-          <children>
-            <Label text="%type:">
-              <font>
-                <Font size="16.0" />
-              </font>
-            </Label>
+                  <Label text=" : ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
             <Label fx:id="type" text="type">
               <font>
                 <Font size="16.0" />
@@ -57,11 +46,16 @@
         </HBox>
         <HBox>
           <children>
-            <Label text="%ADdress:">
+            <Label text="%address">
               <font>
                 <Font size="16.0" />
               </font>
             </Label>
+                  <Label text=" : ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
             <Label fx:id="address" text="address">
               <font>
                 <Font size="16.0" />
@@ -71,11 +65,16 @@
         </HBox>
         <HBox>
           <children>
-            <Label text="%PHoneNumber:">
+            <Label text="%phoneNumber">
               <font>
                 <Font size="16.0" />
               </font>
             </Label>
+                  <Label text=" : ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
             <Label fx:id="phone" text="phone">
               <font>
                 <Font size="16.0" />

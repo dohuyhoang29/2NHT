@@ -2,6 +2,7 @@ package com.controller;
 
 import com.helper.CategoryDatabaseHelper;
 import com.helper.ProductDatabaseHelper;
+import com.helper.ProjectManager;
 import com.helper.ValidationManager;
 import com.model.Category;
 import com.model.Product;
@@ -10,6 +11,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.List;
 import java.util.Optional;
@@ -31,8 +33,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 
 public class EditProductController implements Initializable {
-  @FXML
-  private TextField txtSearch;
 
   @FXML
   private ImageView changeLanguage;
@@ -92,13 +92,22 @@ public class EditProductController implements Initializable {
   private Label errPrice;
 
   @FXML
+  private TextField txtHardDrive;
+
+  @FXML
+  private Label errHardDrive;
+
+  @FXML
   private TextField txtOrigin;
+
+  @FXML
+  private Label errOrigin;
 
   @FXML
   private TextField txtWarrantyPeriod;
 
   @FXML
-  private Label errImportDate;
+  private Label errWarrantyPeriod;
 
   @FXML
   private Button btnNextBasicInfo;
@@ -107,22 +116,16 @@ public class EditProductController implements Initializable {
   private VBox productImages;
 
   @FXML
-  private Button btnChooseImages;
+  private HBox demoImg;
 
   @FXML
   private ImageView imgPreview;
 
   @FXML
-  private TextField txtColor;
+  private VBox clickUpload;
 
   @FXML
-  private Label errColor;
-
-  @FXML
-  private TextField txtHardDrive;
-
-  @FXML
-  private Label errHardDrive;
+  private Label errImgSrc;
 
   @FXML
   private Button btnPreviousProductImg;
@@ -176,12 +179,12 @@ public class EditProductController implements Initializable {
 
   private File imgSrc;
   final FileChooser fileChooser = new FileChooser();
-  String path = "D:/App/IntelliJ IDEA 2021.2/Project/2NHT_v1/src/com/images/";
-  String pathOut = "D:/App/IntelliJ IDEA 2021.2/Project/2NHT_v1/out/production/2NHT_v1/com/images";
+  String path = Paths.get(".").toAbsolutePath().normalize() + "/src/com/images/";
   Product product;
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
+    username.setText(ProjectManager.getInstance().getAccount().getUsername());
     List<Category> listCate = CategoryDatabaseHelper.getAllCategories();
     for (Category c : listCate) {
       cbCategory.getItems().add(c.getName());
@@ -189,11 +192,12 @@ public class EditProductController implements Initializable {
     cbCategory.setValue("Laptop");
   }
 
-  public void setData (Product product) {
+  public void setData(Product product) {
+    demoImg.setVisible(true);
+    clickUpload.setVisible(false);
     this.product = product;
-    System.out.println(product.getCategoryName());
     Image image = new Image(getClass().getResourceAsStream("/com/images/" + product.getImgSrc()));
-//    imgSrc = new File("/com/view/" + product.getImgSrc());
+    imgSrc = new File(path + product.getImgSrc());
 
     imgPreview.setImage(image);
     txtProductCode.setText(product.getProductCode());
@@ -211,7 +215,6 @@ public class EditProductController implements Initializable {
     txtCpu.setText(product.getCpu());
     txtGpu.setText(product.getGpu());
     txtRam.setText(product.getRam());
-    txtColor.setText(product.getColor());
     txtOperatingSystem.setText(product.getOperatingSystem());
     txtRearCamera.setText(product.getRearCamera());
     txtSelfieCamera.setText(product.getSelfieCamera());
@@ -237,36 +240,39 @@ public class EditProductController implements Initializable {
       ProductDatabaseHelper.editProduct(category.getId(), txtProductCode.getText(),
           txtProductName.getText(), txtWarrantyPeriod.getText(),
           Integer.parseInt(txtImportPrice.getText()), Integer.parseInt(txtPrice.getText()),
-          txtHardDrive.getText(), txtOrigin.getText(), txtColor.getText(),
-          imgName,
-          txtScreen.getText(), txtCpu.getText(),
+          txtHardDrive.getText(), txtOrigin.getText(), imgName, txtScreen.getText(), txtCpu.getText(),
           txtGpu.getText(), txtRam.getText(), txtOperatingSystem.getText(), txtRearCamera.getText(),
           txtSelfieCamera.getText(), txtBatteryCapacity.getText(), txtSim.getText(),
           txtDimensions.getText(), txtWeight.getText(), product.getId());
 
       if (imgSrc != null) {
-        Files.copy(imgSrc.toPath(), (new File(path + imgSrc.getName())).toPath(), StandardCopyOption.REPLACE_EXISTING);
+        Files.copy(imgSrc.toPath(), (new File(path + imgSrc.getName())).toPath(),
+            StandardCopyOption.REPLACE_EXISTING);
       }
-      Navigator.getInstance().goToInsertProduct();
+      Navigator.getInstance().goToProductsList();
     }
+  }
+
+  @FXML
+  void deleteImage (MouseEvent event) {
+    demoImg.setVisible(false);
+    clickUpload.setVisible(true);
   }
 
   @FXML
   private void showChangeLanguageMousePressed(MouseEvent mouseEvent) {
     count++;
-    if (count % 2 != 0) {
-      changeLanguageContainer.setVisible(true);
-    } else {
-      changeLanguageContainer.setVisible(false);
-    }
+    changeLanguageContainer.setVisible(count % 2 != 0);
   }
 
   @FXML
   void clickChooseImage(MouseEvent mouseEvent) {
     imgSrc = fileChooser.showOpenDialog(Navigator.getInstance().getStage());
-    Image image = new Image("file:///" + imgSrc.getAbsolutePath());
 
     if (imgSrc != null) {
+      demoImg.setVisible(true);
+      clickUpload.setVisible(false);
+      Image image = new Image("file:///" + imgSrc.getAbsolutePath());
       imgPreview.setImage(image);
     }
   }
@@ -308,10 +314,21 @@ public class EditProductController implements Initializable {
         count++;
       }else errPrice.setText("");
 
-      if(txtWarrantyPeriod.getText().isEmpty()) {
-        errImportDate.setText("Warranty Period date is required");
+      if(txtHardDrive.getText().isEmpty()) {
+        errHardDrive.setText("Hard drive is required");
         count++;
-      }else errImportDate.setText("");
+      }
+      else errHardDrive.setText("");
+
+      if(txtOrigin.getText().isEmpty()) {
+        errOrigin.setText("Origin is required");
+        count++;
+      }else errOrigin.setText("");
+
+      if(txtWarrantyPeriod.getText().isEmpty()) {
+        errWarrantyPeriod.setText("Warranty Period date is required");
+        count++;
+      }else errWarrantyPeriod.setText("");
 
       if(count == 0)
         productImages.setVisible(true);
@@ -322,17 +339,10 @@ public class EditProductController implements Initializable {
   private void setBtnNextProductImg(MouseEvent mouseEvent) {
     if(productImages.isVisible()) {
       int count = 0;
-      if(txtColor.getText().isEmpty()) {
-        errColor.setText("Product's color is required");
+      if (imgSrc == null) {
+        errImgSrc.setText("No photos selected");
         count++;
-      }
-      else errColor.setText("");
-
-      if(txtHardDrive.getText().isEmpty()) {
-        errHardDrive.setText("Hard drive is required");
-        count++;
-      }
-      else errHardDrive.setText("");
+      } else errImgSrc.setText("");
 
       if(count == 0) productData.setVisible(true);
     }
@@ -380,6 +390,7 @@ public class EditProductController implements Initializable {
   private void goToOrder(MouseEvent mouseEvent) throws IOException {
     Navigator.getInstance().goToOrder();
   }
+
   @FXML
   private void logout(MouseEvent mouseEvent) throws IOException {
     Navigator.getInstance().goToLogin();

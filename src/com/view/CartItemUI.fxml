@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="1170.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.CartItemController">
+<HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="1170.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.CartItemController">
    <children>
       <ImageView fx:id="imgSrc" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -28,7 +25,12 @@
             </Label>
             <HBox>
                <children>
-                  <Label prefHeight="27.0" text="%harddrive:">
+                  <Label prefHeight="27.0" text="%hardDrive">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="27.0" text=" : ">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -58,7 +60,25 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="65.0" prefWidth="373.0">
          <children>
-            <TextField fx:id="quantity" prefHeight="25.0" prefWidth="84.0" />
+            <AnchorPane>
+               <children>
+                  <TextField fx:id="quantity" layoutY="20.0" prefHeight="25.0" prefWidth="84.0" />
+                  <VBox fx:id="quantityBox" alignment="CENTER" layoutX="67.0" layoutY="23.0" onMouseEntered="#quantityEntered" onMouseExited="#quantityExited" prefHeight="20.0" prefWidth="13.0" style="-fx-background-color: #e7e7e7;" visible="false">
+                     <children>
+                        <ImageView fitHeight="10.0" fitWidth="10.0" onMouseClicked="#up" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/ic_up.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="10.0" fitWidth="10.0" onMouseClicked="#down" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/ic_down.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
          </children>
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="65.0" prefWidth="166.0">

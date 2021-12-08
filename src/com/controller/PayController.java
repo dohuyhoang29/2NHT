@@ -38,7 +38,7 @@ public class PayController implements Initializable {
   private TextField phoneNumber;
 
   @FXML
-  private TextField address;
+  private TextArea address;
 
   @FXML
   private TextArea note;
@@ -54,7 +54,6 @@ public class PayController implements Initializable {
     name.setText(ProjectManager.getInstance().getAccount().getUsername());
     phoneNumber.setText(ProjectManager.getInstance().getAccount().getPhone());
     address.setText(ProjectManager.getInstance().getAccount().getAddress());
-    System.out.println(ProjectManager.getInstance().getAccount().getAddress());
 
     listCart = CartDatabaseHelper.getAllCartByAccount(ProjectManager.getInstance().getAccount().getUsername());
     for (Cart  c : listCart) {
@@ -65,13 +64,12 @@ public class PayController implements Initializable {
   //Action
   @FXML
   void clickOrder(ActionEvent event) throws IOException {
-    Integer orderID = OrderDatabaseHelper.insertOrder(ProjectManager.getInstance().getAccount().getId(), name.getText(), totalPrice, address.getText(), phoneNumber.getText(), note.getText());
-    System.out.println(orderID.toString());
-    Navigator.getInstance().goToHome();
+    Integer orderID = OrderDatabaseHelper.insertOrder(ProjectManager.getInstance().getAccount().getId(), name.getText(), totalPrice, address.getText(), phoneNumber.getText());
     for (Cart c : listCart) {
       OrderDetailsDatabaseHelper.insertOrderDetails(c.getQuantity(), c.getProductID(), orderID);
       CartDatabaseHelper.deleteCart(c.getId());
     }
+    Navigator.getInstance().goToPurchaseOrder();
   }
 
   //Dieu huong

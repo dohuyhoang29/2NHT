@@ -3,6 +3,7 @@ package com.controller;
 import com.helper.AccountDatabaseHelper;
 import com.helper.OrderDatabaseHelper;
 import com.helper.OrderDetailsDatabaseHelper;
+import com.helper.ProjectManager;
 import com.model.Account;
 import com.model.Order;
 import com.model.OrderDetail;
@@ -94,6 +95,7 @@ public class OrderDetailsController implements Initializable {
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
+    username.setText(ProjectManager.getInstance().getAccount().getUsername());
     cbStatus.getItems().addAll(Order.TO_PAY, Order.TO_SHIP, Order.TO_RECEIVE, Order.COMPLETED);
   }
 
@@ -107,6 +109,7 @@ public class OrderDetailsController implements Initializable {
     address.setText(order.getAddress());
     cbStatus.setValue(order.getStatus());
     date.setText(order.getCreateDateProperty());
+    orderID.setText(order.getCode());
 
     listOrderDetail = OrderDetailsDatabaseHelper.getOrderDetail(order.getId());
 

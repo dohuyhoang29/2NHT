@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="600.0" spacing="10.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ViewReviewController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="600.0" spacing="10.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ViewReviewController">
    <children>
       <Label text="%productReviews">
          <font>
@@ -33,11 +33,12 @@
                   </Label>
                   <HBox>
                      <children>
-                        <Label text="%harddrive:">
+                        <Label text="%hardDrive">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
+                        <Label text=" : " />
                         <Label fx:id="hardDrive" text="256GB">
                            <font>
                               <Font size="14.0" />
@@ -62,9 +63,10 @@
                   <VBox>
                      <children>
                         <Label fx:id="username" text="username" />
-                        <HBox>
+                        <HBox spacing="5.0">
                            <children>
-                              <Label text="%pOint:" />
+                              <Label text="%point" />
+                              <Label text=" : " />
                               <Label fx:id="point" text="5" />
                            </children>
                         </HBox>

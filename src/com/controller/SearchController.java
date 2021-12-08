@@ -56,18 +56,11 @@ public class SearchController implements Initializable {
   @FXML
   private GridPane gridProduct;
 
-  List<Category> listCategory = new ArrayList<>();
   List<Product> listProduct = new ArrayList<>();
   List<Cart> listCart = new ArrayList<>();
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
-    listCategory = CategoryDatabaseHelper.getAllCategories();
-    cbCategory.getItems().add("Select Category");
-    cbCategory.setValue("Select Category");
-    for (Category c : listCategory) {
-      cbCategory.getItems().add(c.getName());
-    }
 
     listCart = CartDatabaseHelper.getAllCartByAccount(ProjectManager.getInstance().getAccount().getUsername());
     Integer cart = listCart.size();
@@ -75,35 +68,36 @@ public class SearchController implements Initializable {
   }
 
   public void setData (String key) {
-    this.key.setText(key);
-    search.setText(key);
-    txtSearch.setText(key);
+    if (key != null) {
+      this.key.setText(key);
+      txtSearch.setText(key);
 //
-    listProduct = ProductDatabaseHelper.searchProduct(key);
+      listProduct = ProductDatabaseHelper.searchProduct(key);
 
-    int column = 0;
-    int row = 1;
+      int column = 0;
+      int row = 1;
 
-    try {
-      for (int i = 0; i < listProduct.size(); i++) {
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/com/view/ProductItemUI.fxml"));
-        VBox vBox = loader.load();
+      try {
+        for (int i = 0; i < listProduct.size(); i++) {
+          FXMLLoader loader = new FXMLLoader();
+          loader.setLocation(getClass().getResource("/com/view/ProductItemUI.fxml"));
+          VBox vBox = loader.load();
 
-        ProductItemController controller = loader.getController();
-        controller.setData(listProduct.get(i));
+          ProductItemController controller = loader.getController();
+          controller.setData(listProduct.get(i));
 
-        if (column == 4) {
-          column = 0;
-          row++;
+          if (column == 4) {
+            column = 0;
+            row++;
+          }
+
+          gridProduct.add(vBox, column++, row);
+
+          GridPane.setMargin(vBox, new Insets(20));
         }
-
-        gridProduct.add(vBox, column++, row);
-
-        GridPane.setMargin(vBox, new Insets(20));
+      } catch (IOException e) {
+        e.printStackTrace();
       }
-    } catch (IOException e) {
-      e.printStackTrace();
     }
   }
 

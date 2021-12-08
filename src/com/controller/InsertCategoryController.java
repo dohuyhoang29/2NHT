@@ -1,6 +1,8 @@
 package com.controller;
 
 import com.helper.CategoryDatabaseHelper;
+import com.helper.NotificationManager;
+import com.helper.ProjectManager;
 import com.view.Navigator;
 import java.io.IOException;
 import java.net.URL;
@@ -63,7 +65,7 @@ public class InsertCategoryController implements Initializable {
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
-
+    username.setText(ProjectManager.getInstance().getAccount().getUsername());
   }
 
   //Hanh dong
@@ -78,7 +80,7 @@ public class InsertCategoryController implements Initializable {
   }
 
   @FXML
-  private void insertCategory() {
+  private void insertCategory() throws IOException {
     if(txtName.getText().isEmpty()) {
       errName.setText("Category's name is required");
     }else if(CategoryDatabaseHelper.getCategoryByName(txtName.getText()) != null) {
@@ -86,6 +88,8 @@ public class InsertCategoryController implements Initializable {
     }else {
       errName.setText("");
       CategoryDatabaseHelper.insertCategory(txtName.getText(), txtDescription.getText());
+      NotificationManager.getInstance().success("Insert Category Success");
+      Navigator.getInstance().goToInsertCategory();
     }
   }
 

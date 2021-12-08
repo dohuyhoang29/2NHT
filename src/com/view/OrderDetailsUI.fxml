@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.OrderDetailsController">
+<BorderPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.OrderDetailsController">
   <top>
     <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" spacing="10.0" styleClass="background_main" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
       <children>
@@ -137,6 +137,23 @@
             </Label>
           </children>
         </HBox>
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#goToCategoryList" spacing="5.0" style="-fx-background-color: #234;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_category.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="%categoryList" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
             <HBox alignment="CENTER_LEFT" onMouseClicked="#goToOrder" spacing="5.0" style="-fx-background-color: #234;">
                <children>
                   <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
@@ -240,6 +257,25 @@
                                 <Font name="System Bold" size="24.0" />
                               </font>
                             </Label>
+                                          <HBox>
+                                             <children>
+                                                <Label text="Order ID">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text=" : ">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="orderID" text="15/11/2021">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
                           </children>
                         </VBox>
                         <Pane prefHeight="76.0" prefWidth="414.0" />
@@ -318,25 +354,35 @@
                                 </Label>
                                 <HBox>
                                   <children>
-                                    <Label text="%shipping:">
+                                    <Label text="%shipping">
                                       <font>
                                         <Font name="System Bold" size="16.0" />
                                       </font>
                                     </Label>
-                                    <Label text="Shoppe Express">
+                                    <Label text=" : ">
                                       <font>
                                         <Font size="16.0" />
                                       </font>
                                     </Label>
+                                                      <Label fx:id="address2" text="Shoppe Express">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
                                   </children>
                                 </HBox>
                                 <HBox>
                                   <children>
-                                    <Label text="%status:">
+                                    <Label text="%status">
                                       <font>
                                         <Font name="System Bold" size="16.0" />
                                       </font>
                                     </Label>
+                                                      <Label text=" : ">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
                                     <Label fx:id="status" text="Confirmed">
                                       <font>
                                         <Font size="16.0" />
@@ -373,16 +419,21 @@
                                 <HBox prefHeight="18.0" prefWidth="192.0" />
                                 <HBox>
                                   <children>
-                                    <Label text="%adDress:">
+                                    <Label text="%address">
                                       <font>
                                         <Font name="System Bold" size="16.0" />
                                       </font>
                                     </Label>
-                                    <Label fx:id="address" text="Shoppe Express">
+                                    <Label fx:id="address" text=" : ">
                                       <font>
                                         <Font size="16.0" />
                                       </font>
                                     </Label>
+                                                      <Label fx:id="address1" text="Shoppe Express">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
                                   </children>
                                 </HBox>
                               </children>
@@ -427,7 +478,7 @@
                               </VBox>
                       <ScrollPane prefHeight="404.0" prefWidth="967.0" style="-fx-background-color: #fff;" styleClass="transparent" stylesheets="@../css/style.css">
                         <content>
-                          <VBox fx:id="itemLayout" prefHeight="232.0" prefWidth="965.0" style="-fx-background-color: #fff;">
+                          <VBox fx:id="itemLayout" prefHeight="213.0" prefWidth="965.0" style="-fx-background-color: #fff;">
                             <children>
                               <VBox />
                             </children>
@@ -438,11 +489,16 @@
                         </VBox>
                 <HBox alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="967.0">
                   <children>
-                    <Label text="%subtotal:">
+                    <Label text="%subtotal">
                       <font>
                         <Font name="System Bold" size="18.0" />
                       </font>
                     </Label>
+                              <Label text=" : ">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
                     <Label text="\$ ">
                       <font>
                         <Font size="18.0" />

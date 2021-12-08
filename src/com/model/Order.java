@@ -15,6 +15,7 @@ public class Order {
 
   private ObjectProperty<Integer> id;
   private ObjectProperty<Integer> accountID;
+  private StringProperty code;
   private StringProperty name;
   private ObjectProperty<Integer> totalPrice;
   private LocalDate createDate;
@@ -23,9 +24,10 @@ public class Order {
   private StringProperty address;
   private StringProperty phoneNumber;
 
-  public Order (Integer id, Integer accountID, String name, Integer totalPrice, LocalDate createDate, String status, String address, String phoneNumber) {
+  public Order (Integer id, Integer accountID, String code, String name, Integer totalPrice, LocalDate createDate, String status, String address, String phoneNumber) {
     this.id = new SimpleObjectProperty<>(id);
     this.accountID = new SimpleObjectProperty<>(accountID);
+    this.code = new SimpleStringProperty(code);
     this.name = new SimpleStringProperty(name);
     this.totalPrice = new SimpleObjectProperty<>(totalPrice);
     this.createDate = createDate;
@@ -57,6 +59,18 @@ public class Order {
 
   public void setAccountID(Integer accountID) {
     this.accountID.set(accountID);
+  }
+
+  public String getCode() {
+    return code.get();
+  }
+
+  public StringProperty getCodeProperty() {
+    return code;
+  }
+
+  public void setCode(String code) {
+    this.code.set(code);
   }
 
   public String getName() {

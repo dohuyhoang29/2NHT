@@ -5,6 +5,7 @@ import com.model.Feedback;
 import com.model.OrderDetail;
 import com.view.Navigator;
 import java.io.IOException;
+import java.nio.file.Paths;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -40,12 +41,13 @@ public class ViewReviewController {
   OrderDetail orderDetail;
   Stage stage;
   Feedback Feedback;
+  String path = Paths.get(".").toAbsolutePath().normalize() + "/src/com/images/";
 
   public void setData (Feedback feedBack, OrderDetail orderDetail, Stage stage) {
     this.orderDetail = orderDetail;
     this.Feedback = feedBack;
     this.stage = stage;
-    Image image = new Image(getClass().getResourceAsStream("/com/images/" + orderDetail.getImgSrc()));
+    Image image = new Image("file:///" + path + orderDetail.getImgSrc());
     imgSrc.setImage(image);
     name.setText(orderDetail.getName());
     hardDrive.setText(orderDetail.getHardDrive());

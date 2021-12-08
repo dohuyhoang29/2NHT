@@ -18,7 +18,6 @@ public class Product {
  private ObjectProperty<Integer> price;
  private StringProperty hardDrive;
  private StringProperty origin;
- private StringProperty color;
  private StringProperty imgSrc;
 
  private StringProperty screen;
@@ -42,7 +41,7 @@ public class Product {
 
   public Product(Integer id, String categoryName, String productCode, String productName, String status, String warrantyPeriod,
       Integer importPrice, Integer price, String hardDrive,
-      String origin, String color, String imgSrc, String screen, String cpu,
+      String origin, String imgSrc, String screen, String cpu,
       String gpu, String ram, String operatingSystem, String rearCamera, String selfieCamera,
       String batteryCapacity, String sim, String weight, String dimensions) {
     this.id = new SimpleObjectProperty<>(id);
@@ -55,7 +54,6 @@ public class Product {
     this.price = new SimpleObjectProperty<>(price);
     this.hardDrive = new SimpleStringProperty(hardDrive);
     this.origin = new SimpleStringProperty(origin);
-    this.color = new SimpleStringProperty(color);
     this.imgSrc = new SimpleStringProperty(imgSrc);
     this.screen = new SimpleStringProperty(screen);
     this.cpu = new SimpleStringProperty(cpu);
@@ -191,18 +189,6 @@ public class Product {
 
   public void setOrigin(String origin) {
     this.origin.set(origin);
-  }
-
-  public String getColor() {
-    return color.get();
-  }
-
-  public StringProperty getColorProperty() {
-    return color;
-  }
-
-  public void setColor(String color) {
-    this.color.set(color);
   }
 
   public String getImgSrc() {

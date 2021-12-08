@@ -1,5 +1,6 @@
 package com.helper;
 
+import com.Main;
 import com.model.Order;
 import java.sql.Connection;
 import java.sql.Date;
@@ -14,19 +15,19 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class OrderDatabaseHelper {
-  public static Integer insertOrder (Integer accountID, String name, Integer totalPrice, String address, String phone, String note) {
-    String query = "INSERT INTO `order` (account_id, name, total_price, create_date, status, address, phone_number) VALUES (?,?,?,?,?,?,?);";
+  public static Integer insertOrder (Integer accountID, String name, Integer totalPrice, String address, String phone) {
+    String query = "INSERT INTO `order` (account_id, code, name, total_price, create_date, status, address, phone_number) VALUES (?,?,?,?,?,?,?,?);";
     Integer id = 0;
     try (Connection cnt = DatabaseHelper.getConnetion();
         PreparedStatement preStm = cnt.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
       preStm.setInt(1, accountID);
-      preStm.setString(2, name);
-      preStm.setInt(3, totalPrice);
-      preStm.setDate(4, Date.valueOf(LocalDate.now()));
-      preStm.setString(5, Order.TO_PAY);
-      preStm.setString(6, address);
-      preStm.setString(7, phone);
-      preStm.setString(8, note);
+      preStm.setString(2, Main.random());
+      preStm.setString(3, name);
+      preStm.setInt(4, totalPrice);
+      preStm.setDate(5, Date.valueOf(LocalDate.now()));
+      preStm.setString(6, Order.TO_PAY);
+      preStm.setString(7, address);
+      preStm.setString(8, phone);
 
       if (preStm.executeUpdate() > 0) {
         ResultSet rs = preStm.getGeneratedKeys();
@@ -42,7 +43,7 @@ public class OrderDatabaseHelper {
 
   public static ObservableList<Order> getAllOrder () {
     ObservableList<Order> list = FXCollections.observableArrayList();
-    String query = "SELECT o.id, o.account_id, o.name, o.total_price, o.create_date, o.status, o.address, o.phone_number "
+    String query = "SELECT o.id, o.account_id, o.code, o.name, o.total_price, o.create_date, o.status, o.address, o.phone_number "
         + "FROM `order` AS o "
         + "INNER JOIN `account` AS a ON o.account_id = a.id;";
 
@@ -52,6 +53,7 @@ public class OrderDatabaseHelper {
       while (rs.next()) {
         Integer id = rs.getInt("id");
         Integer accountID = rs.getInt("account_id");
+        String code = rs.getString("code");
         String name = rs.getString("name");
         Integer totalPrice = rs.getInt("total_price");
         LocalDate createDate = rs.getDate("create_date").toLocalDate();
@@ -59,7 +61,7 @@ public class OrderDatabaseHelper {
         String address = rs.getString("address");
         String phoneNumber = rs.getString("phone_number");
 
-        list.add(new Order(id, accountID, name, totalPrice, createDate, status, address, phoneNumber));
+        list.add(new Order(id, accountID, code, name, totalPrice, createDate, status, address, phoneNumber));
       }
     } catch (SQLException throwables) {
       throwables.printStackTrace();
@@ -70,36 +72,109 @@ public class OrderDatabaseHelper {
 
   public static List<Order> searchOrder (String name, String status, LocalDate from, LocalDate to) {
     List<Order> list = new ArrayList<>();
-    String query = "SELECT o.id, o.account_id, o.name, o.total_price, o.create_date, o.status, o.address, o.phone_number "
+    String query = "SELECT o.id, o.account_id, o.code, o.name, o.total_price, o.create_date, o.status, o.address, o.phone_number "
         + "FROM `order` AS o "
         + "INNER JOIN `account` AS a ON o.account_id = a.id WHERE 1 = 1 ";
 
-    if (name != null) {
-      query += " AND name = ? OR price = ? ";
+    if (name != null && !name.equalsIgnoreCase("")) {
+      query += " AND o.name LIKE ? OR o.code LIKE ? ";
     }
 
-    if (status != null) {
-      query += "AND status = ? ";
+    if (status != "All") {
+      query += "AND o.status = ? ";
     }
 
     if (from != null) {
-      query += "AND create_date >= ? ";
+      query += "AND o.create_date >= ? ";
     }
 
     if (to != null) {
-      query += "AND create_date <= ? ";
+      query += "AND o.create_date <= ? ";
     }
     try (Connection cnt = DatabaseHelper.getConnetion();
         PreparedStatement preStm = cnt.prepareStatement(query)) {
-      if (name != null) {
-
+      if (name != null && !name.equalsIgnoreCase("") && status == "All" && from == null && to == null) {
+        preStm.setString(1, "%" + name + "%");
+        preStm.setString(2, "%" + name + "%");
       }
-      preStm.setString(1, name);
+      if (name == null && name.equalsIgnoreCase("") && status != "All" && from == null && to == null) {
+        preStm.setString(1, status);
+      }
+      if (name == null && name.equalsIgnoreCase("") && status == "All" && from != null && to == null) {
+        preStm.setDate(1, Date.valueOf(from));
+      }
+      if (name == null && name.equalsIgnoreCase("") && status == "All" && from == null && to != null) {
+        preStm.setDate(1, Date.valueOf(to));
+      }
+      if (name != null && !name.equalsIgnoreCase("") && status != "All" && from == null && to == null) {
+        preStm.setString(1, "%" + name + "%");
+        preStm.setString(2, "%" + name + "%");
+        preStm.setString(3, status);
+      }
+      if (name != null && !name.equalsIgnoreCase("") && status == "All" && from != null && to == null) {
+        preStm.setString(1, "%" + name + "%");
+        preStm.setString(2, "%" + name + "%");
+        preStm.setDate(3, Date.valueOf(from));
+      }
+      if (name != null && !name.equalsIgnoreCase("") && status == "All" && from == null && to != null) {
+        preStm.setString(1, "%" + name + "%");
+        preStm.setString(2, "%" + name + "%");
+        preStm.setDate(3, Date.valueOf(to));
+      }
+      if (name != null && !name.equalsIgnoreCase("") && status == "All" && from == null && to != null) {
+        preStm.setString(1, "%" + name + "%");
+        preStm.setString(2, "%" + name + "%");
+        preStm.setDate(3, Date.valueOf(to));
+      }
+      if (name == null && name.equalsIgnoreCase("") && status != "All" && from == null && to != null) {
+        preStm.setString(1, status);
+        preStm.setDate(2, Date.valueOf(to));
+      }
+      if (name == null && name.equalsIgnoreCase("") && status != "All" && from != null && to == null) {
+        preStm.setString(1, status);
+        preStm.setDate(4, Date.valueOf(from));
+      }
+      if (name == null && name.equalsIgnoreCase("") && status == "All" && from != null && to != null) {
+        preStm.setDate(1, Date.valueOf(from));
+        preStm.setDate(2, Date.valueOf(to));
+      }
+      if (name != null && !name.equalsIgnoreCase("") && status != "All" && from != null && to == null) {
+        preStm.setString(1, "%" + name + "%");
+        preStm.setString(2, "%" + name + "%");
+        preStm.setString(3, status);
+        preStm.setDate(4, Date.valueOf(from));
+      }
+      if (name != null && !name.equalsIgnoreCase("") && status != "All" && from == null && to != null) {
+        preStm.setString(1, "%" + name + "%");
+        preStm.setString(2, "%" + name + "%");
+        preStm.setString(3, status);
+        preStm.setDate(4, Date.valueOf(to));
+      }
+      if (name != null && !name.equalsIgnoreCase("") && status == "All" && from != null && to != null) {
+        preStm.setString(1, "%" + name + "%");
+        preStm.setString(2, "%" + name + "%");
+        preStm.setDate(3, Date.valueOf(from));
+        preStm.setDate(4, Date.valueOf(to));
+      }
+      if (name == null && name.equalsIgnoreCase("") && status != "All" && from != null && to != null) {
+        preStm.setString(1, status);
+        preStm.setDate(2, Date.valueOf(from));
+        preStm.setDate(3, Date.valueOf(to));
+      }
+      if (name != null && !name.equalsIgnoreCase("") && status != "All" && from != null && to != null) {
+        preStm.setString(1, "%" + name + "%");
+        preStm.setString(2, "%" + name + "%");
+        preStm.setString(3, status);
+        preStm.setDate(4, Date.valueOf(from));
+        preStm.setDate(5, Date.valueOf(to));
+      }
+
 
       ResultSet rs = preStm.executeQuery();
       while (rs.next()) {
         Integer id = rs.getInt("id");
         Integer accountID = rs.getInt("account_id");
+        String code = rs.getString("code");
         String Name = rs.getString("name");
         Integer totalPrice = rs.getInt("total_price");
         LocalDate createDate = rs.getDate("create_date").toLocalDate();
@@ -107,7 +182,7 @@ public class OrderDatabaseHelper {
         String address = rs.getString("address");
         String phoneNumber = rs.getString("phone_number");
 
-        list.add(new Order(id, accountID, Name, totalPrice, createDate, Status, address, phoneNumber));
+        list.add(new Order(id, accountID, code, Name, totalPrice, createDate, Status, address, phoneNumber));
       }
     } catch (SQLException throwables) {
       throwables.printStackTrace();

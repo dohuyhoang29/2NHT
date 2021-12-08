@@ -2,6 +2,7 @@ package com.controller;
 
 import com.helper.AccountDatabaseHelper;
 import com.helper.NotificationManager;
+import com.helper.ProjectManager;
 import com.helper.ValidationManager;
 import com.model.Account;
 import com.view.Navigator;
@@ -19,6 +20,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -26,9 +28,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 public class EditAccountController implements Initializable {
-  @FXML
-  private TextField txtSearch;
-
   @FXML
   private ImageView changeLanguage;
 
@@ -42,6 +41,9 @@ public class EditAccountController implements Initializable {
   private ImageView imgdashboard;
 
   @FXML
+  private RadioButton show_password_btn;
+
+  @FXML
   private Label lbdashboard;
 
   @FXML
@@ -49,6 +51,9 @@ public class EditAccountController implements Initializable {
 
   @FXML
   private HBox productsList;
+
+  @FXML
+  private HBox accountList;
 
   @FXML
   private VBox changeLanguageContainer;
@@ -69,19 +74,22 @@ public class EditAccountController implements Initializable {
   private TextField txtAddress;
 
   @FXML
-  private PasswordField pfPassword;
-
-  @FXML
   private Label errPassword;
 
   @FXML
-  private PasswordField pfConfirmPassword;
+  private TextField showPassword;
+
+  @FXML
+  private PasswordField txtPassword;
 
   @FXML
   private Label errConfirmPassword;
 
   @FXML
-  private ChoiceBox<String> cbType;
+  private TextField showConfirmPassword;
+
+  @FXML
+  private PasswordField txtConfirmPassword;
 
   @FXML
   private TextField txtPhoneNumber;
@@ -94,17 +102,18 @@ public class EditAccountController implements Initializable {
 
   private int count;
   private Account acc;
+  private String passwordText;
+  private String confirmPasswordText;
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
+    username.setText(ProjectManager.getInstance().getAccount().getUsername());
   }
 
   public void setData(Account account) {
     this.acc = account;
     txtUsername.setText(account.getUsername());
     txtEmail.setText(account.getEmail());
-    pfPassword.setText(account.getPassword());
-    pfConfirmPassword.setText(account.getPassword());
     if (account.getAddress() != null) {
       txtAddress.setText(account.getAddress());
     }
@@ -123,67 +132,68 @@ public class EditAccountController implements Initializable {
   }
 
   @FXML
+  void show_Password(ActionEvent event) {
+    if(show_password_btn.isSelected()==true){
+      passwordText= txtPassword.getText();
+      confirmPasswordText= txtConfirmPassword.getText();
+
+      txtPassword.setVisible(false);
+      showPassword.setVisible(true);
+
+      txtConfirmPassword.setVisible(false);
+      showConfirmPassword.setVisible(true);
+
+      showPassword.setText(passwordText);
+      showConfirmPassword.setText(confirmPasswordText);
+    }
+    else {
+      passwordText= showPassword.getText();
+      confirmPasswordText= showConfirmPassword.getText();
+
+      showPassword.setVisible(false);
+      txtPassword.setVisible(true);
+
+      showConfirmPassword.setVisible(false);
+      txtConfirmPassword.setVisible(true);
+
+      txtPassword.setText(passwordText);
+      txtConfirmPassword.setText(confirmPasswordText);
+    }
+  }
+
+  @FXML
   void editAccount(ActionEvent event) throws IOException {
     int count = 0;
     ValidationManager check = ValidationManager.getInstance();
-
-//    username
-    if(txtUsername.getText().isEmpty()) {
-      errUsername.setText("Username is required");
-      count++;
-    }else if(AccountDatabaseHelper.getAccountByUsername(txtUsername.getText()) != null && !txtUsername.getText().equalsIgnoreCase(acc.getUsername())) {
-      errUsername.setText("Username exists");
-      count++;
-    }else if (!check.validUsername(txtUsername.getText())) {
-      errUsername.setText("Username can only have characters and numbers");
-      count++;
-    }else {
-      errUsername.setText("");
+    if (txtPassword.getText().isEmpty() && !showPassword.getText().isEmpty()) {
+      txtPassword.setText(showPassword.getText());
     }
-
 //    password
-    if(pfPassword.getText().isEmpty()) {
+    if(txtPassword.getText().isEmpty() && showPassword.getText().isEmpty()) {
       errPassword.setText("Password is required");
       count++;
-    }else if (!check.validPassword(pfPassword.getText())) {
+    }else if (!check.validPassword(txtPassword.getText()) && !check.validPassword(showPassword.getText())) {
       errPassword.setText("Use 8 or more characters with a mix of letters, numbers & symbols");
       count++;
     }else errPassword.setText("");
 
 //    confirm password
-    if (pfConfirmPassword.getText().isEmpty()) {
+    if (txtConfirmPassword.getText().isEmpty() && showConfirmPassword.getText().isEmpty()) {
       errConfirmPassword.setText("Confirm Password is required");
       count++;
-    }else if(!pfConfirmPassword.getText().equalsIgnoreCase(pfPassword.getText())) {
+    }else if(!txtConfirmPassword.getText().equalsIgnoreCase(txtPassword.getText()) && !showConfirmPassword.getText().equalsIgnoreCase(showPassword.getText())) {
       errConfirmPassword.setText("Those passwords didn’t match");
       count++;
     }else errConfirmPassword.setText("");
 
-//    email
-    if (txtEmail.getText().isEmpty()) {
-      errEmail.setText("Email is required");
-      count++;
-    }else if (!check.validEmail(txtEmail.getText())) {
-      errEmail.setText("Email must have the same syntax as follows: xyz012@xyz.xyz");
-      count++;
-    }else errEmail.setText("");
-
-//    phone
-    if (txtPhoneNumber.getText().isEmpty()) {
-      errPhone.setText("Phone Number is required");
-      count++;
-    }else if (!check.validPhoneNumber(txtPhoneNumber.getText())) {
-      errPhone.setText("Phone numbers can only be numeric and have 10 numbers");
-      count++;
-    }else errPhone.setText("");
-
     if (count == 0) {
+
       Alert alert = new Alert(AlertType.CONFIRMATION);
       alert.setContentText("Are you sure you want to do it?");
 
       Optional<ButtonType> option = alert.showAndWait();
       if (option.get() == ButtonType.OK) {
-        AccountDatabaseHelper.editAccount(txtEmail.getText(), pfPassword.getText(), "STAFF", txtAddress.getText(), txtPhoneNumber.getText(), acc.getId());
+        AccountDatabaseHelper.resetPassword(txtPassword.getText(), acc.getId());
         NotificationManager.getInstance().success("Reset Password Success");
         Navigator.getInstance().goToAccountList();
       }

@@ -1,9 +1,0 @@
-
-s
-java:S1450…"WRemove the "listCart" field and declare it as a local variable in the relevant methods.(õ”¨üÿÿÿÿ
-H
-java:S1172«"1Remove this unused method parameter "mouseEvent".(¢œÁ±
-M
-java:S1172°"1Remove this unused method parameter "mouseEvent".(îı¨şÿÿÿÿ
-X
-java:S1117Ê"<Rename "quantity" which hides the field declared at line 58.(½»ÂÙùÿÿÿÿ

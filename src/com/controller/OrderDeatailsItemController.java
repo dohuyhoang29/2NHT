@@ -1,6 +1,7 @@
 package com.controller;
 
 import com.model.OrderDetail;
+import java.nio.file.Paths;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -22,8 +23,10 @@ public class OrderDeatailsItemController {
   @FXML
   private Label total;
 
+  String path = Paths.get(".").toAbsolutePath().normalize() + "/src/com/images/";
+
   public void setData (OrderDetail orderDetail) {
-    Image image = new Image(getClass().getResourceAsStream("/com/images/" + orderDetail.getImgSrc()));
+    Image image = new Image("file:///" + path + orderDetail.getImgSrc());
     imgSrc.setImage(image);
 
     name.setText(orderDetail.getName());

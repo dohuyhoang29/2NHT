@@ -1,6 +1,7 @@
 package com.controller;
 
 import com.helper.CategoryDatabaseHelper;
+import com.helper.ProjectManager;
 import com.model.Category;
 import com.view.Navigator;
 import java.io.IOException;
@@ -59,6 +60,7 @@ public class CategoryListController implements Initializable {
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
+    username.setText(ProjectManager.getInstance().getAccount().getUsername());
     list = CategoryDatabaseHelper.getAllCategories();
 
     try {

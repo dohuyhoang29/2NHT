@@ -3,11 +3,13 @@ package com.controller;
 import com.helper.CartDatabaseHelper;
 import com.helper.FeedbackDatabaseHelper;
 import com.helper.ProjectManager;
+import com.helper.TranslateManager;
 import com.model.Feedback;
 import com.model.OrderDetail;
 import com.view.Navigator;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Paths;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,7 +24,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-public class PurchaseOrderItemController implements Initializable {
+public class  PurchaseOrderItemController implements Initializable {
   @FXML
   private ImageView imgSrc;
 
@@ -49,6 +51,7 @@ public class PurchaseOrderItemController implements Initializable {
 
   private OrderDetail orderDetail;
   Feedback feedback;
+  String path = Paths.get(".").toAbsolutePath().normalize() + "/src/com/images/";
 
 
   @Override
@@ -59,7 +62,7 @@ public class PurchaseOrderItemController implements Initializable {
   public void setData (OrderDetail orderDetail) {
     this.orderDetail = orderDetail;
 
-    Image image = new Image(getClass().getResourceAsStream("/com/images/" + orderDetail.getImgSrc()));
+    Image image = new Image("file:///" + path + orderDetail.getImgSrc());
     imgSrc.setImage(image);
     name.setText(orderDetail.getName());
     hardDrive.setText(orderDetail.getHardDrive());
@@ -69,13 +72,21 @@ public class PurchaseOrderItemController implements Initializable {
 
     feedback = FeedbackDatabaseHelper.getFeedbackByProductAndAccount(orderDetail.getProductID(), ProjectManager.getInstance().getAccount().getId());
 
-    if (feedback == null) {
-      viewReview.setVisible(false);
-      review.setVisible(true);
+    if (orderDetail.getStatus().equalsIgnoreCase("Completed")) {
+      if (feedback == null) {
+        viewReview.setVisible(false);
+        review.setVisible(true);
+      } else {
+        review.setVisible(false);
+        viewReview.setVisible(true);
+      }
     } else {
+      viewReview.setVisible(false);
+      viewReview.setManaged(false);
       review.setVisible(false);
-      viewReview.setVisible(true);
+      review.setManaged(false);
     }
+
   }
 
   @FXML
@@ -88,6 +99,7 @@ public class PurchaseOrderItemController implements Initializable {
   void feedback (ActionEvent event) throws IOException {
     FXMLLoader loader = new FXMLLoader();
     loader.setLocation(getClass().getResource("/com/view/ReviewUI.fxml"));
+    loader.setResources(TranslateManager.getRb());
     Parent root = loader.load();
     ReviewController controller = loader.getController();
     Stage stage = new Stage();
@@ -103,6 +115,7 @@ public class PurchaseOrderItemController implements Initializable {
   void viewReview (ActionEvent event) throws IOException {
     FXMLLoader loader = new FXMLLoader();
     loader.setLocation(getClass().getResource("/com/view/ViewReviewUI.fxml"));
+    loader.setResources(TranslateManager.getRb());
     Parent root = loader.load();
     ViewReviewController controller = loader.getController();
     Stage stage = new Stage();

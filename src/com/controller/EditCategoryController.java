@@ -1,6 +1,8 @@
 package com.controller;
 
 import com.helper.CategoryDatabaseHelper;
+import com.helper.NotificationManager;
+import com.helper.ProjectManager;
 import com.model.Category;
 import com.view.Navigator;
 import java.io.IOException;
@@ -69,7 +71,7 @@ public class EditCategoryController implements Initializable {
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
-
+    username.setText(ProjectManager.getInstance().getAccount().getUsername());
   }
 
   public void setData (Category category) {
@@ -103,6 +105,7 @@ public class EditCategoryController implements Initializable {
       Optional<ButtonType> option = alert.showAndWait();
       if (option.get() == ButtonType.OK) {
         CategoryDatabaseHelper.editCategory(txtName.getText(), txtDescription.getText(), category.getId());
+        NotificationManager.getInstance().success("Edit Category Success");
         Navigator.getInstance().goToCategoryList();
       }
     }

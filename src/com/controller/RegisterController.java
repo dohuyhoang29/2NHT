@@ -2,6 +2,7 @@ package com.controller;
 
 
 import com.helper.AccountDatabaseHelper;
+import com.helper.NotificationManager;
 import com.helper.ValidationManager;
 import com.view.Navigator;
 import java.io.IOException;
@@ -35,7 +36,10 @@ public class RegisterController implements Initializable {
   private TextField txtUsername;
 
   @FXML
-  private TextField show_tf;
+  private TextField showPassword;
+
+  @FXML
+  private TextField showConfirmPassword;
 
   @FXML
   private PasswordField txtPassword;
@@ -50,7 +54,7 @@ public class RegisterController implements Initializable {
   private TextField txtAddress;
 
   @FXML
-  private RadioButton rdShowPass;
+  private RadioButton show_password_btn;
 
   @FXML
   private Label errUsername;
@@ -70,7 +74,8 @@ public class RegisterController implements Initializable {
   @FXML
   private Label errPassword;
 
-  String written_text;
+  private String passwordText;
+  private String confirmPasswordText;
 
   @Override
   public void initialize(URL url, ResourceBundle rb) {
@@ -84,81 +89,97 @@ public class RegisterController implements Initializable {
     if (txtUsername.getText().isEmpty()) {
       errUsername.setText("Username is required");
       count++;
-    }
-    if (!check.validUsername(txtUsername.getText()) && !txtUsername.getText().isEmpty()) {
+    } else if (!check.validUsername(txtUsername.getText()) && !txtUsername.getText().isEmpty()) {
       errUsername.setText("Username can only have characters and numbers");
       count++;
-    }
+    } else errUsername.setText("");
+
+
+
     if (txtEmail.getText().isEmpty()) {
       errEmail.setText("Email is required");
       count++;
-    }
-    if (!check.validEmail(txtEmail.getText()) && !txtEmail.getText().isEmpty()) {
+    } else if (!check.validEmail(txtEmail.getText()) && !txtEmail.getText().isEmpty()) {
       errEmail.setText("Email must have the same syntax as follows: xyz012@xyz.xyz");
       count++;
-    }
-    if (txtPassword.getText().isEmpty()) {
+    } else errEmail.setText("");
+
+
+
+    if (txtPassword.getText().isEmpty() && showPassword.getText().isEmpty()) {
       errPassword.setText("Password is required");
       count++;
-    }
-    if (!check.validPassword(txtPassword.getText()) && !txtPassword.getText().isEmpty()) {
+    } else if ((!check.validPassword(txtPassword.getText()) && !txtPassword.getText().isEmpty()) && (!check.validPassword(showPassword.getText()) && !showPassword.getText().isEmpty())) {
       errPassword.setText("Use 8 or more characters with a mix of letters, numbers & symbols");
       count++;
-    }
-    if (txtConfirmPassword.getText().isEmpty()) {
+    } else errPassword.setText("");
+
+
+
+    if (txtConfirmPassword.getText().isEmpty() && showConfirmPassword.getText().isEmpty()) {
       errConfirmPassword.setText("Confirm Password is required");
       count++;
-    }
-    if (!txtConfirmPassword.getText().equalsIgnoreCase(txtPassword.getText())  && !txtConfirmPassword.getText().isEmpty()) {
+    } else if ((!txtConfirmPassword.getText().equalsIgnoreCase(txtPassword.getText())  && !txtConfirmPassword.getText().isEmpty()) && (!showConfirmPassword.getText().equalsIgnoreCase(showPassword.getText())  && !showConfirmPassword.getText().isEmpty())) {
       errConfirmPassword.setText("Those passwords didn’t match");
       count++;
-    }
+    } else errConfirmPassword.setText("");
+
+
+
     if (txtPhone.getText().isEmpty()) {
       errPhone.setText("Phone Number is required");
       count++;
-    }
-    if (!check.validPhoneNumber(txtPhone.getText()) && !txtPhone.getText().isEmpty()) {
+    } else if (!check.validPhoneNumber(txtPhone.getText()) && !txtPhone.getText().isEmpty()) {
       errPhone.setText("Phone numbers can only be numeric and have 10 numbers");
       count++;
-    }
+    } else errPhone.setText("");
+
+
+
     if (txtAddress.getText().isEmpty()) {
       errAddress.setText("Address is required");
       count++;
-    }
+    } else errAddress.setText("");
 
     if (txtPassword.getText().equalsIgnoreCase(txtConfirmPassword.getText()) && count == 0) {
       boolean result = AccountDatabaseHelper.insertAccount(txtUsername.getText(), txtEmail.getText(),
           txtPassword.getText(), "USER", txtAddress.getText(), txtPhone.getText());
       if (result) {
-        Alert alert = new Alert(AlertType.INFORMATION);
-        alert.setHeaderText(null);
-        alert.setContentText("Register Successfully");
-        Optional<ButtonType> option = alert.showAndWait();
-        if (option.get() == ButtonType.OK) {
-          Navigator.getInstance().goToLogin();
-        }
+        NotificationManager.getInstance().success("Register Success");
+        Navigator.getInstance().goToLogin();
       } else {
-        Alert alert = new Alert(AlertType.ERROR);
-        alert.setHeaderText(null);
-        alert.setContentText("Register Failed");
-        alert.show();
+        NotificationManager.getInstance().warning("Register Failed");
       }
     }
   }
 
   @FXML
-  void show_Password() {
-    if (rdShowPass.isSelected() == true) {
-      written_text = txtPassword.getText();
+  void show_Password(ActionEvent event) {
+    if(show_password_btn.isSelected()==true){
+      passwordText= txtPassword.getText();
+      confirmPasswordText= txtConfirmPassword.getText();
+
       txtPassword.setVisible(false);
-      show_tf.setVisible(true);
-      show_tf.setText(written_text);
-    } else {
-      written_text = show_tf.getText();
-      show_tf.setVisible(false);
+      showPassword.setVisible(true);
+
+      txtConfirmPassword.setVisible(false);
+      showConfirmPassword.setVisible(true);
+
+      showPassword.setText(passwordText);
+      showConfirmPassword.setText(confirmPasswordText);
+    }
+    else {
+      passwordText= showPassword.getText();
+      confirmPasswordText= showConfirmPassword.getText();
+
+      showPassword.setVisible(false);
       txtPassword.setVisible(true);
 
-      txtPassword.setText(written_text);
+      showConfirmPassword.setVisible(false);
+      txtConfirmPassword.setVisible(true);
+
+      txtPassword.setText(passwordText);
+      txtConfirmPassword.setText(confirmPasswordText);
     }
   }
 

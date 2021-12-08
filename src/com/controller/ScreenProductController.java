@@ -4,16 +4,20 @@ import com.helper.CartDatabaseHelper;
 import com.helper.FeedbackDatabaseHelper;
 import com.helper.ProductDatabaseHelper;
 import com.helper.ProjectManager;
+import com.helper.TranslateManager;
 import com.model.Cart;
 import com.model.Feedback;
 import com.model.Product;
 import com.view.Navigator;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -50,19 +54,13 @@ public class ScreenProductController implements Initializable {
   private Label hardDriveTop;
 
   @FXML
-  private HBox hardDriveBox;
-
-  @FXML
   private Label price;
 
   @FXML
   private TextField quantity;
 
   @FXML
-  private Button btnAddToCart;
-
-  @FXML
-  private HBox pointReviewBox;
+  private VBox quantityBox;
 
   @FXML
   private Label quantityReviewTop;
@@ -128,21 +126,31 @@ public class ScreenProductController implements Initializable {
   private HBox similarBox;
 
   Product product;
-  List<Product> listProduct = new ArrayList<>();
   List<Feedback> listFeedback = new ArrayList<>();
   private List<Cart> listCart = new ArrayList<>();
+  String path = Paths.get(".").toAbsolutePath().normalize() + "/src/com/images/";
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
     listCart = CartDatabaseHelper.getAllCartByAccount(ProjectManager.getInstance().getAccount().getUsername());
     Integer cart = listCart.size();
     count.setText(cart.toString());
+
+    quantity.textProperty().addListener(new ChangeListener<String>() {
+      @Override
+      public void changed(ObservableValue<? extends String> observable, String oldValue,
+          String newValue) {
+        if (!newValue.matches("\\d")) {
+          quantity.setText(newValue.replaceAll("[^\\d]", ""));
+        }
+      }
+    });
   }
 
   public void setData(Product product) {
     ProjectManager.getInstance().setProduct(product);
 
-    Image image = new Image(getClass().getResourceAsStream("/com/images/" + product.getImgSrc()));
+    Image image = new Image("file:///" + path + product.getImgSrc());
     imgSrc.setImage(image);
 
     name.setText(product.getProductName());
@@ -160,8 +168,6 @@ public class ScreenProductController implements Initializable {
     weight.setText(product.getWeight());
     dimensions.setText(product.getDimensions());
 
-    printListHardDrive(product.getProductName());
-
     printListFeedBack(product.getId());
 
   }
@@ -178,25 +184,6 @@ public class ScreenProductController implements Initializable {
     reviews.setVisible(true);
   }
 
-  public void printListHardDrive(String name) {
-    nameProductReview.setText(name);
-    listProduct = ProductDatabaseHelper.getAllProductByname(name);
-    try {
-      for (int i = 0; i < listProduct.size(); i++) {
-        FXMLLoader loader = new FXMLLoader();
-
-        loader.setLocation(getClass().getResource("/com/view/HardDriveItemUI.fxml"));
-        Label label = loader.load();
-        HardDriveItemController controller = loader.getController();
-        controller.setData(listProduct.get(i));
-        hardDriveBox.getChildren().add(label);
-
-      }
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
-
   public void printListFeedBack(Integer productID) {
     listFeedback = FeedbackDatabaseHelper.getFeedbackByProduct(productID);
     Integer quantity = listFeedback.size();
@@ -206,6 +193,7 @@ public class ScreenProductController implements Initializable {
       for (int i = 0; i < listFeedback.size(); i++) {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/com/view/FeedbackItemUI.fxml"));
+        loader.setResources(TranslateManager.getRb());
         VBox vBox = loader.load();
         FeedbackItemController controller = loader.getController();
         controller.setData(listFeedback.get(i));
@@ -216,25 +204,36 @@ public class ScreenProductController implements Initializable {
     }
   }
 
-  public void similarProduct (String category) {
-    listProduct = ProductDatabaseHelper.getAllProductByCategory(category);
+  @FXML
+  void up (MouseEvent event) {
+    Integer count = Integer.parseInt(quantity.getText());
+    count++;
+    quantity.setText(count.toString());
+  }
 
-    try {
-      for (int i = 0; i < 3; i++) {
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/com/view/ProductItemUI.fxml"));
-        VBox vBox = loader.load();
-        ProductItemController controller = loader.getController();
-        controller.setData(listProduct.get(i));
-        similarBox.getChildren().add(vBox);
-      }
-    } catch (IOException e) {
-      e.printStackTrace();
+  @FXML
+  void down (MouseEvent event) {
+    Integer count = Integer.parseInt(quantity.getText());
+    count--;
+    if (count < 1) {
+      quantity.setText("1");
+    } else {
+      quantity.setText(count.toString());
     }
   }
 
   @FXML
-  void clickAddToCart(ActionEvent event) {
+  void quantityEntered (MouseEvent event) {
+    quantityBox.setVisible(true);
+  }
+
+  @FXML
+  void quantityExited (MouseEvent event) {
+    quantityBox.setVisible(false);
+  }
+
+  @FXML
+  void clickAddToCart(ActionEvent event) throws IOException {
     List<Cart> list = new ArrayList<>(CartDatabaseHelper.getAllCartByAccount(ProjectManager.getInstance().getAccount().getUsername()));
     for (int i = 0; i <list.size(); i++) {
       if (Objects.equals(ProjectManager.getInstance().getProduct().getId(), list.get(i).getProductID())) {
@@ -243,6 +242,7 @@ public class ScreenProductController implements Initializable {
       }
     }
     CartDatabaseHelper.addToCart(Integer.parseInt(quantity.getText()), ProjectManager.getInstance().getAccount().getId(), ProjectManager.getInstance().getProduct().getId());
+    Navigator.getInstance().goToScreenProduct(ProjectManager.getInstance().getProduct());
   }
 
   @FXML

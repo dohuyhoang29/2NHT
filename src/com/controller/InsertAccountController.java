@@ -1,6 +1,7 @@
 package com.controller;
 
 import com.helper.AccountDatabaseHelper;
+import com.helper.ProjectManager;
 import com.helper.ValidationManager;
 import com.view.Navigator;
 import java.io.IOException;
@@ -90,7 +91,7 @@ public class InsertAccountController implements Initializable {
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
-
+    username.setText(ProjectManager.getInstance().getAccount().getUsername());
   }
 
   //Hanh dong nhi @@@@

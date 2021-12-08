@@ -3,16 +3,21 @@ package com.controller;
 import com.helper.CategoryDatabaseHelper;
 import com.helper.NotificationManager;
 import com.helper.ProductDatabaseHelper;
+import com.helper.ProjectManager;
 import com.helper.ValidationManager;
 import com.model.Category;
+import com.model.Product;
 import com.view.Navigator;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -173,14 +178,35 @@ public class InsertProductController implements Initializable {
 
   private File imgSrc;
   final FileChooser fileChooser = new FileChooser();
-  String path = "C:/Users/hoang/IdeaProjects/2NHT/src/com/images/";
+  String path = Paths.get(".").toAbsolutePath().normalize() + "/src/com/images/";
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
+    username.setText(ProjectManager.getInstance().getAccount().getUsername());
     List<Category> listCate = CategoryDatabaseHelper.getAllCategories();
     for (Category c : listCate) {
       cbCategory.getItems().add(c.getName());
     }
+
+    txtImportPrice.textProperty().addListener(new ChangeListener<String>() {
+      @Override
+      public void changed(ObservableValue<? extends String> observable, String oldValue,
+          String newValue) {
+        if (!newValue.matches("\\d")) {
+          txtImportPrice.setText(newValue.replaceAll("[^\\d]", ""));
+        }
+      }
+    });
+
+    txtPrice.textProperty().addListener(new ChangeListener<String>() {
+      @Override
+      public void changed(ObservableValue<? extends String> observable, String oldValue,
+          String newValue) {
+        if (!newValue.matches("\\d")) {
+          txtPrice.setText(newValue.replaceAll("[^\\d]", ""));
+        }
+      }
+    });
   }
 
   //Actions
@@ -230,10 +256,16 @@ public class InsertProductController implements Initializable {
       if(txtProductCode.getText().isEmpty()) {
         errProductCode.setText("Product's code is required");
         count++;
-      }else errProductCode.setText("");
+      } else if (ProductDatabaseHelper.getProductByCode(txtProductCode.getText()) != null) {
+        errProductCode.setText("Product's code exists");
+        count++;
+      } else errProductCode.setText("");
 
       if(txtProductName.getText().isEmpty()) {
         errProductName.setText("Product's name is required");
+        count++;
+      } else if (ProductDatabaseHelper.getProductByName(txtProductName.getText()) != null){
+        errProductName.setText("Product's name exists");
         count++;
       }else errProductName.setText("");
 
@@ -302,6 +334,12 @@ public class InsertProductController implements Initializable {
   private void setBtnPreviousProductData(MouseEvent mouseEvent) {
     productData.setVisible(false);
     productImages.setVisible(true);
+  }
+
+  @FXML
+  void deleteImage (MouseEvent event) {
+    demoImg.setVisible(false);
+    clickUpload.setVisible(true);
   }
 
   //Dieu huong

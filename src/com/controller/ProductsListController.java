@@ -1,6 +1,9 @@
 package com.controller;
 
+import com.helper.CategoryDatabaseHelper;
 import com.helper.ProductDatabaseHelper;
+import com.helper.ProjectManager;
+import com.model.Category;
 import com.model.Product;
 import com.view.Navigator;
 import java.io.IOException;
@@ -77,9 +80,12 @@ public class ProductsListController implements Initializable {
   int count;
 
   ObservableList<Product> listData = FXCollections.observableArrayList();
+  List<Category> listCategory = new ArrayList<>();
   @Override
   public void initialize(URL location, ResourceBundle resources) {
+    username.setText(ProjectManager.getInstance().getAccount().getUsername());
     listData = ProductDatabaseHelper.getAllProduct();
+    listCategory = CategoryDatabaseHelper.getAllCategories();
     try {
       for (Product p : listData) {
         FXMLLoader fxmlLoader = new FXMLLoader();
@@ -91,6 +97,12 @@ public class ProductsListController implements Initializable {
       }
     } catch (IOException e) {
       e.printStackTrace();
+    }
+
+    cpCategroy.getItems().add("All");
+    cpCategroy.setValue("All");
+    for (Category c : listCategory) {
+      cpCategroy.getItems().add(c.getName());
     }
   }
 

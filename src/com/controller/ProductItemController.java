@@ -6,6 +6,7 @@ import com.model.Cart;
 import com.model.Product;
 import com.view.Navigator;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -27,10 +28,11 @@ public class ProductItemController {
   private Label price;
 
   Product product;
+  String path = Paths.get(".").toAbsolutePath().normalize() + "/src/com/images/";
 
   public void setData (Product product) {
     this.product = product;
-    Image image = new Image(getClass().getResourceAsStream("/com/images/" + product.getImgSrc()));
+    Image image = new Image("file:///" + path + product.getImgSrc());
 
     imgSrc.setImage(image);
     name.setText(product.getProductName());

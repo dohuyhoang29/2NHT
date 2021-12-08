@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox prefHeight="153.0" prefWidth="1070.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.PurchaseOrderItemController">
+<VBox prefHeight="153.0" prefWidth="1070.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.PurchaseOrderItemController">
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
          <children>
@@ -29,7 +24,12 @@
                   </Label>
                   <HBox>
                      <children>
-                        <Label text="%harddrive:">
+                        <Label text="%hardDrive">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text=" : ">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -43,7 +43,12 @@
                   </HBox>
                   <HBox>
                      <children>
-                        <Label text="%qUantity:">
+                        <Label text="%quantity">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text=" : ">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -55,6 +60,11 @@
                         </Label>
                         <HBox alignment="CENTER_RIGHT" prefHeight="5.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                            <children>
+                              <Label text="\$" textFill="#2266dd">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
                               <Label fx:id="price" text="4250" textFill="#2266dd" />
                            </children>
                            <padding>
@@ -70,9 +80,19 @@
       <Separator prefWidth="200.0" />
       <VBox prefWidth="1068.0">
          <children>
-            <HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="1068.0" spacing="20.0">
+            <HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="1068.0">
                <children>
-                  <Label text="%tOtal:">
+                  <Label text="Total">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text=" : ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="\$" textFill="#2266dd">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -89,7 +109,7 @@
             </HBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="1068.0" spacing="20.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#rePurchase" style="-fx-background-color: #26d;" text="%Repurchase" textFill="WHITE">
+                  <Button mnemonicParsing="false" onAction="#rePurchase" style="-fx-background-color: #26d;" text="%repurchase" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>

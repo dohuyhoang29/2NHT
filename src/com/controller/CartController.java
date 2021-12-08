@@ -2,6 +2,7 @@ package com.controller;
 
 import com.helper.CartDatabaseHelper;
 import com.helper.ProjectManager;
+import com.helper.TranslateManager;
 import com.model.Cart;
 import com.view.Navigator;
 import java.io.IOException;
@@ -54,6 +55,7 @@ public class CartController implements Initializable {
       for (int i = 0; i < listCart.size(); i++) {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/com/view/CartItemUI.fxml"));
+        loader.setResources(TranslateManager.getRb());
         HBox hBox = loader.load();
         CartItemController controller = loader.getController();
         sub += controller.setData(listCart.get(i));

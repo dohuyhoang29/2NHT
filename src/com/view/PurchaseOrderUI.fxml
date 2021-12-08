@@ -233,7 +233,7 @@
                            <children>
                               <HBox alignment="CENTER" onMouseClicked="#goToAllBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="All" HBox.hgrow="ALWAYS">
+                                    <Label text="%all" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -242,7 +242,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToPayBox" prefWidth="218.0" styleClass="purchase-order-choose" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="To Pay" textFill="#2266dd" HBox.hgrow="ALWAYS">
+                                    <Label text="%toPay" textFill="#2266dd" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -251,7 +251,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToShipBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="To Ship" HBox.hgrow="ALWAYS">
+                                    <Label text="%toShip" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -260,7 +260,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToReceiveBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="To Receive" HBox.hgrow="ALWAYS">
+                                    <Label text="%toReceive" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -269,7 +269,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToCompletedBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="Completed" HBox.hgrow="ALWAYS">
+                                    <Label text="%completed" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -291,7 +291,7 @@
                            <children>
                               <HBox alignment="CENTER" onMouseClicked="#goToAllBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="All" HBox.hgrow="ALWAYS">
+                                    <Label text="%all" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -300,7 +300,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToPayBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="To Pay" HBox.hgrow="ALWAYS">
+                                    <Label text="%toPay" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -309,7 +309,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToShipBox" prefWidth="218.0" styleClass="purchase-order-choose" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="To Ship" textFill="#2266dd" HBox.hgrow="ALWAYS">
+                                    <Label text="%toShip" textFill="#2266dd" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -318,7 +318,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToReceiveBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="To Receive" HBox.hgrow="ALWAYS">
+                                    <Label text="%toReceive" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -327,7 +327,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToCompletedBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="Completed" HBox.hgrow="ALWAYS">
+                                    <Label text="%completed" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -349,7 +349,7 @@
                            <children>
                               <HBox alignment="CENTER" onMouseClicked="#goToAllBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="All" HBox.hgrow="ALWAYS">
+                                    <Label text="%all" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -358,7 +358,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToPayBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="To Pay" HBox.hgrow="ALWAYS">
+                                    <Label text="%toPay" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -367,7 +367,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToShipBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="To Ship" HBox.hgrow="ALWAYS">
+                                    <Label text="%toShip" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -376,7 +376,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToReceiveBox" prefWidth="218.0" styleClass="purchase-order-choose" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="To Receive" textFill="#2266dd" HBox.hgrow="ALWAYS">
+                                    <Label text="%toReceive" textFill="#2266dd" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -385,7 +385,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToCompletedBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="Completed" HBox.hgrow="ALWAYS">
+                                    <Label text="%completed" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -407,7 +407,7 @@
                            <children>
                               <HBox alignment="CENTER" onMouseClicked="#goToAllBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="All" HBox.hgrow="ALWAYS">
+                                    <Label text="%all" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -416,7 +416,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToPayBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="To Pay" HBox.hgrow="ALWAYS">
+                                    <Label text="%toPay" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -425,7 +425,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToShipBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="To Ship" HBox.hgrow="ALWAYS">
+                                    <Label text="%toShip" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -434,7 +434,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToReceiveBox" prefWidth="218.0" styleClass="purchase-order-choose-non" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="To Receive" HBox.hgrow="ALWAYS">
+                                    <Label text="%toReceive" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -443,7 +443,7 @@
                               </HBox>
                               <HBox alignment="CENTER" onMouseClicked="#goToCompletedBox" prefWidth="218.0" styleClass="purchase-order-choose" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="Completed" textFill="#2266dd" HBox.hgrow="ALWAYS">
+                                    <Label text="%completed" textFill="#2266dd" HBox.hgrow="ALWAYS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>

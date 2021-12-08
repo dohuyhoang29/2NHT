@@ -3,6 +3,7 @@ package com.controller;
 import com.helper.CartDatabaseHelper;
 import com.helper.OrderDetailsDatabaseHelper;
 import com.helper.ProjectManager;
+import com.helper.TranslateManager;
 import com.model.Cart;
 import com.model.Order;
 import com.model.OrderDetail;
@@ -90,6 +91,7 @@ public class PurchaseOrderController implements Initializable {
         for (int i = 0; i < listOrderDetail.size(); i++) {
           FXMLLoader loader = new FXMLLoader();
           loader.setLocation(getClass().getResource("/com/view/PurchaseOrderItemUI.fxml"));
+          loader.setResources(TranslateManager.getRb());
           VBox vBox = loader.load();
           PurchaseOrderItemController controller = loader.getController();
           controller.setData(listOrderDetail.get(i));
@@ -109,6 +111,7 @@ public class PurchaseOrderController implements Initializable {
         for (int i = 0; i < listOrderDetail.size(); i++) {
           FXMLLoader loader = new FXMLLoader();
           loader.setLocation(getClass().getResource("/com/view/PurchaseOrderItemUI.fxml"));
+          loader.setResources(TranslateManager.getRb());
           VBox vBox = loader.load();
           PurchaseOrderItemController controller = loader.getController();
           controller.setData(listOrderDetail.get(i));
@@ -128,6 +131,7 @@ public class PurchaseOrderController implements Initializable {
         for (int i = 0; i < listOrderDetail.size(); i++) {
           FXMLLoader loader = new FXMLLoader();
           loader.setLocation(getClass().getResource("/com/view/PurchaseOrderItemUI.fxml"));
+          loader.setResources(TranslateManager.getRb());
           VBox vBox = loader.load();
           PurchaseOrderItemController controller = loader.getController();
           controller.setData(listOrderDetail.get(i));
@@ -147,6 +151,7 @@ public class PurchaseOrderController implements Initializable {
         for (int i = 0; i < listOrderDetail.size(); i++) {
           FXMLLoader loader = new FXMLLoader();
           loader.setLocation(getClass().getResource("/com/view/PurchaseOrderItemUI.fxml"));
+          loader.setResources(TranslateManager.getRb());
           VBox vBox = loader.load();
           PurchaseOrderItemController controller = loader.getController();
           controller.setData(listOrderDetail.get(i));
@@ -166,6 +171,7 @@ public class PurchaseOrderController implements Initializable {
         for (int i = 0; i < listOrderDetail.size(); i++) {
           FXMLLoader loader = new FXMLLoader();
           loader.setLocation(getClass().getResource("/com/view/PurchaseOrderItemUI.fxml"));
+          loader.setResources(TranslateManager.getRb());
           VBox vBox = loader.load();
           PurchaseOrderItemController controller = loader.getController();
           controller.setData(listOrderDetail.get(i));

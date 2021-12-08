@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.OrderController">
+<BorderPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.OrderController">
   <top>
     <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" spacing="10.0" styleClass="background_main" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
       <children>
@@ -139,6 +139,23 @@
             </Label>
           </children>
         </HBox>
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#goToCategoryList" spacing="5.0" style="-fx-background-color: #234;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_category.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="%categoryList" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
             <HBox alignment="CENTER_LEFT" onMouseClicked="#goToOrder" spacing="5.0" style="-fx-background-color: #234;">
                <children>
                   <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
@@ -215,7 +232,7 @@
         </HBox>
         <VBox prefHeight="200.0" prefWidth="100.0" styleClass="background" stylesheets="@../css/style.css">
           <children>
-            <Label text="%addAccount">
+            <Label text="%orders">
               <font>
                 <Font name="System Bold" size="20.0" />
               </font>
@@ -233,7 +250,7 @@
               <children>
                 <HBox prefHeight="10.0" prefWidth="967.0" spacing="10.0">
                   <children>
-                    <TextField fx:id="txtSearch" prefHeight="25.0" prefWidth="182.0" promptText="%earchProduct">
+                    <TextField fx:id="txtSearch" prefHeight="25.0" prefWidth="182.0" promptText="%searchProduct">
                       <font>
                         <Font size="14.0" />
                       </font>
@@ -253,7 +270,12 @@
                   <HBox prefHeight="31.0" prefWidth="967.0">
                     <children>
                       <Pane prefHeight="31.0" prefWidth="14.0" />
-                      <Label prefHeight="27.0" prefWidth="440.0" text="%customerName">
+                                    <Label prefHeight="27.0" prefWidth="124.0" text="%id">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                      <Label prefHeight="27.0" prefWidth="319.0" text="%customerName">
                         <font>
                           <Font size="18.0" />
                         </font>

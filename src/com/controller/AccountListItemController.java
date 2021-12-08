@@ -2,6 +2,7 @@ package com.controller;
 
 import com.Main;
 import com.helper.AccountDatabaseHelper;
+import com.helper.TranslateManager;
 import com.model.Account;
 import com.view.Navigator;
 import java.io.IOException;
@@ -67,12 +68,14 @@ public class AccountListItemController {
   private void viewAccount () throws IOException {
     FXMLLoader fxmlLoader = new FXMLLoader();
     fxmlLoader.setLocation(getClass().getResource("/com/view/ViewAccountUI.fxml"));
+    fxmlLoader.setResources(TranslateManager.getRb());
     Parent root = fxmlLoader.load();
     ViewAccountController controller = fxmlLoader.getController();
     controller.setData(account);
     Scene scene = new Scene(root);
     Stage viewAccount = new Stage();
     viewAccount.setScene(scene);
+    viewAccount.setTitle("View Account");
     viewAccount.initModality(Modality.WINDOW_MODAL);
     viewAccount.initOwner(Navigator.getInstance().getStage());
     viewAccount.show();

@@ -127,7 +127,7 @@
                   </ScrollPane>
                   <HBox alignment="CENTER" prefHeight="55.0" prefWidth="1248.0">
                      <children>
-                        <Label text="%allProduct ">
+                        <Label text="%allProduct">
                            <font>
                               <Font name="System Bold" size="26.0" />
                            </font>

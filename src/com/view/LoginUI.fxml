@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="350.0" styleClass="transparent" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="350.0" styleClass="transparent" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.LoginController">
    <children>
       <ImageView fitHeight="570.0" fitWidth="350.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -20,7 +20,7 @@
          </image>
       </ImageView>
       
-      <Text layoutX="90.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%don'thaveanaccount?">
+      <Text layoutX="90.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%don'thaveanaccount">
          <font>
             <Font name="Times New Roman" size="15.0" />
          </font>
@@ -54,7 +54,7 @@
             <Image url="@../images/lock.png" />
          </image>
       </ImageView>
-      <Text fill="#8a8282" layoutX="106.0" layoutY="488.0" onMouseClicked="#forgotPassword" strokeType="OUTSIDE" strokeWidth="0.0" text="%forgotyourpassword?">
+      <Text fill="#8a8282" layoutX="106.0" layoutY="488.0" onMouseClicked="#forgotPassword" strokeType="OUTSIDE" strokeWidth="0.0" text="%forgotyourpassword">
          <font>
             <Font name="Times New Roman" size="15.0" />
          </font>

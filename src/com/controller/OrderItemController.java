@@ -17,12 +17,16 @@ public class OrderItemController {
   private Label status;
 
   @FXML
+  private Label code;
+
+  @FXML
   private Label date;
 
   Order order;
 
   public void setData (Order order) {
     this.order = order;
+    code.setText(order.getCode());
     name.setText(order.getName());
     totalPrice.setText(order.getTotalPrice().toString());
     status.setText(order.getStatus());

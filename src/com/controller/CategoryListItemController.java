@@ -2,6 +2,7 @@ package com.controller;
 
 import com.Main;
 import com.helper.CategoryDatabaseHelper;
+import com.helper.NotificationManager;
 import com.helper.ProductDatabaseHelper;
 import com.model.Category;
 import com.model.Product;
@@ -55,13 +56,13 @@ public class CategoryListItemController {
     status.setText(category.getStatus());
 
     if (category.getStatus().equalsIgnoreCase(Main.UNLOCK)) {
-      lock.setVisible(false);
-      unlock.setVisible(true);
+      lock.setVisible(true);
+      unlock.setVisible(false);
     }
 
     if (category.getStatus().equalsIgnoreCase(Main.LOCK)) {
-      unlock.setVisible(false);
-      lock.setVisible(true);
+      unlock.setVisible(true);
+      lock.setVisible(false);
     }
   }
 
@@ -78,6 +79,7 @@ public class CategoryListItemController {
       for (Product p : listProduct) {
         ProductDatabaseHelper.lockProduct(p.getId());
       }
+      NotificationManager.getInstance().success("Lock Category Success");
     }
   }
 
@@ -94,6 +96,7 @@ public class CategoryListItemController {
       for (Product p : listProduct) {
         ProductDatabaseHelper.unLockProduct(p.getId());
       }
+      NotificationManager.getInstance().success("Un-Lock Category Success");
     }
   }
 

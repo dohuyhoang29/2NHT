@@ -38,33 +38,11 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox fx:id="pointBox" alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="364.0">
+                  <HBox fx:id="pointBox" alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="364.0" spacing="5.0">
                      <children>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/ic_star.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/ic_star.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/ic_star.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/ic_star.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/ic_star.png" />
-                           </image>
-                        </ImageView>
+                        <Label text="%point" />
+                        <Label text=" : " />
+                        <Label fx:id="point" layoutX="10.0" layoutY="13.0" text="5" />
                      </children>
                   </HBox>
                   <Label fx:id="feedback" text="Looking forward to buying 1!">

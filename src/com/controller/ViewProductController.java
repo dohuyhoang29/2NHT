@@ -1,11 +1,18 @@
 package com.controller;
 
+import com.helper.FeedbackDatabaseHelper;
+import com.helper.ProjectManager;
+import com.model.Feedback;
 import com.model.Product;
 import com.view.Navigator;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -93,8 +100,20 @@ public class ViewProductController implements Initializable {
   @FXML
   private Label batteryCapacity;
 
+  @FXML
+  private VBox reviewBox;
+
+  int count;
+  List<Feedback> listFeedback = new ArrayList<>();
+  String path = Paths.get(".").toAbsolutePath().normalize() + "/src/com/images/";
+
+  @Override
+  public void initialize(URL location, ResourceBundle resources) {
+    username.setText(ProjectManager.getInstance().getAccount().getUsername());
+  }
+
   public void setData(Product product) {
-    Image image = new Image(getClass().getResourceAsStream("/com/images/" + product.getImgSrc()));
+    Image image = new Image("file:///" + path + product.getImgSrc());
 
     imgSrc.setImage(image);
     code.setText(product.getProductCode());
@@ -111,18 +130,28 @@ public class ViewProductController implements Initializable {
     cpu.setText(product.getCpu());
     gpu.setText(product.getGpu());
     ram.setText(product.getRam());
-    color.setText(product.getColor());
     operatingSystem.setText(product.getOperatingSystem());
     rearCamera.setText(product.getRearCamera());
     selfieCamera.setText(product.getSelfieCamera());
     batteryCapacity.setText(product.getBatteryCapacity());
+
+    printListFeedBack(product.getId());
   }
 
-  int count;
-
-  @Override
-  public void initialize(URL location, ResourceBundle resources) {
-
+  public void printListFeedBack(Integer productID) {
+    listFeedback = FeedbackDatabaseHelper.getFeedbackByProduct(productID);
+    try {
+      for (int i = 0; i < listFeedback.size(); i++) {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/com/view/FeedbackItemUI.fxml"));
+        VBox vBox = loader.load();
+        FeedbackItemController controller = loader.getController();
+        controller.setData(listFeedback.get(i));
+        reviewBox.getChildren().add(vBox);
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   //Hanh dong

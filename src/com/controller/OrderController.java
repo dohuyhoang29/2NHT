@@ -1,6 +1,7 @@
 package com.controller;
 
 import com.helper.OrderDatabaseHelper;
+import com.helper.ProjectManager;
 import com.model.Order;
 import com.view.Navigator;
 import java.io.IOException;
@@ -74,6 +75,7 @@ public class OrderController implements Initializable {
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
+    username.setText(ProjectManager.getInstance().getAccount().getUsername());
     listOrder = OrderDatabaseHelper.getAllOrder();
 
     try {
@@ -88,7 +90,8 @@ public class OrderController implements Initializable {
     } catch (IOException e) {
       e.printStackTrace();
     }
-
+    cbStatus.getItems().add("All");
+    cbStatus.setValue("All");
     cbStatus.getItems().addAll(Order.TO_PAY, Order.TO_SHIP, Order.TO_RECEIVE, Order.COMPLETED);
   }
 
@@ -105,9 +108,10 @@ public class OrderController implements Initializable {
 
   @FXML
   void search (ActionEvent event) {
-    List<Order> list = OrderDatabaseHelper.searchOrder(txtSearch.getText(), cbStatus.getValue(), dpFrom.getValue(), dpTo.getValue());
+//    System.out.println(txtSearch.getText());
+    orderBox.getChildren().clear();
     listOrder.clear();
-    listOrder.addAll(list);
+    listOrder.addAll(OrderDatabaseHelper.searchOrder(txtSearch.getText(), cbStatus.getValue(), dpFrom.getValue(), dpTo.getValue()));
   }
 
   //Dieu Huong
