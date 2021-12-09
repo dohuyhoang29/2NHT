@@ -1,0 +1,17 @@
+
+v	java:S116,"\Rename this field "show_password_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’Ê²ıÿÿÿÿ
+x
+java:S1450j"bRemove the "confirmPasswordText" field and declare it as a local variable in the relevant methods.(•üò
+v
+java:S1450i"[Remove the "passwordText" field and declare it as a local variable in the relevant methods.(æş¡Áúÿÿÿÿ
+]
+java:S1126"BReplace this if-then-else statement by a single method invocation.(İ³¶’ùÿÿÿÿ
+d	java:S100‡"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çèÒ½
+>
+java:S1125ˆ"'Remove the unnecessary boolean literal.(Û´ÌÅ
+Q
+java:S1117¦":Rename "count" which hides the field declared at line 103.(æÕ¿¼
+]
+java:S1128";Remove this unused import 'javafx.scene.control.ChoiceBox'.(ã‚½úÿÿÿÿ8öıéÑÙ/
+Q
+java:S3655Ã"5Call "option.isPresent()" before accessing the value.(Ï¬ÚÃúÿÿÿÿ

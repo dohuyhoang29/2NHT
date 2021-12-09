@@ -1,0 +1,13 @@
+
+n
+java:S3776™"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(›ÂÚúÿÿÿÿ
+Q
+java:S1117":Rename "count" which hides the field declared at line 178.(æÕ¿¼
+K
+java:S2209°"5Change this instance-reference to a static reference.(†®Ğj
+L
+java:S2209¸"5Change this instance-reference to a static reference.(Ğ€®…
+Q
+java:S1117Õ":Rename "count" which hides the field declared at line 178.(æÕ¿¼
+Q
+java:S3655ï"5Call "option.isPresent()" before accessing the value.(Ï¬ÚÃúÿÿÿÿ

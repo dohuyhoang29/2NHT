@@ -1,0 +1,10 @@
+
+]
+java:S1126w"BReplace this if-then-else statement by a single method invocation.(İ³¶’ùÿÿÿÿ
+M
+java:S1128
+"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8øãÑÙ/
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8øãÑÙ/
+]
+java:S1128";Remove this unused import 'javafx.scene.control.ChoiceBox'.(ã‚½úÿÿÿÿ8øãÑÙ/

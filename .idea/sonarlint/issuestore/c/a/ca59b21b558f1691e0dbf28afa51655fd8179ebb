@@ -1,0 +1,6 @@
+
+m	java:S116+"SRename this field "Feedback" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã ÿŠùÿÿÿÿ
+o
+java:S1845+"TRename field "Feedback" to prevent any misunderstanding/clash with field "feedback".(ã ÿŠùÿÿÿÿ
+T
+java:S1117C"9Rename "stage" which hides the field declared at line 42.(ƒÑÀ·ùÿÿÿÿ
