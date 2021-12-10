@@ -190,13 +190,14 @@ public class EditProductController implements Initializable {
       cbCategory.getItems().add(c.getName());
     }
     cbCategory.setValue("Laptop");
+    fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("JPG", "*.jpg"), new FileChooser.ExtensionFilter("PNG", "*.png"));
   }
 
   public void setData(Product product) {
     demoImg.setVisible(true);
     clickUpload.setVisible(false);
     this.product = product;
-    Image image = new Image(getClass().getResourceAsStream("/com/images/" + product.getImgSrc()));
+    Image image = new Image("file:///" + path + product.getImgSrc());
     imgSrc = new File(path + product.getImgSrc());
 
     imgPreview.setImage(image);

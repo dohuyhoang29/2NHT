@@ -207,6 +207,8 @@ public class InsertProductController implements Initializable {
         }
       }
     });
+
+    fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("JPG", "*.jpg"), new FileChooser.ExtensionFilter("PNG", "*.png"));
   }
 
   //Actions
@@ -238,9 +240,9 @@ public class InsertProductController implements Initializable {
   @FXML
   void clickChooseImage(MouseEvent mouseEvent) {
     imgSrc = fileChooser.showOpenDialog(Navigator.getInstance().getStage());
-    Image image = new Image("file:///" + imgSrc.getAbsolutePath());
 
     if (imgSrc != null) {
+      Image image = new Image("file:///" + imgSrc.getAbsolutePath());
       imgPreview.setImage(image);
       clickUpload.setVisible(false);
       demoImg.setVisible(true);

@@ -66,7 +66,9 @@ public class CartController implements Initializable {
     } catch (IOException e) {
       e.printStackTrace();
     }
-
+    listCart = CartDatabaseHelper.getAllCartByAccount(ProjectManager.getInstance().getAccount().getUsername());
+    Integer cart = listCart.size();
+    count.setText(cart.toString());
   }
 
   //Action
@@ -87,6 +89,21 @@ public class CartController implements Initializable {
   }
 
   @FXML
+  void goToMacBook(MouseEvent event) throws IOException {
+    Navigator.getInstance().goToMacbook();
+  }
+
+  @FXML
+  void goToIPhone(MouseEvent event) throws IOException {
+    Navigator.getInstance().goToIPhone();
+  }
+
+  @FXML
+  void goToIPad(MouseEvent event) throws IOException {
+    Navigator.getInstance().goToIPad();
+  }
+
+  @FXML
   void goToSearch (MouseEvent event) throws IOException {
     Navigator.getInstance().goToSearch(txtSearch.getText());
   }
@@ -100,5 +117,4 @@ public class CartController implements Initializable {
   void goToLogin (MouseEvent event) throws IOException {
     Navigator.getInstance().goToLogin();
   }
-
 }

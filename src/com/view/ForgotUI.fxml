@@ -13,7 +13,7 @@
             <Image url="@../images/forgot.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="104.0" layoutY="38.0" text="%pleasecontact:">
+      <Label layoutX="104.0" layoutY="38.0" text="%pleasecontact">
          <font>
             <Font size="24.0" />
          </font>

@@ -62,7 +62,7 @@
          <children>
             <AnchorPane>
                <children>
-                  <TextField fx:id="quantity" layoutY="20.0" prefHeight="25.0" prefWidth="84.0" />
+                  <TextField fx:id="quantity" layoutY="20.0" onMouseEntered="#quantityEntered" onMouseExited="#quantityExited" prefHeight="25.0" prefWidth="84.0" />
                   <VBox fx:id="quantityBox" alignment="CENTER" layoutX="67.0" layoutY="23.0" onMouseEntered="#quantityEntered" onMouseExited="#quantityExited" prefHeight="20.0" prefWidth="13.0" style="-fx-background-color: #e7e7e7;" visible="false">
                      <children>
                         <ImageView fitHeight="10.0" fitWidth="10.0" onMouseClicked="#up" pickOnBounds="true" preserveRatio="true">

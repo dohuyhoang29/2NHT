@@ -262,6 +262,21 @@ public class ScreenProductController implements Initializable {
   }
 
   @FXML
+  void goToMacBook(MouseEvent event) throws IOException {
+    Navigator.getInstance().goToMacbook();
+  }
+
+  @FXML
+  void goToIPhone(MouseEvent event) throws IOException {
+    Navigator.getInstance().goToIPhone();
+  }
+
+  @FXML
+  void goToIPad(MouseEvent event) throws IOException {
+    Navigator.getInstance().goToIPad();
+  }
+
+  @FXML
   void goToSearch (MouseEvent event) throws IOException {
     Navigator.getInstance().goToSearch(txtSearch.getText());
   }
