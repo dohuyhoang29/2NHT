@@ -1,9 +1,6 @@
 package com.controller;
 
-import com.helper.CartDatabaseHelper;
-import com.helper.CategoryDatabaseHelper;
-import com.helper.ProductDatabaseHelper;
-import com.helper.ProjectManager;
+import com.helper.*;
 import com.model.Cart;
 import com.model.Category;
 import com.model.Product;
@@ -81,6 +78,7 @@ public class SearchController implements Initializable {
         for (int i = 0; i < listProduct.size(); i++) {
           FXMLLoader loader = new FXMLLoader();
           loader.setLocation(getClass().getResource("/com/view/ProductItemUI.fxml"));
+          loader.setResources(TranslateManager.getRb());
           VBox vBox = loader.load();
 
           ProductItemController controller = loader.getController();
