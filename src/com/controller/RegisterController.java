@@ -24,8 +24,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 public class RegisterController implements Initializable {
-
-  ScaleTransition scaleTransition1;
   @FXML
   private TextField txtEmail;
 
@@ -46,9 +44,6 @@ public class RegisterController implements Initializable {
 
   @FXML
   private PasswordField txtConfirmPassword;
-
-  @FXML
-  private Button btnCreate;
 
   @FXML
   private TextField txtAddress;
@@ -92,6 +87,9 @@ public class RegisterController implements Initializable {
     } else if (!check.validUsername(txtUsername.getText()) && !txtUsername.getText().isEmpty()) {
       errUsername.setText("Username can only have characters and numbers");
       count++;
+    } else if (AccountDatabaseHelper.getAccountByUsername(txtUsername.getText()) != null) {
+      errUsername.setText("Username existed");
+      count++;
     } else errUsername.setText("");
 
 
@@ -109,7 +107,7 @@ public class RegisterController implements Initializable {
     if (txtPassword.getText().isEmpty() && showPassword.getText().isEmpty()) {
       errPassword.setText("Password is required");
       count++;
-    } else if ((!check.validPassword(txtPassword.getText()) && !txtPassword.getText().isEmpty()) && (!check.validPassword(showPassword.getText()) && !showPassword.getText().isEmpty())) {
+    } else if ((!check.validPassword(txtPassword.getText()) && !txtPassword.getText().isEmpty()) || (!check.validPassword(showPassword.getText()) && !showPassword.getText().isEmpty())) {
       errPassword.setText("Use 8 or more characters with a mix of letters, numbers & symbols");
       count++;
     } else errPassword.setText("");
@@ -119,7 +117,7 @@ public class RegisterController implements Initializable {
     if (txtConfirmPassword.getText().isEmpty() && showConfirmPassword.getText().isEmpty()) {
       errConfirmPassword.setText("Confirm Password is required");
       count++;
-    } else if ((!txtConfirmPassword.getText().equalsIgnoreCase(txtPassword.getText())  && !txtConfirmPassword.getText().isEmpty()) && (!showConfirmPassword.getText().equalsIgnoreCase(showPassword.getText())  && !showConfirmPassword.getText().isEmpty())) {
+    } else if ((!txtConfirmPassword.getText().equalsIgnoreCase(txtPassword.getText())  && !txtConfirmPassword.getText().isEmpty()) || (!showConfirmPassword.getText().equalsIgnoreCase(showPassword.getText())  && !showConfirmPassword.getText().isEmpty())) {
       errConfirmPassword.setText("Those passwords didn’t match");
       count++;
     } else errConfirmPassword.setText("");

@@ -1,17 +1,17 @@
 
-v	java:S116."\Rename this field "show_password_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’Ê²ıÿÿÿÿ
+v	java:S1167"\Rename this field "show_password_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’Ê²ıÿÿÿÿ
 x
-java:S1450J"bRemove the "confirmPasswordText" field and declare it as a local variable in the relevant methods.(•üò
+java:S1450S"bRemove the "confirmPasswordText" field and declare it as a local variable in the relevant methods.(•üò
 }
-java:S1450H"bRemove the "currentPasswordText" field and declare it as a local variable in the relevant methods.(ÔıŞ’ÿÿÿÿÿ
+java:S1450Q"bRemove the "currentPasswordText" field and declare it as a local variable in the relevant methods.(ÔıŞ’ÿÿÿÿÿ
 r
-java:S1450K"WRemove the "listCart" field and declare it as a local variable in the relevant methods.(õ”¨üÿÿÿÿ
+java:S1450T"WRemove the "listCart" field and declare it as a local variable in the relevant methods.(õ”¨üÿÿÿÿ
 y
-java:S1450I"^Remove the "newPasswordText" field and declare it as a local variable in the relevant methods.(úëÆ‹ÿÿÿÿÿ
+java:S1450R"^Remove the "newPasswordText" field and declare it as a local variable in the relevant methods.(úëÆ‹ÿÿÿÿÿ
 
-java:S1130W"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(÷´ ùÿÿÿÿ8¹µ¼±Ù/
+java:S1130p"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(÷´ ùÿÿÿÿ8¹µ¼±Ù/
 X
-java:S1117X";Rename "account" which hides the field declared at line 36.(°€”¶8€êƒâ×/
-j	java:S100i"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çèÒ½8ªÕ¸ˆØ/
-D
-java:S1125j"'Remove the unnecessary boolean literal.(Û´ÌÅ8­Õ¸ˆØ/
+java:S1117q";Rename "account" which hides the field declared at line 45.(°€”¶8€êƒâ×/
+k	java:S100‚"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çèÒ½8ªÕ¸ˆØ/
+E
+java:S1125ƒ"'Remove the unnecessary boolean literal.(Û´ÌÅ8­Õ¸ˆØ/

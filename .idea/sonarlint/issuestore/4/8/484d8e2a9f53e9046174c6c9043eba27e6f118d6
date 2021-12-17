@@ -1,0 +1,25 @@
+
+U
+java:S1118":Add a private constructor to hide the implicit public one.(º±œÿÿÿÿÿ
+A
+java:S1168Q"+Return an empty collection instead of null.(¥¹ï
+B
+java:S1168Å"+Return an empty collection instead of null.(¥¹ï
+M
+java:S1128	"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8‰ÚáÑÙ/
+M
+java:S1128
+"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8‰ÚáÑÙ/
+^
+java:S1192"HDefine a constant instead of duplicating this literal "address" 4 times.(ÔéÑ¸
+_
+java:S1192"IDefine a constant instead of duplicating this literal "password" 4 times.(Œ‡ğ„
+c
+java:S1192"MDefine a constant instead of duplicating this literal "phone_number" 4 times.(íşÑÄ
+a
+java:S1192"FDefine a constant instead of duplicating this literal "email" 4 times.(¬äÂøÿÿÿÿ
+d
+java:S1192"GDefine a constant instead of duplicating this literal "status" 4 times.(ïœë8ìŞÑÙ/
+_
+java:S1192"IDefine a constant instead of duplicating this literal "username" 4 times.(ê­¯
+f	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ©æª

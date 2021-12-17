@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.OrderDetailsController">
+<BorderPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.OrderDetailsController">
   <top>
     <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" spacing="10.0" styleClass="background_main" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
       <children>
@@ -85,23 +77,6 @@
           <VBox.margin>
             <Insets left="30.0" />
           </VBox.margin>
-        </HBox>
-        <HBox fx:id="addProduct2" alignment="CENTER_LEFT" onMousePressed="#goToInsertProduct" spacing="5.0" style="-fx-background-color: #234;">
-          <children>
-            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-              <image>
-                <Image url="@../images/ic_product.png" />
-              </image>
-              <HBox.margin>
-                <Insets left="30.0" />
-              </HBox.margin>
-            </ImageView>
-            <Label text="%addProduct" textFill="WHITE">
-              <font>
-                <Font name="System Bold" size="20.0" />
-              </font>
-            </Label>
-          </children>
         </HBox>
         <HBox fx:id="productsList" alignment="CENTER_LEFT" onMousePressed="#goToProductList" spacing="5.0" style="-fx-background-color: #234;">
           <children>
@@ -304,7 +279,7 @@
                                 </Pane>
                               </children>
                             </Pane>
-                            <VBox>
+                            <VBox HBox.hgrow="ALWAYS">
                               <children>
                                 <Label text="%customer">
                                   <font>
@@ -345,51 +320,36 @@
                                 </Pane>
                               </children>
                             </Pane>
-                            <VBox>
+                            <VBox HBox.hgrow="ALWAYS">
                               <children>
                                 <Label text="%orderInfo">
                                   <font>
                                     <Font name="System Bold" size="18.0" />
                                   </font>
                                 </Label>
-                                <HBox>
-                                  <children>
-                                    <Label text="%shipping">
-                                      <font>
-                                        <Font name="System Bold" size="16.0" />
-                                      </font>
-                                    </Label>
-                                    <Label text=" : ">
-                                      <font>
-                                        <Font size="16.0" />
-                                      </font>
-                                    </Label>
-                                                      <Label fx:id="address2" text="Shoppe Express">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                  </children>
-                                </HBox>
-                                <HBox>
-                                  <children>
-                                    <Label text="%status">
-                                      <font>
-                                        <Font name="System Bold" size="16.0" />
-                                      </font>
-                                    </Label>
-                                                      <Label text=" : ">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                    <Label fx:id="status" text="Confirmed">
-                                      <font>
-                                        <Font size="16.0" />
-                                      </font>
-                                    </Label>
-                                  </children>
-                                </HBox>
+                                                <VBox alignment="CENTER" prefHeight="75.0" prefWidth="97.0" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                      <HBox>
+                                        <children>
+                                          <Label text="%status">
+                                            <font>
+                                              <Font name="System Bold" size="16.0" />
+                                            </font>
+                                          </Label>
+                                                            <Label text=" : ">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                          <Label fx:id="status">
+                                            <font>
+                                              <Font size="16.0" />
+                                            </font>
+                                          </Label>
+                                        </children>
+                                      </HBox>
+                                                   </children>
+                                                </VBox>
                               </children>
                             </VBox>
                           </children>
@@ -409,7 +369,7 @@
                                 </Pane>
                               </children>
                             </Pane>
-                            <VBox>
+                            <VBox HBox.hgrow="ALWAYS">
                               <children>
                                 <Label text="%deliverTo">
                                   <font>
@@ -424,12 +384,12 @@
                                         <Font name="System Bold" size="16.0" />
                                       </font>
                                     </Label>
-                                    <Label fx:id="address" text=" : ">
+                                    <Label text=" : ">
                                       <font>
                                         <Font size="16.0" />
                                       </font>
                                     </Label>
-                                                      <Label fx:id="address1" text="Shoppe Express">
+                                                      <Label fx:id="address">
                                                          <font>
                                                             <Font size="16.0" />
                                                          </font>

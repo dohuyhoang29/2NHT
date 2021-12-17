@@ -1,10 +1,13 @@
 package com.controller;
 
 import com.helper.CartDatabaseHelper;
+import com.helper.CategoryDatabaseHelper;
+import com.helper.OrderDatabaseHelper;
 import com.helper.OrderDetailsDatabaseHelper;
 import com.helper.ProjectManager;
 import com.helper.TranslateManager;
 import com.model.Cart;
+import com.model.Category;
 import com.model.Order;
 import com.model.OrderDetail;
 import com.view.Navigator;
@@ -13,16 +16,22 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
 public class PurchaseOrderController implements Initializable {
+  @FXML
+  private HBox categoryBox;
+
   @FXML
   private TextField txtSearch;
 
@@ -65,8 +74,9 @@ public class PurchaseOrderController implements Initializable {
   @FXML
   private VBox completedBox;
 
-  List<OrderDetail> listOrderDetail = new ArrayList<>();
+  ObservableList<Order> listOrder = FXCollections.observableArrayList();
   private List<Cart> listCart = new ArrayList<>();
+  private ObservableList<Category> listCategory = FXCollections.observableArrayList();
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
@@ -80,21 +90,36 @@ public class PurchaseOrderController implements Initializable {
     listCart = CartDatabaseHelper.getAllCartByAccount(ProjectManager.getInstance().getAccount().getUsername());
     Integer cart = listCart.size();
     count.setText(cart.toString());
+
+    listCategory.addAll(CategoryDatabaseHelper.getAllCategories());
+
+    try {
+      for (int i = 0; i < listCategory.size(); i++) {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/com/view/CategoryItemUI.fxml"));
+        Label label = loader.load();
+        CategoryItemController controller = loader.getController();
+        controller.setData(listCategory.get(i));
+        categoryBox.getChildren().add(label);
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   //setData
   void setDataAll () {
-    listOrderDetail = OrderDetailsDatabaseHelper.getOrderDetailByAccount(ProjectManager.getInstance().getAccount().getId());
+    listOrder = OrderDatabaseHelper.getAllOrderByAccount(ProjectManager.getInstance().getAccount().getId());
 
-    if (listOrderDetail != null) {
+    if (listOrder != null) {
       try {
-        for (int i = 0; i < listOrderDetail.size(); i++) {
+        for (int i = 0; i < listOrder.size(); i++) {
           FXMLLoader loader = new FXMLLoader();
           loader.setLocation(getClass().getResource("/com/view/PurchaseOrderItemUI.fxml"));
           loader.setResources(TranslateManager.getRb());
           VBox vBox = loader.load();
           PurchaseOrderItemController controller = loader.getController();
-          controller.setData(listOrderDetail.get(i));
+          controller.setData(listOrder.get(i));
           allBox.getChildren().add(vBox);
         }
       } catch (IOException e) {
@@ -104,17 +129,17 @@ public class PurchaseOrderController implements Initializable {
   }
 
   void setDataToPay () {
-    listOrderDetail = OrderDetailsDatabaseHelper.getOrderDetailByAccountAndStatus(ProjectManager.getInstance().getAccount().getId(), Order.TO_PAY);
+    listOrder = OrderDatabaseHelper.getAllOrderByAccountAndStatus(ProjectManager.getInstance().getAccount().getId(), Order.TO_PAY);
 
-    if (listOrderDetail != null) {
+    if (listOrder != null) {
       try {
-        for (int i = 0; i < listOrderDetail.size(); i++) {
+        for (int i = 0; i < listOrder.size(); i++) {
           FXMLLoader loader = new FXMLLoader();
           loader.setLocation(getClass().getResource("/com/view/PurchaseOrderItemUI.fxml"));
           loader.setResources(TranslateManager.getRb());
           VBox vBox = loader.load();
           PurchaseOrderItemController controller = loader.getController();
-          controller.setData(listOrderDetail.get(i));
+          controller.setData(listOrder.get(i));
           toPayBox.getChildren().add(vBox);
         }
       } catch (IOException e) {
@@ -124,17 +149,17 @@ public class PurchaseOrderController implements Initializable {
   }
 
   void setDataToShip () {
-    listOrderDetail = OrderDetailsDatabaseHelper.getOrderDetailByAccountAndStatus(ProjectManager.getInstance().getAccount().getId(), Order.TO_SHIP);
+    listOrder = OrderDatabaseHelper.getAllOrderByAccountAndStatus(ProjectManager.getInstance().getAccount().getId(), Order.TO_SHIP);
 
-    if (listOrderDetail != null) {
+    if (listOrder != null) {
       try {
-        for (int i = 0; i < listOrderDetail.size(); i++) {
+        for (int i = 0; i < listOrder.size(); i++) {
           FXMLLoader loader = new FXMLLoader();
           loader.setLocation(getClass().getResource("/com/view/PurchaseOrderItemUI.fxml"));
           loader.setResources(TranslateManager.getRb());
           VBox vBox = loader.load();
           PurchaseOrderItemController controller = loader.getController();
-          controller.setData(listOrderDetail.get(i));
+          controller.setData(listOrder.get(i));
           toShipBox.getChildren().add(vBox);
         }
       } catch (IOException e) {
@@ -144,17 +169,17 @@ public class PurchaseOrderController implements Initializable {
   }
 
   void setDataToReceive () {
-    listOrderDetail = OrderDetailsDatabaseHelper.getOrderDetailByAccountAndStatus(ProjectManager.getInstance().getAccount().getId(), Order.TO_RECEIVE);
+    listOrder = OrderDatabaseHelper.getAllOrderByAccountAndStatus(ProjectManager.getInstance().getAccount().getId(), Order.TO_RECEIVE);
 
-    if (listOrderDetail != null) {
+    if (listOrder != null) {
       try {
-        for (int i = 0; i < listOrderDetail.size(); i++) {
+        for (int i = 0; i < listOrder.size(); i++) {
           FXMLLoader loader = new FXMLLoader();
           loader.setLocation(getClass().getResource("/com/view/PurchaseOrderItemUI.fxml"));
           loader.setResources(TranslateManager.getRb());
           VBox vBox = loader.load();
           PurchaseOrderItemController controller = loader.getController();
-          controller.setData(listOrderDetail.get(i));
+          controller.setData(listOrder.get(i));
           toReceiveBox.getChildren().add(vBox);
         }
       } catch (IOException e) {
@@ -164,17 +189,17 @@ public class PurchaseOrderController implements Initializable {
   }
 
   void setDataCompleted () {
-    listOrderDetail = OrderDetailsDatabaseHelper.getOrderDetailByAccountAndStatus(ProjectManager.getInstance().getAccount().getId(), Order.COMPLETED);
+    listOrder = OrderDatabaseHelper.getAllOrderByAccountAndStatus(ProjectManager.getInstance().getAccount().getId(), Order.COMPLETED);
 
-    if (listOrderDetail != null) {
+    if (listOrder != null) {
       try {
-        for (int i = 0; i < listOrderDetail.size(); i++) {
+        for (int i = 0; i < listOrder.size(); i++) {
           FXMLLoader loader = new FXMLLoader();
           loader.setLocation(getClass().getResource("/com/view/PurchaseOrderItemUI.fxml"));
           loader.setResources(TranslateManager.getRb());
           VBox vBox = loader.load();
           PurchaseOrderItemController controller = loader.getController();
-          controller.setData(listOrderDetail.get(i));
+          controller.setData(listOrder.get(i));
           completedBox.getChildren().add(vBox);
         }
       } catch (IOException e) {
@@ -195,21 +220,6 @@ public class PurchaseOrderController implements Initializable {
   @FXML
   void goToCart (MouseEvent event) throws IOException {
     Navigator.getInstance().goToCart();
-  }
-
-  @FXML
-  void goToMacBook(MouseEvent event) throws IOException {
-    Navigator.getInstance().goToMacbook();
-  }
-
-  @FXML
-  void goToIPhone(MouseEvent event) throws IOException {
-    Navigator.getInstance().goToIPhone();
-  }
-
-  @FXML
-  void goToIPad(MouseEvent event) throws IOException {
-    Navigator.getInstance().goToIPad();
   }
 
   @FXML

@@ -77,23 +77,6 @@
             <Insets left="30.0" />
           </VBox.margin>
         </HBox>
-        <HBox fx:id="addProduct2" alignment="CENTER_LEFT" onMousePressed="#goToInsertProduct" spacing="5.0" style="-fx-background-color: #234;">
-          <children>
-            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-              <image>
-                <Image url="@../images/ic_product.png" />
-              </image>
-              <HBox.margin>
-                <Insets left="30.0" />
-              </HBox.margin>
-            </ImageView>
-            <Label text="%addProduct" textFill="WHITE">
-              <font>
-                <Font name="System Bold" size="20.0" />
-              </font>
-            </Label>
-          </children>
-        </HBox>
         <HBox fx:id="productsList" alignment="CENTER_LEFT" onMousePressed="#goToProductList" spacing="5.0" style="-fx-background-color: #234;">
           <children>
             <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">

@@ -1,6 +1,7 @@
 package com.controller;
 
 import com.helper.CartDatabaseHelper;
+import com.helper.CategoryDatabaseHelper;
 import com.helper.ProductDatabaseHelper;
 import com.helper.ProjectManager;
 import com.model.Cart;
@@ -12,6 +13,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,10 +27,14 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
-public class MacbookController implements Initializable {
+public class CategoryController implements Initializable {
+  @FXML
+  private HBox categoryBox;
+
   @FXML
   private TextField txtSearch;
 
@@ -66,10 +73,32 @@ public class MacbookController implements Initializable {
 
   private List<Product> listData = new ArrayList<>();
   private List<Cart> listCart = new ArrayList<>();
+  private ObservableList<Category> listCategory = FXCollections.observableArrayList();
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
-    listData = ProductDatabaseHelper.getAllProductByCategory(Category.MAC);
+    listCart = CartDatabaseHelper.getAllCartByAccount(ProjectManager.getInstance().getAccount().getUsername());
+    Integer cart = listCart.size();
+    count.setText(cart.toString());
+
+    listCategory.addAll(CategoryDatabaseHelper.getAllCategories());
+
+    try {
+      for (int i = 0; i < listCategory.size(); i++) {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/com/view/CategoryItemUI.fxml"));
+        Label label = loader.load();
+        CategoryItemController controller = loader.getController();
+        controller.setData(listCategory.get(i));
+        categoryBox.getChildren().add(label);
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
+  public void setData(Category category) {
+    listData = ProductDatabaseHelper.getAllProductByCategory(category.getName());
     int column = 0;
     int row = 1;
 
@@ -94,16 +123,6 @@ public class MacbookController implements Initializable {
     } catch (IOException e) {
       e.printStackTrace();
     }
-
-    listCart = CartDatabaseHelper.getAllCartByAccount(ProjectManager.getInstance().getAccount().getUsername());
-    Integer cart = listCart.size();
-    count.setText(cart.toString());
-  }
-
-  //Action
-  @FXML
-  void filter (ActionEvent event) {
-
   }
 
   //Dieu huong
@@ -115,21 +134,6 @@ public class MacbookController implements Initializable {
   @FXML
   void goToCart (MouseEvent event) throws IOException {
     Navigator.getInstance().goToCart();
-  }
-
-  @FXML
-  void goToMacBook(MouseEvent event) throws IOException {
-    Navigator.getInstance().goToMacbook();
-  }
-
-  @FXML
-  void goToIPhone(MouseEvent event) throws IOException {
-    Navigator.getInstance().goToIPhone();
-  }
-
-  @FXML
-  void goToIPad(MouseEvent event) throws IOException {
-    Navigator.getInstance().goToIPad();
   }
 
   @FXML

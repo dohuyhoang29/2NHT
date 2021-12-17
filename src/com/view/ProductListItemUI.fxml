@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ProductListItemController">
+<VBox style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ProductListItemController">
    <children>
       <HBox fx:id="productListItem" alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="967.0">
          <children>
@@ -19,14 +15,14 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <HBox alignment="CENTER_LEFT">
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
                <children>
                   <ImageView fx:id="imgSrc" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/Phone/apple/ip13promax/iphone-13-pro-max-blue-select.png" />
+                        <Image url="@../images/iphone-13-0-0_3.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="name" prefHeight="25.0" prefWidth="227.0" text="Iphone 13 Pro Max">
+                  <Label fx:id="name" prefHeight="25.0" prefWidth="217.0" text="Iphone 13 Pro Max">
                      <font>
                         <Font size="16.0" />
                      </font>

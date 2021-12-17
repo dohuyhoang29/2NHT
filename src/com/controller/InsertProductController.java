@@ -190,8 +190,7 @@ public class InsertProductController implements Initializable {
 
     txtImportPrice.textProperty().addListener(new ChangeListener<String>() {
       @Override
-      public void changed(ObservableValue<? extends String> observable, String oldValue,
-          String newValue) {
+      public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
         if (!newValue.matches("\\d")) {
           txtImportPrice.setText(newValue.replaceAll("[^\\d]", ""));
         }
@@ -224,7 +223,7 @@ public class InsertProductController implements Initializable {
         txtSim.getText(), txtDimensions.getText(), txtWeight.getText());
     Files.copy(imgSrc.toPath(), (new File(path + imgSrc.getName())).toPath(), StandardCopyOption.REPLACE_EXISTING);
     NotificationManager.getInstance().success("Add Product Success");
-    Navigator.getInstance().goToInsertProduct();
+    Navigator.getInstance().goToProductsList();
   }
 
   @FXML

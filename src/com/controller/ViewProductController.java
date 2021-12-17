@@ -2,6 +2,7 @@ package com.controller;
 
 import com.helper.FeedbackDatabaseHelper;
 import com.helper.ProjectManager;
+import com.helper.TranslateManager;
 import com.model.Feedback;
 import com.model.Product;
 import com.view.Navigator;
@@ -144,6 +145,7 @@ public class ViewProductController implements Initializable {
       for (int i = 0; i < listFeedback.size(); i++) {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/com/view/FeedbackItemUI.fxml"));
+        loader.setResources(TranslateManager.getRb());
         VBox vBox = loader.load();
         FeedbackItemController controller = loader.getController();
         controller.setData(listFeedback.get(i));

@@ -1,11 +1,13 @@
 package com.controller;
 
 import com.helper.CartDatabaseHelper;
+import com.helper.CategoryDatabaseHelper;
 import com.helper.FeedbackDatabaseHelper;
 import com.helper.ProductDatabaseHelper;
 import com.helper.ProjectManager;
 import com.helper.TranslateManager;
 import com.model.Cart;
+import com.model.Category;
 import com.model.Feedback;
 import com.model.Product;
 import com.view.Navigator;
@@ -18,6 +20,8 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -34,6 +38,8 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
 public class ScreenProductController implements Initializable {
+  @FXML
+  private HBox categoryBox;
 
   @FXML
   private TextField txtSearch;
@@ -128,6 +134,7 @@ public class ScreenProductController implements Initializable {
   Product product;
   List<Feedback> listFeedback = new ArrayList<>();
   private List<Cart> listCart = new ArrayList<>();
+  private ObservableList<Category> listCategory = FXCollections.observableArrayList();
   String path = Paths.get(".").toAbsolutePath().normalize() + "/src/com/images/";
 
   @Override
@@ -145,6 +152,21 @@ public class ScreenProductController implements Initializable {
         }
       }
     });
+
+    listCategory.addAll(CategoryDatabaseHelper.getAllCategories());
+
+    try {
+      for (int i = 0; i < listCategory.size(); i++) {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/com/view/CategoryItemUI.fxml"));
+        Label label = loader.load();
+        CategoryItemController controller = loader.getController();
+        controller.setData(listCategory.get(i));
+        categoryBox.getChildren().add(label);
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   public void setData(Product product) {
@@ -259,21 +281,6 @@ public class ScreenProductController implements Initializable {
   @FXML
   void goToCart (MouseEvent event) throws IOException {
     Navigator.getInstance().goToCart();
-  }
-
-  @FXML
-  void goToMacBook(MouseEvent event) throws IOException {
-    Navigator.getInstance().goToMacbook();
-  }
-
-  @FXML
-  void goToIPhone(MouseEvent event) throws IOException {
-    Navigator.getInstance().goToIPhone();
-  }
-
-  @FXML
-  void goToIPad(MouseEvent event) throws IOException {
-    Navigator.getInstance().goToIPad();
   }
 
   @FXML

@@ -57,6 +57,9 @@ public class ProductsListController implements Initializable {
   private VBox changeLanguageContainer;
 
   @FXML
+  private Button addProduct;
+
+  @FXML
   private ChoiceBox<String> cpCategroy;
 
   @FXML
@@ -141,6 +144,11 @@ public class ProductsListController implements Initializable {
   //Dieu huong
   @FXML
   private void goToInsertProduct(MouseEvent mouseEvent) throws IOException {
+    Navigator.getInstance().goToInsertProduct();
+  }
+
+  @FXML
+  private void goToAddProduct(ActionEvent event) throws IOException {
     Navigator.getInstance().goToInsertProduct();
   }
 

@@ -6,9 +6,6 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Category {
-  public static final String MAC = "MacBook";
-  public static final String IPHONE = "iPhone";
-  public static final String IPAD = "iPad";
 
   private ObjectProperty<Integer> id;
   private StringProperty name;

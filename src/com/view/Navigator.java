@@ -1,9 +1,11 @@
 package com.view;
 
+import com.controller.CategoryController;
 import com.controller.EditAccountController;
 import com.controller.EditCategoryController;
 import com.controller.EditProductController;
 import com.controller.OrderDetailsController;
+import com.controller.PurchaseOrderDetailController;
 import com.controller.ScreenProductController;
 import com.controller.SearchController;
 import com.controller.ViewProductController;
@@ -11,6 +13,7 @@ import com.helper.TranslateManager;
 import com.model.Account;
 import com.model.Category;
 import com.model.Order;
+import com.model.OrderDetail;
 import com.model.Product;
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
@@ -42,13 +45,12 @@ public class Navigator {
   static final String SCREEN_PRODUCT = "ScreenProductUI.fxml";
   static final String CART = "CartUI.fxml";
   static final String PAY = "PayUI.fxml";
-  static final String MACBOOK = "MacbookUI.fxml";
-  static final String IPHONE = "iPhoneUI.fxml";
-  static final String IPAD = "iPadUI.fxml";
+  static final String CATEGORY = "CategoryUI.fxml";
   static final String PROFILE = "ProfileUI.fxml";
   static final String SEARCH = "SearchUI.fxml";
   static final String CHANGE_PASS = "ChangePasswordUI.fxml";
   static final String PURCHASE_ORDER = "PurchaseOrderUI.fxml";
+  static final String PURCHASE_ORDER_DETAIL = "PurchaseOrderDetailUI.fxml";
 
   private FXMLLoader loader;
   private static Navigator navigator;
@@ -171,16 +173,10 @@ public class Navigator {
     goToScene(PROJECT_NAME, PAY);
   }
 
-  public void goToMacbook () throws IOException {
-    goToScene(PROJECT_NAME, MACBOOK);
-  }
-
-  public void goToIPhone () throws IOException {
-    goToScene(PROJECT_NAME, IPHONE);
-  }
-
-  public void goToIPad () throws IOException {
-    goToScene(PROJECT_NAME, IPAD);
+  public void goToCategory (Category category) throws IOException {
+    goToScene(PROJECT_NAME, CATEGORY);
+    CategoryController controller = loader.getController();
+    controller.setData(category);
   }
 
   public void goToProfile() throws IOException {
@@ -205,5 +201,11 @@ public class Navigator {
 
   public void goToPurchaseOrder () throws IOException {
     goToScene(PROJECT_NAME, PURCHASE_ORDER);
+  }
+
+  public void goToPurchaseOrderDetail (Order order) throws IOException {
+    goToScene(PROJECT_NAME, PURCHASE_ORDER_DETAIL);
+    PurchaseOrderDetailController controller = loader.getController();
+    controller.setData(order);
   }
 }

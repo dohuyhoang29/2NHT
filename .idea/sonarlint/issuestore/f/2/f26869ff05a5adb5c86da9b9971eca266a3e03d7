@@ -1,0 +1,6 @@
+
+s	java:S116N"RRename this field "Account" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºÍÆÒúÿÿÿÿ8ğë¢Û/
+t
+java:S1845N"RRename field "Account" to prevent any misunderstanding/clash with field "account".(ºÍÆÒúÿÿÿÿ8Âğë¢Û/
+y
+java:S1450J"WRemove the "listCart" field and declare it as a local variable in the relevant methods.(õ”¨üÿÿÿÿ8áğë¢Û/

@@ -76,6 +76,7 @@ public class CategoryListItemController {
       CategoryDatabaseHelper.lockCategory(category.getId());
       Navigator.getInstance().goToCategoryList();
       List<Product> listProduct = ProductDatabaseHelper.getAllProductByCategory(category.getName());
+      System.out.println(listProduct.size());
       for (Product p : listProduct) {
         ProductDatabaseHelper.lockProduct(p.getId());
       }
@@ -93,6 +94,7 @@ public class CategoryListItemController {
       CategoryDatabaseHelper.unLockCategory(category.getId());
       Navigator.getInstance().goToCategoryList();
       List<Product> listProduct = ProductDatabaseHelper.getAllProductByCategory(category.getName());
+      System.out.println(listProduct.size());
       for (Product p : listProduct) {
         ProductDatabaseHelper.unLockProduct(p.getId());
       }

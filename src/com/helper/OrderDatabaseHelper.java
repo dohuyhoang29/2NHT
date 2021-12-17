@@ -70,6 +70,67 @@ public class OrderDatabaseHelper {
     return list;
   }
 
+  public static ObservableList<Order> getAllOrderByAccountAndStatus (Integer Id, String Status) {
+    ObservableList<Order> list = FXCollections.observableArrayList();
+    String query = "SELECT o.id, o.account_id, o.code, o.name, o.total_price, o.create_date, o.status, o.address, o.phone_number "
+        + "FROM `order` AS o "
+        + "INNER JOIN `account` AS a ON o.account_id = a.id WHERE o.account_id = ? AND o.status = ?";
+
+    try (Connection cnt = DatabaseHelper.getConnetion();
+        PreparedStatement preStm = cnt.prepareStatement(query)) {
+      preStm.setInt(1, Id);
+      preStm.setString(2, Status);
+      ResultSet rs = preStm.executeQuery();
+      while (rs.next()) {
+        Integer id = rs.getInt("id");
+        Integer accountID = rs.getInt("account_id");
+        String code = rs.getString("code");
+        String name = rs.getString("name");
+        Integer totalPrice = rs.getInt("total_price");
+        LocalDate createDate = rs.getDate("create_date").toLocalDate();
+        String status = rs.getString("status");
+        String address = rs.getString("address");
+        String phoneNumber = rs.getString("phone_number");
+
+        list.add(new Order(id, accountID, code, name, totalPrice, createDate, status, address, phoneNumber));
+      }
+    } catch (SQLException throwables) {
+      throwables.printStackTrace();
+      return null;
+    }
+    return list;
+  }
+
+  public static ObservableList<Order> getAllOrderByAccount (Integer id) {
+    ObservableList<Order> list = FXCollections.observableArrayList();
+    String query = "SELECT o.id, o.account_id, o.code, o.name, o.total_price, o.create_date, o.status, o.address, o.phone_number "
+        + "FROM `order` AS o "
+        + "INNER JOIN `account` AS a ON o.account_id = a.id WHERE o.account_id = ?;";
+
+    try (Connection cnt = DatabaseHelper.getConnetion();
+        PreparedStatement preStm = cnt.prepareStatement(query)) {
+      preStm.setInt(1, id);
+      ResultSet rs = preStm.executeQuery();
+      while (rs.next()) {
+        Integer Id = rs.getInt("id");
+        Integer accountID = rs.getInt("account_id");
+        String code = rs.getString("code");
+        String name = rs.getString("name");
+        Integer totalPrice = rs.getInt("total_price");
+        LocalDate createDate = rs.getDate("create_date").toLocalDate();
+        String status = rs.getString("status");
+        String address = rs.getString("address");
+        String phoneNumber = rs.getString("phone_number");
+
+        list.add(new Order(Id, accountID, code, name, totalPrice, createDate, status, address, phoneNumber));
+      }
+    } catch (SQLException throwables) {
+      throwables.printStackTrace();
+      return null;
+    }
+    return list;
+  }
+
   public static List<Order> searchOrder (String name, String status, LocalDate from, LocalDate to) {
     List<Order> list = new ArrayList<>();
     String query = "SELECT o.id, o.account_id, o.code, o.name, o.total_price, o.create_date, o.status, o.address, o.phone_number "

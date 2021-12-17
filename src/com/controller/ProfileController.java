@@ -2,25 +2,34 @@ package com.controller;
 
 import com.helper.AccountDatabaseHelper;
 import com.helper.CartDatabaseHelper;
+import com.helper.CategoryDatabaseHelper;
 import com.helper.NotificationManager;
 import com.helper.ProjectManager;
 import com.model.Cart;
+import com.model.Category;
 import com.view.Navigator;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 
 public class ProfileController implements Initializable {
+  @FXML
+  private HBox categoryBox;
+
   @FXML
   private TextField txtSearch;
 
@@ -61,6 +70,7 @@ public class ProfileController implements Initializable {
   private Button changePassword;
 
   private List<Cart> listCart = new ArrayList<>();
+  private ObservableList<Category> listCategory = FXCollections.observableArrayList();
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
@@ -73,6 +83,21 @@ public class ProfileController implements Initializable {
     listCart = CartDatabaseHelper.getAllCartByAccount(ProjectManager.getInstance().getAccount().getUsername());
     Integer cart = listCart.size();
     count.setText(cart.toString());
+
+    listCategory.addAll(CategoryDatabaseHelper.getAllCategories());
+
+    try {
+      for (int i = 0; i < listCategory.size(); i++) {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/com/view/CategoryItemUI.fxml"));
+        Label label = loader.load();
+        CategoryItemController controller = loader.getController();
+        controller.setData(listCategory.get(i));
+        categoryBox.getChildren().add(label);
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   //Action
@@ -120,21 +145,6 @@ public class ProfileController implements Initializable {
   }
 
   @FXML
-  void goToMacBook(MouseEvent event) throws IOException {
-    Navigator.getInstance().goToMacbook();
-  }
-
-  @FXML
-  void goToIPhone(MouseEvent event) throws IOException {
-    Navigator.getInstance().goToIPhone();
-  }
-
-  @FXML
-  void goToIPad(MouseEvent event) throws IOException {
-    Navigator.getInstance().goToIPad();
-  }
-
-  @FXML
   void goToSearch (MouseEvent event) throws IOException {
     Navigator.getInstance().goToSearch(txtSearch.getText());
   }
@@ -158,7 +168,4 @@ public class ProfileController implements Initializable {
   void goToPurchaseOrder (MouseEvent event) throws IOException {
     Navigator.getInstance().goToPurchaseOrder();
   }
-
-
-
 }

@@ -15,7 +15,7 @@ public class Main extends Application {
   @Override
   public void start(Stage primaryStage) throws Exception {
     Navigator.getInstance().setStage(primaryStage);
-    Navigator.getInstance().goToLogin();
+    Navigator.getInstance().goToRegister();
   }
 
 
